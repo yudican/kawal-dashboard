@@ -28,14 +28,14 @@ export const customFetchBaseQuery = baseUrl => {
 
 export const getItem = key => {
   try {
-    const data = localStorage.getItem(key)
+    const data = typeof window !== 'undefined' && localStorage.getItem(key)
     return JSON.parse(data)
   } catch (error) {
-    const data = localStorage.getItem(key)
+    const data = typeof window !== 'undefined' && localStorage.getItem(key)
     return data
   }
 }
 
-export const setItem = async (key, value) => {
-  await localStorage.setItem(key, value)
+export const setItem = (key, value) => {
+  typeof window !== 'undefined' && localStorage.setItem(key, value)
 }

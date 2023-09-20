@@ -1,13 +1,13 @@
 import { createApi } from '@reduxjs/toolkit/query/react'
 import { API_URL } from 'src/utils/constants'
-import { customFetchBaseQuery } from 'src/utils/helpers'
+import { customFetchBaseQuery, getItem } from 'src/utils/helpers'
 
 export const profileService = createApi({
   reducerPath: 'profileService',
   baseQuery: customFetchBaseQuery({
     baseUrl: API_URL,
     prepareHeaders: (headers, { getState }) => {
-      const token = localStorage.getItem('token')
+      const token = getItem('token')
       console.log(token, 'token')
       console.log(getState(), 'getState()')
       headers.set('Authorization', `Bearer ${token}`)
