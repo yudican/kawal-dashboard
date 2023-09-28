@@ -11,7 +11,7 @@ import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
 import TablePagination from '@mui/material/TablePagination'
 
-const TableStickyHeader = ({ data, currentPage = 1, total = 0, onChangePage, columns = [] }) => {
+const TableStickyHeader = ({ data = [], currentPage = 1, total = 0, onChangePage, columns = [] }) => {
   // ** States
   const [page, setPage] = useState(0)
   const [rowsPerPage, setRowsPerPage] = useState(50)
@@ -26,29 +26,32 @@ const TableStickyHeader = ({ data, currentPage = 1, total = 0, onChangePage, col
         <Table stickyHeader aria-label='sticky table'>
           <TableHead>
             <TableRow>
-              {columns.map(column => (
-                <TableCell key={column.id} align={column.align} sx={{ minWidth: column.minWidth }}>
-                  {column.label}
-                </TableCell>
-              ))}
+              {columns &&
+                columns.map(column => (
+                  <TableCell key={column.id} align={column.align} sx={{ minWidth: column.minWidth }}>
+                    {column.label}
+                  </TableCell>
+                ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map(row => {
-              return (
-                <TableRow hover role='checkbox' tabIndex={-1} key={row.id}>
-                  {columns.map(column => {
-                    const value = row[column.id]
+            {data &&
+              data.map(row => {
+                return (
+                  <TableRow hover role='checkbox' tabIndex={-1} key={row.id}>
+                    {columns &&
+                      columns.map(column => {
+                        const value = row[column.id]
 
-                    return (
-                      <TableCell key={column.id} align={column.align}>
-                        {value}
-                      </TableCell>
-                    )
-                  })}
-                </TableRow>
-              )
-            })}
+                        return (
+                          <TableCell key={column.id} align={column.align}>
+                            {value}
+                          </TableCell>
+                        )
+                      })}
+                  </TableRow>
+                )
+              })}
           </TableBody>
         </Table>
       </TableContainer>

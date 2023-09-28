@@ -9,7 +9,6 @@ import { ProtectedRouter } from '../_app'
 
 const VisitPage = () => {
   const { data, isLoading, refetch } = useGetVisitQuery(`?limit=50`)
-  console.log(data, 'data')
   return (
     <ProtectedRouter>
       <Grid item xs={12}>
