@@ -75,7 +75,7 @@ const AccountSettings = () => {
               </Box>
             }
           />
-          <Tab
+          {/* <Tab
             value='info'
             label={
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -83,7 +83,7 @@ const AccountSettings = () => {
                 <TabName>Info</TabName>
               </Box>
             }
-          />
+          /> */}
         </TabList>
 
         <TabPanel sx={{ p: 0 }} value='account'>

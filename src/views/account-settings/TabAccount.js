@@ -1,5 +1,5 @@
 // ** React Imports
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
@@ -20,6 +20,11 @@ import Button from '@mui/material/Button'
 
 // ** Icons Imports
 import Close from 'mdi-material-ui/Close'
+import { useUpdateProfileMutation } from 'src/configs/Redux/Services/profileService'
+import { toast } from 'react-toastify'
+import { setUserData } from 'src/configs/Redux/Reducers/userReducer'
+import { getItem, setItem } from 'src/utils/helpers'
+import { useDispatch } from 'react-redux'
 
 const ImgStyled = styled('img')(({ theme }) => ({
   width: 120,
@@ -46,9 +51,29 @@ const ResetButtonStyled = styled(Button)(({ theme }) => ({
 }))
 
 const TabAccount = () => {
+  const dispatch = useDispatch()
   // ** State
   const [openAlert, setOpenAlert] = useState(true)
-  const [imgSrc, setImgSrc] = useState('/images/avatars/1.png')
+  const [imgSrc, setImgSrc] = useState(null)
+  const user = getItem('userData')
+  const [form, setForm] = useState({
+    name: null,
+    email: null,
+    telepon: null,
+    photo: null
+  })
+
+  const [updateProfile, { isLoading: updateProfileLoading }] = useUpdateProfileMutation()
+
+  useEffect(() => {
+    setForm({
+      name: null,
+      email: null,
+      telepon: null,
+      photo: null,
+      ...user
+    })
+  }, [])
 
   const onChange = file => {
     const reader = new FileReader()
@@ -56,6 +81,42 @@ const TabAccount = () => {
     if (files && files.length !== 0) {
       reader.onload = () => setImgSrc(reader.result)
       reader.readAsDataURL(files[0])
+      setForm({
+        ...form,
+        photo: files[0]
+      })
+    }
+  }
+
+  const handleSubmit = async () => {
+    try {
+      // Validate form data using Yup
+      // Submit the form or perform the desired action here
+      const formData = new FormData()
+      const newForm = {
+        ...form
+      }
+
+      formData.append('name', newForm.name)
+      formData.append('email', newForm.email)
+      formData.append('telepon', newForm.telepon)
+      if (form.photo) {
+        formData.append('photo', newForm.photo)
+      }
+      console.log(newForm, 'newForm')
+      updateProfile(formData).then(({ data, error }) => {
+        if (error) {
+          return toast(error?.data?.message || 'Ubah Profil Gagal')
+        }
+
+        toast('Ubah Profil berhasil')
+
+        dispatch(setUserData(data))
+        return setItem('userData', JSON.stringify(data))
+      })
+    } catch (error) {
+      // Handle validation errors and set validationErrors state
+      const errors = {}
     }
   }
 
@@ -65,7 +126,7 @@ const TabAccount = () => {
         <Grid container spacing={7}>
           <Grid item xs={12} sx={{ marginTop: 4.8, marginBottom: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <ImgStyled src={imgSrc} alt='Profile Pic' />
+              <ImgStyled src={imgSrc || user?.photo || '/images/avatars/1.png'} alt='Profile Pic' />
               <Box>
                 <ButtonStyled component='label' variant='contained' htmlFor='account-settings-upload-image'>
                   Upload New Photo
@@ -77,58 +138,79 @@ const TabAccount = () => {
                     id='account-settings-upload-image'
                   />
                 </ButtonStyled>
-                <ResetButtonStyled color='error' variant='outlined' onClick={() => setImgSrc('/images/avatars/1.png')}>
+                {/* <ResetButtonStyled color='error' variant='outlined' onClick={() => setImgSrc('/images/avatars/1.png')}>
                   Reset
-                </ResetButtonStyled>
-                <Typography variant='body2' sx={{ marginTop: 5 }}>
+                </ResetButtonStyled> */}
+                {/* <Typography variant='body2' sx={{ marginTop: 5 }}>
                   Allowed PNG or JPEG. Max size of 800K.
-                </Typography>
+                </Typography> */}
               </Box>
             </Box>
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Username' placeholder='johnDoe' defaultValue='johnDoe' />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='John Doe' />
+            <TextField
+              fullWidth
+              label='Nama Lengkap'
+              // placeholder='johnDoe'
+              value={form?.name}
+              onChange={e =>
+                setForm({
+                  ...form,
+                  name: e.target.value
+                })
+              }
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               type='email'
               label='Email'
-              placeholder='johnDoe@example.com'
-              defaultValue='johnDoe@example.com'
+              value={form?.email}
+              // placeholder='johnDoe@example.com'
+              onChange={e =>
+                setForm({
+                  ...form,
+                  email: e.target.value
+                })
+              }
             />
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel>Role</InputLabel>
-              <Select label='Role' defaultValue='admin'>
+              <Select
+                label='Role'
+                defaultValue={form?.role}
+                onChange={e =>
+                  setForm({
+                    ...form,
+                    role: e
+                  })
+                }
+              >
                 <MenuItem value='admin'>Admin</MenuItem>
-                <MenuItem value='author'>Author</MenuItem>
-                <MenuItem value='editor'>Editor</MenuItem>
-                <MenuItem value='maintainer'>Maintainer</MenuItem>
-                <MenuItem value='subscriber'>Subscriber</MenuItem>
+                <MenuItem value='user'>Koordinator</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <FormControl fullWidth>
-              <InputLabel>Status</InputLabel>
-              <Select label='Status' defaultValue='active'>
-                <MenuItem value='active'>Active</MenuItem>
-                <MenuItem value='inactive'>Inactive</MenuItem>
-                <MenuItem value='pending'>Pending</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Company' placeholder='ABC Pvt. Ltd.' defaultValue='ABC Pvt. Ltd.' />
+            <TextField
+              fullWidth
+              label='Telepon'
+              value={form?.telepon}
+              // placeholder='08123xxxxxx'
+              onChange={e =>
+                setForm({
+                  ...form,
+                  telepon: e.target.value
+                })
+              }
+            />
           </Grid>
 
-          {openAlert ? (
+          {/* {openAlert ? (
             <Grid item xs={12} sx={{ mb: 3 }}>
               <Alert
                 severity='warning'
@@ -145,10 +227,10 @@ const TabAccount = () => {
                 </Link>
               </Alert>
             </Grid>
-          ) : null}
+          ) : null} */}
 
           <Grid item xs={12}>
-            <Button variant='contained' sx={{ marginRight: 3.5 }}>
+            <Button variant='contained' sx={{ marginRight: 3.5 }} onClick={() => handleSubmit()}>
               Save Changes
             </Button>
             <Button type='reset' variant='outlined' color='secondary'>

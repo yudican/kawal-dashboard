@@ -8,10 +8,8 @@ export const profileService = createApi({
     baseUrl: API_URL,
     prepareHeaders: (headers, { getState }) => {
       const token = getItem('token')
-      console.log(token, 'token')
-      console.log(getState(), 'getState()')
       headers.set('Authorization', `Bearer ${token}`)
-      // headers.set('Content-Type', `multipart/form-data`);
+      // headers.set('Content-Type', `multipart/form-data`)
       return headers
     }
   }),
@@ -20,10 +18,10 @@ export const profileService = createApi({
       query: body => ({
         url: '/profile/update/profile',
         method: 'POST',
-        body,
-        headers: {
-          'Content-Type': 'multipart/form-data' // Set the Content-Type header to multipart/form-data
-        }
+        body
+        // headers: {
+        //   'Content-Type': 'multipart/form-data' // Set the Content-Type header to multipart/form-data
+        // }
       })
     }),
 
@@ -33,10 +31,13 @@ export const profileService = createApi({
         method: 'POST',
         body
       })
+    }),
+    getUsers: builder.query({
+      query: page => `/users${page ? page : ''}`
     })
 
     // Add other endpoints here if needed
   })
 })
 
-export const { useUpdateProfileMutation, useUpdatePasswordMutation } = profileService
+export const { useUpdateProfileMutation, useUpdatePasswordMutation, useGetUsersQuery } = profileService

@@ -21,7 +21,7 @@ const navigation = () => {
       title: 'Account Settings',
       icon: AccountCogOutline,
       path: '/account-settings'
-    }
+    },
     // {
     //   sectionTitle: 'Pages'
     // },
@@ -46,11 +46,16 @@ const navigation = () => {
     // {
     //   sectionTitle: 'User Interface'
     // },
-    // {
-    //   title: 'Typography',
-    //   icon: FormatLetterCase,
-    //   path: '/typography'
-    // },
+    {
+      title: 'Koordinator',
+      icon: FormatLetterCase,
+      path: '/koordinator'
+    },
+    {
+      title: 'Relawan',
+      icon: FormatLetterCase,
+      path: '/relawan'
+    }
     // {
     //   title: 'Icons',
     //   path: '/icons',
