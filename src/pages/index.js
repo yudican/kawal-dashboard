@@ -9,14 +9,18 @@ import Grid from '@mui/material/Grid'
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
-import { useGetVisitQuery } from 'src/configs/Redux/Services/visitService'
+import { Card } from 'antd'
+import { useGetVisitQuery, useGetVisitReportQuery } from 'src/configs/Redux/Services/visitService'
+import BarChart from 'src/layouts/components/chart'
+import MapPoligon from 'src/views/dashboard/MapPoligon'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import Trophy from 'src/views/dashboard/Trophy'
 import { ProtectedRouter } from './_app'
 
 const Dashboard = () => {
   const { data, isLoading } = useGetVisitQuery('?limit=30')
-
+  const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
+  console.log(reportData, 'reportData')
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
@@ -27,9 +31,16 @@ const Dashboard = () => {
           <Grid item xs={12} md={8}>
             <StatisticsCard visit={data} />
           </Grid>
-          {/* <Grid item xs={12} md={6} lg={4}>
-            <WeeklyOverview />
-          </Grid> */}
+          <Grid item xs={12} md={12} lg={12}>
+            <Card>
+              <BarChart values={reportData?.counts} labels={reportData?.months} />
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12}>
+            <Card>
+              <MapPoligon />
+            </Card>
+          </Grid>
           {/* <Grid item xs={12} md={6} lg={4}>
             <TotalEarning />
           </Grid>

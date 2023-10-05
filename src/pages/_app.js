@@ -29,6 +29,7 @@ import '../../styles/globals.css'
 import store from 'src/configs/Redux/store'
 import { Provider } from 'react-redux'
 import { useEffect } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -72,6 +73,7 @@ const App = props => {
             }}
           </SettingsConsumer>
         </SettingsProvider>
+        <ToastContainer />
       </CacheProvider>
     </Provider>
   )
