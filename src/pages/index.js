@@ -16,11 +16,13 @@ import MapPoligon from 'src/views/dashboard/MapPoligon'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import Trophy from 'src/views/dashboard/Trophy'
 import { ProtectedRouter } from './_app'
+import MapWithMarkers from 'src/views/dashboard/MapWithMarkers'
+import LineChart from 'src/views/dashboard/LineChart'
+import PieChart from 'src/views/dashboard/PieChart'
 
 const Dashboard = () => {
   const { data, isLoading } = useGetVisitQuery('?limit=30')
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
-  console.log(reportData, 'reportData')
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
@@ -38,7 +40,22 @@ const Dashboard = () => {
           </Grid>
           <Grid item xs={12} md={12} lg={12}>
             <Card>
-              <MapPoligon />
+              <LineChart values={reportData?.counts} labels={reportData?.months} />
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12}>
+            <Card>
+              <PieChart values={reportData?.counts} labels={reportData?.months} />
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12}>
+            <Card>
+              <MapPoligon data={data?.visits || []} />
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12}>
+            <Card>
+              <MapWithMarkers data={data?.visits || []} />
             </Card>
           </Grid>
           {/* <Grid item xs={12} md={6} lg={4}>
