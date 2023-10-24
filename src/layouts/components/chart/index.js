@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto'
 import { Bar } from 'react-chartjs-2'
 
-const BarChart = ({ labels, values }) => {
+const BarChart = ({ labels, values, title }) => {
   const data = {
     labels: labels,
     datasets: [
@@ -27,6 +27,7 @@ const BarChart = ({ labels, values }) => {
 
   return (
     <div>
+      {title && <p>{title}</p>}
       <Bar data={data} options={options} />
     </div>
   )

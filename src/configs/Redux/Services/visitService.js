@@ -22,6 +22,14 @@ export const visitService = createApi({
       query: params => `/visits/report/list`,
       providesTags: ['visitReport']
     }),
+    getVisitReportQuestion: builder.query({
+      query: params => `/visits/report/questions`,
+      providesTags: ['ReportQuestion']
+    }),
+    getVisitReportCity: builder.query({
+      query: params => `/visits/report/city`,
+      providesTags: ['ReportCity']
+    }),
     createVisit: builder.mutation({
       query: body => ({
         url: '/visits',
@@ -65,5 +73,7 @@ export const {
   useGetSettingQuery,
   useUpdateSettingMutation,
   useGetVisitReportQuery,
+  useGetVisitReportQuestionQuery,
+  useGetVisitReportCityQuery,
   useShareVisitMutation
 } = visitService

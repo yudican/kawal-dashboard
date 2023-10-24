@@ -23,7 +23,7 @@ const PieChart = ({ values, labels }) => {
   }
 
   return (
-    <div style={{ height: 500, width: '100%' }}>
+    <div style={{ height: 410, width: '100%' }}>
       {/* <h2>Line Chart Example</h2> */}
       <Pie data={data} options={options} />
     </div>
