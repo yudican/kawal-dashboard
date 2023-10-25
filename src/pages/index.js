@@ -28,10 +28,8 @@ import PieChart from 'src/views/dashboard/PieChart'
 const Dashboard = () => {
   const { data, isLoading } = useGetVisitQuery('?limit=30')
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
-  const { data: reportQuestionData, isLoading: loadingQuestiondata } = useGetVisitReportQuestionQuery()
+  const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
   const { data: reportCityData, isLoading: loadingCitydata } = useGetVisitReportCityQuery()
-  console.log(reportQuestionData, 'reportQuestionData')
-  console.log(reportCityData, 'reportCityData')
   const cityData =
     (reportCityData &&
       reportCityData.map(item => {
@@ -97,19 +95,20 @@ const Dashboard = () => {
               <BarChart values={cityData.map(item => item.value)} labels={cityData.map(item => item.label)} />
             </Card>
           </Grid>
-          {questions.map(item => {
-            return (
-              <Grid item xs={12} md={6}>
-                <Card>
-                  <BarChart
-                    values={reportQuestionData[item.value]?.map(row => row[row._id])}
-                    labels={reportQuestionData[item.value]?.map(row => row._id)}
-                    title={item.label}
-                  />
-                </Card>
-              </Grid>
-            )
-          })}
+          {isSuccess &&
+            questions.map(item => {
+              return (
+                <Grid item xs={12} md={6}>
+                  <Card>
+                    <BarChart
+                      values={reportQuestionData[item.value]?.map(row => row[row._id])}
+                      labels={reportQuestionData[item.value]?.map(row => row._id)}
+                      title={item.label}
+                    />
+                  </Card>
+                </Grid>
+              )
+            })}
 
           <Grid item xs={12} md={12} lg={12}>
             <Card>
