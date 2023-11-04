@@ -5,4 +5,4 @@ export const MAPBOX_PUBLIC_KEY =
 export const MAPBOX_SECRET_KEY =
   'sk.eyJ1IjoieXVkaWNhbmRyYTEiLCJhIjoiY2xqa3gybHhlMDBxbzNqbW4wYndtbTV6YiJ9.GTbR4eH7daYffaCB8ycvzA'
 
-export const API_URL = 'https://visit-api.punyakios.com/v1'
+export const API_URL = 'https://ir-one-backend-90a12f2aa1eb.herokuapp.com/v1'
