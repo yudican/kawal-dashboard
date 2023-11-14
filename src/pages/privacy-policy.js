@@ -66,3 +66,5 @@ const PrivacyPolicy = () => {
     </p>
   )
 }
+
+export default PrivacyPolicy
