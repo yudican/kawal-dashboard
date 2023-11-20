@@ -1,0 +1,4628 @@
+[
+  {
+    "id": 1,
+    "nama": "Kabupaten Simeulue",
+    "slug": "kabupaten-simeulue",
+    "pid": 1101,
+    "prov_id": 11,
+    "ro_city_id": 414,
+    "ro_zip": 23891
+  },
+  {
+    "id": 2,
+    "nama": "Kabupaten Aceh Singkil",
+    "slug": "kabupaten-aceh-singkil",
+    "pid": 1102,
+    "prov_id": 11,
+    "ro_city_id": 6,
+    "ro_zip": 24785
+  },
+  {
+    "id": 3,
+    "nama": "Kabupaten Aceh Selatan",
+    "slug": "kabupaten-aceh-selatan",
+    "pid": 1103,
+    "prov_id": 11,
+    "ro_city_id": 5,
+    "ro_zip": 23719
+  },
+  {
+    "id": 4,
+    "nama": "Kabupaten Aceh Tenggara",
+    "slug": "kabupaten-aceh-tenggara",
+    "pid": 1104,
+    "prov_id": 11,
+    "ro_city_id": 9,
+    "ro_zip": 24611
+  },
+  {
+    "id": 5,
+    "nama": "Kabupaten Aceh Timur",
+    "slug": "kabupaten-aceh-timur",
+    "pid": 1105,
+    "prov_id": 11,
+    "ro_city_id": 10,
+    "ro_zip": 24454
+  },
+  {
+    "id": 6,
+    "nama": "Kabupaten Aceh Tengah",
+    "slug": "kabupaten-aceh-tengah",
+    "pid": 1106,
+    "prov_id": 11,
+    "ro_city_id": 8,
+    "ro_zip": 24511
+  },
+  {
+    "id": 7,
+    "nama": "Kabupaten Aceh Barat",
+    "slug": "kabupaten-aceh-barat",
+    "pid": 1107,
+    "prov_id": 11,
+    "ro_city_id": 1,
+    "ro_zip": 23681
+  },
+  {
+    "id": 8,
+    "nama": "Kabupaten Aceh Besar",
+    "slug": "kabupaten-aceh-besar",
+    "pid": 1108,
+    "prov_id": 11,
+    "ro_city_id": 3,
+    "ro_zip": 23951
+  },
+  {
+    "id": 9,
+    "nama": "Kabupaten Pidie",
+    "slug": "kabupaten-pidie",
+    "pid": 1109,
+    "prov_id": 11,
+    "ro_city_id": 358,
+    "ro_zip": 24116
+  },
+  {
+    "id": 10,
+    "nama": "Kabupaten Bireuen",
+    "slug": "kabupaten-bireuen",
+    "pid": 1110,
+    "prov_id": 11,
+    "ro_city_id": 72,
+    "ro_zip": 24219
+  },
+  {
+    "id": 11,
+    "nama": "Kabupaten Aceh Utara",
+    "slug": "kabupaten-aceh-utara",
+    "pid": 1111,
+    "prov_id": 11,
+    "ro_city_id": 11,
+    "ro_zip": 24382
+  },
+  {
+    "id": 12,
+    "nama": "Kabupaten Aceh Barat Daya",
+    "slug": "kabupaten-aceh-barat-daya",
+    "pid": 1112,
+    "prov_id": 11,
+    "ro_city_id": 2,
+    "ro_zip": 23764
+  },
+  {
+    "id": 13,
+    "nama": "Kabupaten Gayo Lues",
+    "slug": "kabupaten-gayo-lues",
+    "pid": 1113,
+    "prov_id": 11,
+    "ro_city_id": 127,
+    "ro_zip": 24653
+  },
+  {
+    "id": 14,
+    "nama": "Kabupaten Aceh Tamiang",
+    "slug": "kabupaten-aceh-tamiang",
+    "pid": 1114,
+    "prov_id": 11,
+    "ro_city_id": 7,
+    "ro_zip": 24476
+  },
+  {
+    "id": 15,
+    "nama": "Kabupaten Nagan Raya",
+    "slug": "kabupaten-nagan-raya",
+    "pid": 1115,
+    "prov_id": 11,
+    "ro_city_id": 300,
+    "ro_zip": 23674
+  },
+  {
+    "id": 16,
+    "nama": "Kabupaten Aceh Jaya",
+    "slug": "kabupaten-aceh-jaya",
+    "pid": 1116,
+    "prov_id": 11,
+    "ro_city_id": 4,
+    "ro_zip": 23654
+  },
+  {
+    "id": 17,
+    "nama": "Kabupaten Bener Meriah",
+    "slug": "kabupaten-bener-meriah",
+    "pid": 1117,
+    "prov_id": 11,
+    "ro_city_id": 59,
+    "ro_zip": 24581
+  },
+  {
+    "id": 18,
+    "nama": "Kabupaten Pidie Jaya",
+    "slug": "kabupaten-pidie-jaya",
+    "pid": 1118,
+    "prov_id": 11,
+    "ro_city_id": 359,
+    "ro_zip": 24186
+  },
+  {
+    "id": 19,
+    "nama": "Kota Banda Aceh",
+    "slug": "kota-banda-aceh",
+    "pid": 1171,
+    "prov_id": 11,
+    "ro_city_id": 20,
+    "ro_zip": 23238
+  },
+  {
+    "id": 20,
+    "nama": "Kota Sabang",
+    "slug": "kota-sabang",
+    "pid": 1172,
+    "prov_id": 11,
+    "ro_city_id": 384,
+    "ro_zip": 23512
+  },
+  {
+    "id": 21,
+    "nama": "Kota Langsa",
+    "slug": "kota-langsa",
+    "pid": 1173,
+    "prov_id": 11,
+    "ro_city_id": 230,
+    "ro_zip": 24412
+  },
+  {
+    "id": 22,
+    "nama": "Kota Lhokseumawe",
+    "slug": "kota-lhokseumawe",
+    "pid": 1174,
+    "prov_id": 11,
+    "ro_city_id": 235,
+    "ro_zip": 24352
+  },
+  {
+    "id": 23,
+    "nama": "Kota Subulussalam",
+    "slug": "kota-subulussalam",
+    "pid": 1175,
+    "prov_id": 11,
+    "ro_city_id": 429,
+    "ro_zip": 24882
+  },
+  {
+    "id": 24,
+    "nama": "Kabupaten Nias",
+    "slug": "kabupaten-nias",
+    "pid": 1201,
+    "prov_id": 12,
+    "ro_city_id": 307,
+    "ro_zip": 22876
+  },
+  {
+    "id": 25,
+    "nama": "Kabupaten Mandailing Natal",
+    "slug": "kabupaten-mandailing-natal",
+    "pid": 1202,
+    "prov_id": 12,
+    "ro_city_id": 268,
+    "ro_zip": 22916
+  },
+  {
+    "id": 26,
+    "nama": "Kabupaten Tapanuli Selatan",
+    "slug": "kabupaten-tapanuli-selatan",
+    "pid": 1203,
+    "prov_id": 12,
+    "ro_city_id": 463,
+    "ro_zip": 22742
+  },
+  {
+    "id": 27,
+    "nama": "Kabupaten Tapanuli Tengah",
+    "slug": "kabupaten-tapanuli-tengah",
+    "pid": 1204,
+    "prov_id": 12,
+    "ro_city_id": 464,
+    "ro_zip": 22611
+  },
+  {
+    "id": 28,
+    "nama": "Kabupaten Tapanuli Utara",
+    "slug": "kabupaten-tapanuli-utara",
+    "pid": 1205,
+    "prov_id": 12,
+    "ro_city_id": 465,
+    "ro_zip": 22414
+  },
+  {
+    "id": 29,
+    "nama": "Kabupaten Toba Samosir",
+    "slug": "kabupaten-toba-samosir",
+    "pid": 1206,
+    "prov_id": 12,
+    "ro_city_id": 481,
+    "ro_zip": 22316
+  },
+  {
+    "id": 30,
+    "nama": "Kabupaten Labuhan Batu",
+    "slug": "kabupaten-labuhan-batu",
+    "pid": 1207,
+    "prov_id": 12,
+    "ro_city_id": 217,
+    "ro_zip": 21412
+  },
+  {
+    "id": 31,
+    "nama": "Kabupaten Asahan",
+    "slug": "kabupaten-asahan",
+    "pid": 1208,
+    "prov_id": 12,
+    "ro_city_id": 15,
+    "ro_zip": 21214
+  },
+  {
+    "id": 32,
+    "nama": "Kabupaten Simalungun",
+    "slug": "kabupaten-simalungun",
+    "pid": 1209,
+    "prov_id": 12,
+    "ro_city_id": 413,
+    "ro_zip": 21162
+  },
+  {
+    "id": 33,
+    "nama": "Kabupaten Dairi",
+    "slug": "kabupaten-dairi",
+    "pid": 1210,
+    "prov_id": 12,
+    "ro_city_id": 110,
+    "ro_zip": 22211
+  },
+  {
+    "id": 34,
+    "nama": "Kabupaten Karo",
+    "slug": "kabupaten-karo",
+    "pid": 1211,
+    "prov_id": 12,
+    "ro_city_id": 173,
+    "ro_zip": 22119
+  },
+  {
+    "id": 35,
+    "nama": "Kabupaten Deli Serdang",
+    "slug": "kabupaten-deli-serdang",
+    "pid": 1212,
+    "prov_id": 12,
+    "ro_city_id": 112,
+    "ro_zip": 20511
+  },
+  {
+    "id": 36,
+    "nama": "Kabupaten Langkat",
+    "slug": "kabupaten-langkat",
+    "pid": 1213,
+    "prov_id": 12,
+    "ro_city_id": 229,
+    "ro_zip": 20811
+  },
+  {
+    "id": 37,
+    "nama": "Kabupaten Nias Selatan",
+    "slug": "kabupaten-nias-selatan",
+    "pid": 1214,
+    "prov_id": 12,
+    "ro_city_id": 309,
+    "ro_zip": 22865
+  },
+  {
+    "id": 38,
+    "nama": "Kabupaten Humbang Hasundutan",
+    "slug": "kabupaten-humbang-hasundutan",
+    "pid": 1215,
+    "prov_id": 12,
+    "ro_city_id": 146,
+    "ro_zip": 22457
+  },
+  {
+    "id": 39,
+    "nama": "Kabupaten Pakpak Bharat",
+    "slug": "kabupaten-pakpak-bharat",
+    "pid": 1216,
+    "prov_id": 12,
+    "ro_city_id": 325,
+    "ro_zip": 22272
+  },
+  {
+    "id": 40,
+    "nama": "Kabupaten Samosir",
+    "slug": "kabupaten-samosir",
+    "pid": 1217,
+    "prov_id": 12,
+    "ro_city_id": 389,
+    "ro_zip": 22392
+  },
+  {
+    "id": 41,
+    "nama": "Kabupaten Serdang Bedagai",
+    "slug": "kabupaten-serdang-bedagai",
+    "pid": 1218,
+    "prov_id": 12,
+    "ro_city_id": 404,
+    "ro_zip": 20915
+  },
+  {
+    "id": 42,
+    "nama": "Kabupaten Batu Bara",
+    "slug": "kabupaten-batu-bara",
+    "pid": 1219,
+    "prov_id": 12,
+    "ro_city_id": 52,
+    "ro_zip": 21655
+  },
+  {
+    "id": 43,
+    "nama": "Kabupaten Padang Lawas Utara",
+    "slug": "kabupaten-padang-lawas-utara",
+    "pid": 1220,
+    "prov_id": 12,
+    "ro_city_id": 320,
+    "ro_zip": 22753
+  },
+  {
+    "id": 44,
+    "nama": "Kabupaten Padang Lawas",
+    "slug": "kabupaten-padang-lawas",
+    "pid": 1221,
+    "prov_id": 12,
+    "ro_city_id": 319,
+    "ro_zip": 22763
+  },
+  {
+    "id": 45,
+    "nama": "Kabupaten Labuhan Batu Selatan",
+    "slug": "kabupaten-labuhan-batu-selatan",
+    "pid": 1222,
+    "prov_id": 12,
+    "ro_city_id": 218,
+    "ro_zip": 21511
+  },
+  {
+    "id": 46,
+    "nama": "Kabupaten Labuhan Batu Utara",
+    "slug": "kabupaten-labuhan-batu-utara",
+    "pid": 1223,
+    "prov_id": 12,
+    "ro_city_id": 219,
+    "ro_zip": 21711
+  },
+  {
+    "id": 47,
+    "nama": "Kabupaten Nias Utara",
+    "slug": "kabupaten-nias-utara",
+    "pid": 1224,
+    "prov_id": 12,
+    "ro_city_id": 310,
+    "ro_zip": 22856
+  },
+  {
+    "id": 48,
+    "nama": "Kabupaten Nias Barat",
+    "slug": "kabupaten-nias-barat",
+    "pid": 1225,
+    "prov_id": 12,
+    "ro_city_id": 308,
+    "ro_zip": 22895
+  },
+  {
+    "id": 49,
+    "nama": "Kota Sibolga",
+    "slug": "kota-sibolga",
+    "pid": 1271,
+    "prov_id": 12,
+    "ro_city_id": 407,
+    "ro_zip": 22522
+  },
+  {
+    "id": 50,
+    "nama": "Kota Tanjung Balai",
+    "slug": "kota-tanjung-balai",
+    "pid": 1272,
+    "prov_id": 12,
+    "ro_city_id": 459,
+    "ro_zip": 21321
+  },
+  {
+    "id": 51,
+    "nama": "Kota Pematang Siantar",
+    "slug": "kota-pematang-siantar",
+    "pid": 1273,
+    "prov_id": 12,
+    "ro_city_id": 353,
+    "ro_zip": 21126
+  },
+  {
+    "id": 52,
+    "nama": "Kota Tebing Tinggi",
+    "slug": "kota-tebing-tinggi",
+    "pid": 1274,
+    "prov_id": 12,
+    "ro_city_id": 470,
+    "ro_zip": 20632
+  },
+  {
+    "id": 53,
+    "nama": "Kota Medan",
+    "slug": "kota-medan",
+    "pid": 1275,
+    "prov_id": 12,
+    "ro_city_id": 278,
+    "ro_zip": 20228
+  },
+  {
+    "id": 54,
+    "nama": "Kota Binjai",
+    "slug": "kota-binjai",
+    "pid": 1276,
+    "prov_id": 12,
+    "ro_city_id": 70,
+    "ro_zip": 20712
+  },
+  {
+    "id": 55,
+    "nama": "Kota Padangsidimpuan",
+    "slug": "kota-padangsidimpuan",
+    "pid": 1277,
+    "prov_id": 12,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 56,
+    "nama": "Kota Gunungsitoli",
+    "slug": "kota-gunungsitoli",
+    "pid": 1278,
+    "prov_id": 12,
+    "ro_city_id": 137,
+    "ro_zip": 22813
+  },
+  {
+    "id": 57,
+    "nama": "Kabupaten Kepulauan Mentawai",
+    "slug": "kabupaten-kepulauan-mentawai",
+    "pid": 1301,
+    "prov_id": 13,
+    "ro_city_id": 186,
+    "ro_zip": 25771
+  },
+  {
+    "id": 58,
+    "nama": "Kabupaten Pesisir Selatan",
+    "slug": "kabupaten-pesisir-selatan",
+    "pid": 1302,
+    "prov_id": 13,
+    "ro_city_id": 357,
+    "ro_zip": 25611
+  },
+  {
+    "id": 59,
+    "nama": "Kabupaten Solok",
+    "slug": "kabupaten-solok",
+    "pid": 1303,
+    "prov_id": 13,
+    "ro_city_id": 421,
+    "ro_zip": 27315
+  },
+  {
+    "id": 60,
+    "nama": "Kabupaten Sijunjung",
+    "slug": "kabupaten-sijunjung",
+    "pid": 1304,
+    "prov_id": 13,
+    "ro_city_id": 411,
+    "ro_zip": 27511
+  },
+  {
+    "id": 61,
+    "nama": "Kabupaten Tanah Datar",
+    "slug": "kabupaten-tanah-datar",
+    "pid": 1305,
+    "prov_id": 13,
+    "ro_city_id": 453,
+    "ro_zip": 27211
+  },
+  {
+    "id": 62,
+    "nama": "Kabupaten Padang Pariaman",
+    "slug": "kabupaten-padang-pariaman",
+    "pid": 1306,
+    "prov_id": 13,
+    "ro_city_id": 322,
+    "ro_zip": 25583
+  },
+  {
+    "id": 63,
+    "nama": "Kabupaten Agam",
+    "slug": "kabupaten-agam",
+    "pid": 1307,
+    "prov_id": 13,
+    "ro_city_id": 12,
+    "ro_zip": 26411
+  },
+  {
+    "id": 64,
+    "nama": "Kabupaten Lima Puluh Kota",
+    "slug": "kabupaten-lima-puluh-kota",
+    "pid": 1308,
+    "prov_id": 13,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 65,
+    "nama": "Kabupaten Pasaman",
+    "slug": "kabupaten-pasaman",
+    "pid": 1309,
+    "prov_id": 13,
+    "ro_city_id": 339,
+    "ro_zip": 26318
+  },
+  {
+    "id": 66,
+    "nama": "Kabupaten Solok Selatan",
+    "slug": "kabupaten-solok-selatan",
+    "pid": 1310,
+    "prov_id": 13,
+    "ro_city_id": 422,
+    "ro_zip": 27779
+  },
+  {
+    "id": 67,
+    "nama": "Kabupaten Dharmasraya",
+    "slug": "kabupaten-dharmasraya",
+    "pid": 1311,
+    "prov_id": 13,
+    "ro_city_id": 116,
+    "ro_zip": 27612
+  },
+  {
+    "id": 68,
+    "nama": "Kabupaten Pasaman Barat",
+    "slug": "kabupaten-pasaman-barat",
+    "pid": 1312,
+    "prov_id": 13,
+    "ro_city_id": 340,
+    "ro_zip": 26511
+  },
+  {
+    "id": 69,
+    "nama": "Kota Padang",
+    "slug": "kota-padang",
+    "pid": 1371,
+    "prov_id": 13,
+    "ro_city_id": 318,
+    "ro_zip": 25112
+  },
+  {
+    "id": 70,
+    "nama": "Kota Solok",
+    "slug": "kota-solok",
+    "pid": 1372,
+    "prov_id": 13,
+    "ro_city_id": 421,
+    "ro_zip": 27315
+  },
+  {
+    "id": 71,
+    "nama": "Kota Sawah Lunto",
+    "slug": "kota-sawah-lunto",
+    "pid": 1373,
+    "prov_id": 13,
+    "ro_city_id": 394,
+    "ro_zip": 27416
+  },
+  {
+    "id": 72,
+    "nama": "Kota Padang Panjang",
+    "slug": "kota-padang-panjang",
+    "pid": 1374,
+    "prov_id": 13,
+    "ro_city_id": 321,
+    "ro_zip": 27122
+  },
+  {
+    "id": 73,
+    "nama": "Kota Bukittinggi",
+    "slug": "kota-bukittinggi",
+    "pid": 1375,
+    "prov_id": 13,
+    "ro_city_id": 93,
+    "ro_zip": 26115
+  },
+  {
+    "id": 74,
+    "nama": "Kota Payakumbuh",
+    "slug": "kota-payakumbuh",
+    "pid": 1376,
+    "prov_id": 13,
+    "ro_city_id": 345,
+    "ro_zip": 26213
+  },
+  {
+    "id": 75,
+    "nama": "Kota Pariaman",
+    "slug": "kota-pariaman",
+    "pid": 1377,
+    "prov_id": 13,
+    "ro_city_id": 337,
+    "ro_zip": 25511
+  },
+  {
+    "id": 76,
+    "nama": "Kabupaten Kuantan Singingi",
+    "slug": "kabupaten-kuantan-singingi",
+    "pid": 1401,
+    "prov_id": 14,
+    "ro_city_id": 207,
+    "ro_zip": 29519
+  },
+  {
+    "id": 77,
+    "nama": "Kabupaten Indragiri Hulu",
+    "slug": "kabupaten-indragiri-hulu",
+    "pid": 1402,
+    "prov_id": 14,
+    "ro_city_id": 148,
+    "ro_zip": 29319
+  },
+  {
+    "id": 78,
+    "nama": "Kabupaten Indragiri Hilir",
+    "slug": "kabupaten-indragiri-hilir",
+    "pid": 1403,
+    "prov_id": 14,
+    "ro_city_id": 147,
+    "ro_zip": 29212
+  },
+  {
+    "id": 79,
+    "nama": "Kabupaten Pelalawan",
+    "slug": "kabupaten-pelalawan",
+    "pid": 1404,
+    "prov_id": 14,
+    "ro_city_id": 351,
+    "ro_zip": 28311
+  },
+  {
+    "id": 80,
+    "nama": "Kabupaten S I A K",
+    "slug": "kabupaten-s-i-a-k",
+    "pid": 1405,
+    "prov_id": 14,
+    "ro_city_id": 406,
+    "ro_zip": 28623
+  },
+  {
+    "id": 81,
+    "nama": "Kabupaten Kampar",
+    "slug": "kabupaten-kampar",
+    "pid": 1406,
+    "prov_id": 14,
+    "ro_city_id": 166,
+    "ro_zip": 28411
+  },
+  {
+    "id": 82,
+    "nama": "Kabupaten Rokan Hulu",
+    "slug": "kabupaten-rokan-hulu",
+    "pid": 1407,
+    "prov_id": 14,
+    "ro_city_id": 382,
+    "ro_zip": 28511
+  },
+  {
+    "id": 83,
+    "nama": "Kabupaten Bengkalis",
+    "slug": "kabupaten-bengkalis",
+    "pid": 1408,
+    "prov_id": 14,
+    "ro_city_id": 60,
+    "ro_zip": 28719
+  },
+  {
+    "id": 84,
+    "nama": "Kabupaten Rokan Hilir",
+    "slug": "kabupaten-rokan-hilir",
+    "pid": 1409,
+    "prov_id": 14,
+    "ro_city_id": 381,
+    "ro_zip": 28992
+  },
+  {
+    "id": 85,
+    "nama": "Kabupaten Kepulauan Meranti",
+    "slug": "kabupaten-kepulauan-meranti",
+    "pid": 1410,
+    "prov_id": 14,
+    "ro_city_id": 187,
+    "ro_zip": 28791
+  },
+  {
+    "id": 86,
+    "nama": "Kota Pekanbaru",
+    "slug": "kota-pekanbaru",
+    "pid": 1471,
+    "prov_id": 14,
+    "ro_city_id": 350,
+    "ro_zip": 28112
+  },
+  {
+    "id": 87,
+    "nama": "Kota D U M A I",
+    "slug": "kota-d-u-m-a-i",
+    "pid": 1473,
+    "prov_id": 14,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 88,
+    "nama": "Kabupaten Kerinci",
+    "slug": "kabupaten-kerinci",
+    "pid": 1501,
+    "prov_id": 15,
+    "ro_city_id": 194,
+    "ro_zip": 37167
+  },
+  {
+    "id": 89,
+    "nama": "Kabupaten Merangin",
+    "slug": "kabupaten-merangin",
+    "pid": 1502,
+    "prov_id": 15,
+    "ro_city_id": 280,
+    "ro_zip": 37319
+  },
+  {
+    "id": 90,
+    "nama": "Kabupaten Sarolangun",
+    "slug": "kabupaten-sarolangun",
+    "pid": 1503,
+    "prov_id": 15,
+    "ro_city_id": 393,
+    "ro_zip": 37419
+  },
+  {
+    "id": 91,
+    "nama": "Kabupaten Batang Hari",
+    "slug": "kabupaten-batang-hari",
+    "pid": 1504,
+    "prov_id": 15,
+    "ro_city_id": 50,
+    "ro_zip": 36613
+  },
+  {
+    "id": 92,
+    "nama": "Kabupaten Muaro Jambi",
+    "slug": "kabupaten-muaro-jambi",
+    "pid": 1505,
+    "prov_id": 15,
+    "ro_city_id": 293,
+    "ro_zip": 36311
+  },
+  {
+    "id": 93,
+    "nama": "Kabupaten Tanjung Jabung Timur",
+    "slug": "kabupaten-tanjung-jabung-timur",
+    "pid": 1506,
+    "prov_id": 15,
+    "ro_city_id": 461,
+    "ro_zip": 36719
+  },
+  {
+    "id": 94,
+    "nama": "Kabupaten Tanjung Jabung Barat",
+    "slug": "kabupaten-tanjung-jabung-barat",
+    "pid": 1507,
+    "prov_id": 15,
+    "ro_city_id": 460,
+    "ro_zip": 36513
+  },
+  {
+    "id": 95,
+    "nama": "Kabupaten Tebo",
+    "slug": "kabupaten-tebo",
+    "pid": 1508,
+    "prov_id": 15,
+    "ro_city_id": 471,
+    "ro_zip": 37519
+  },
+  {
+    "id": 96,
+    "nama": "Kabupaten Bungo",
+    "slug": "kabupaten-bungo",
+    "pid": 1509,
+    "prov_id": 15,
+    "ro_city_id": 97,
+    "ro_zip": 37216
+  },
+  {
+    "id": 97,
+    "nama": "Kota Jambi",
+    "slug": "kota-jambi",
+    "pid": 1571,
+    "prov_id": 15,
+    "ro_city_id": 156,
+    "ro_zip": 36111
+  },
+  {
+    "id": 98,
+    "nama": "Kota Sungai Penuh",
+    "slug": "kota-sungai-penuh",
+    "pid": 1572,
+    "prov_id": 15,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 99,
+    "nama": "Kabupaten Ogan Komering Ulu",
+    "slug": "kabupaten-ogan-komering-ulu",
+    "pid": 1601,
+    "prov_id": 16,
+    "ro_city_id": 314,
+    "ro_zip": 32112
+  },
+  {
+    "id": 100,
+    "nama": "Kabupaten Ogan Komering Ilir",
+    "slug": "kabupaten-ogan-komering-ilir",
+    "pid": 1602,
+    "prov_id": 16,
+    "ro_city_id": 313,
+    "ro_zip": 30618
+  },
+  {
+    "id": 101,
+    "nama": "Kabupaten Muara Enim",
+    "slug": "kabupaten-muara-enim",
+    "pid": 1603,
+    "prov_id": 16,
+    "ro_city_id": 292,
+    "ro_zip": 31315
+  },
+  {
+    "id": 102,
+    "nama": "Kabupaten Lahat",
+    "slug": "kabupaten-lahat",
+    "pid": 1604,
+    "prov_id": 16,
+    "ro_city_id": 220,
+    "ro_zip": 31419
+  },
+  {
+    "id": 103,
+    "nama": "Kabupaten Musi Rawas",
+    "slug": "kabupaten-musi-rawas",
+    "pid": 1605,
+    "prov_id": 16,
+    "ro_city_id": 298,
+    "ro_zip": 31661
+  },
+  {
+    "id": 104,
+    "nama": "Kabupaten Musi Banyuasin",
+    "slug": "kabupaten-musi-banyuasin",
+    "pid": 1606,
+    "prov_id": 16,
+    "ro_city_id": 297,
+    "ro_zip": 30719
+  },
+  {
+    "id": 105,
+    "nama": "Kabupaten Banyu Asin",
+    "slug": "kabupaten-banyu-asin",
+    "pid": 1607,
+    "prov_id": 16,
+    "ro_city_id": 40,
+    "ro_zip": 30911
+  },
+  {
+    "id": 106,
+    "nama": "Kabupaten Ogan Komering Ulu Selatan",
+    "slug": "kabupaten-ogan-komering-ulu-selatan",
+    "pid": 1608,
+    "prov_id": 16,
+    "ro_city_id": 315,
+    "ro_zip": 32211
+  },
+  {
+    "id": 107,
+    "nama": "Kabupaten Ogan Komering Ulu Timur",
+    "slug": "kabupaten-ogan-komering-ulu-timur",
+    "pid": 1609,
+    "prov_id": 16,
+    "ro_city_id": 316,
+    "ro_zip": 32312
+  },
+  {
+    "id": 108,
+    "nama": "Kabupaten Ogan Ilir",
+    "slug": "kabupaten-ogan-ilir",
+    "pid": 1610,
+    "prov_id": 16,
+    "ro_city_id": 312,
+    "ro_zip": 30811
+  },
+  {
+    "id": 109,
+    "nama": "Kabupaten Empat Lawang",
+    "slug": "kabupaten-empat-lawang",
+    "pid": 1611,
+    "prov_id": 16,
+    "ro_city_id": 121,
+    "ro_zip": 31811
+  },
+  {
+    "id": 110,
+    "nama": "Kabupaten Penukal Abab Lematang Ilir",
+    "slug": "kabupaten-penukal-abab-lematang-ilir",
+    "pid": 1612,
+    "prov_id": 16,
+    "ro_city_id": 312,
+    "ro_zip": 30811
+  },
+  {
+    "id": 111,
+    "nama": "Kabupaten Musi Rawas Utara",
+    "slug": "kabupaten-musi-rawas-utara",
+    "pid": 1613,
+    "prov_id": 16,
+    "ro_city_id": 298,
+    "ro_zip": 31661
+  },
+  {
+    "id": 112,
+    "nama": "Kota Palembang",
+    "slug": "kota-palembang",
+    "pid": 1671,
+    "prov_id": 16,
+    "ro_city_id": 327,
+    "ro_zip": 30111
+  },
+  {
+    "id": 113,
+    "nama": "Kota Prabumulih",
+    "slug": "kota-prabumulih",
+    "pid": 1672,
+    "prov_id": 16,
+    "ro_city_id": 367,
+    "ro_zip": 31121
+  },
+  {
+    "id": 114,
+    "nama": "Kota Pagar Alam",
+    "slug": "kota-pagar-alam",
+    "pid": 1673,
+    "prov_id": 16,
+    "ro_city_id": 324,
+    "ro_zip": 31512
+  },
+  {
+    "id": 115,
+    "nama": "Kota Lubuklinggau",
+    "slug": "kota-lubuklinggau",
+    "pid": 1674,
+    "prov_id": 16,
+    "ro_city_id": 242,
+    "ro_zip": 31614
+  },
+  {
+    "id": 116,
+    "nama": "Kabupaten Bengkulu Selatan",
+    "slug": "kabupaten-bengkulu-selatan",
+    "pid": 1701,
+    "prov_id": 17,
+    "ro_city_id": 63,
+    "ro_zip": 38519
+  },
+  {
+    "id": 117,
+    "nama": "Kabupaten Rejang Lebong",
+    "slug": "kabupaten-rejang-lebong",
+    "pid": 1702,
+    "prov_id": 17,
+    "ro_city_id": 379,
+    "ro_zip": 39112
+  },
+  {
+    "id": 118,
+    "nama": "Kabupaten Bengkulu Utara",
+    "slug": "kabupaten-bengkulu-utara",
+    "pid": 1703,
+    "prov_id": 17,
+    "ro_city_id": 65,
+    "ro_zip": 38619
+  },
+  {
+    "id": 119,
+    "nama": "Kabupaten Kaur",
+    "slug": "kabupaten-kaur",
+    "pid": 1704,
+    "prov_id": 17,
+    "ro_city_id": 175,
+    "ro_zip": 38911
+  },
+  {
+    "id": 120,
+    "nama": "Kabupaten Seluma",
+    "slug": "kabupaten-seluma",
+    "pid": 1705,
+    "prov_id": 17,
+    "ro_city_id": 397,
+    "ro_zip": 38811
+  },
+  {
+    "id": 121,
+    "nama": "Kabupaten Mukomuko",
+    "slug": "kabupaten-mukomuko",
+    "pid": 1706,
+    "prov_id": 17,
+    "ro_city_id": 294,
+    "ro_zip": 38715
+  },
+  {
+    "id": 122,
+    "nama": "Kabupaten Lebong",
+    "slug": "kabupaten-lebong",
+    "pid": 1707,
+    "prov_id": 17,
+    "ro_city_id": 233,
+    "ro_zip": 39264
+  },
+  {
+    "id": 123,
+    "nama": "Kabupaten Kepahiang",
+    "slug": "kabupaten-kepahiang",
+    "pid": 1708,
+    "prov_id": 17,
+    "ro_city_id": 183,
+    "ro_zip": 39319
+  },
+  {
+    "id": 124,
+    "nama": "Kabupaten Bengkulu Tengah",
+    "slug": "kabupaten-bengkulu-tengah",
+    "pid": 1709,
+    "prov_id": 17,
+    "ro_city_id": 64,
+    "ro_zip": 38319
+  },
+  {
+    "id": 125,
+    "nama": "Kota Bengkulu",
+    "slug": "kota-bengkulu",
+    "pid": 1771,
+    "prov_id": 17,
+    "ro_city_id": 62,
+    "ro_zip": 38229
+  },
+  {
+    "id": 126,
+    "nama": "Kabupaten Lampung Barat",
+    "slug": "kabupaten-lampung-barat",
+    "pid": 1801,
+    "prov_id": 18,
+    "ro_city_id": 223,
+    "ro_zip": 34814
+  },
+  {
+    "id": 127,
+    "nama": "Kabupaten Tanggamus",
+    "slug": "kabupaten-tanggamus",
+    "pid": 1802,
+    "prov_id": 18,
+    "ro_city_id": 458,
+    "ro_zip": 35619
+  },
+  {
+    "id": 128,
+    "nama": "Kabupaten Lampung Selatan",
+    "slug": "kabupaten-lampung-selatan",
+    "pid": 1803,
+    "prov_id": 18,
+    "ro_city_id": 224,
+    "ro_zip": 35511
+  },
+  {
+    "id": 129,
+    "nama": "Kabupaten Lampung Timur",
+    "slug": "kabupaten-lampung-timur",
+    "pid": 1804,
+    "prov_id": 18,
+    "ro_city_id": 226,
+    "ro_zip": 34319
+  },
+  {
+    "id": 130,
+    "nama": "Kabupaten Lampung Tengah",
+    "slug": "kabupaten-lampung-tengah",
+    "pid": 1805,
+    "prov_id": 18,
+    "ro_city_id": 225,
+    "ro_zip": 34212
+  },
+  {
+    "id": 131,
+    "nama": "Kabupaten Lampung Utara",
+    "slug": "kabupaten-lampung-utara",
+    "pid": 1806,
+    "prov_id": 18,
+    "ro_city_id": 227,
+    "ro_zip": 34516
+  },
+  {
+    "id": 132,
+    "nama": "Kabupaten Way Kanan",
+    "slug": "kabupaten-way-kanan",
+    "pid": 1807,
+    "prov_id": 18,
+    "ro_city_id": 496,
+    "ro_zip": 34711
+  },
+  {
+    "id": 133,
+    "nama": "Kabupaten Tulangbawang",
+    "slug": "kabupaten-tulangbawang",
+    "pid": 1808,
+    "prov_id": 18,
+    "ro_city_id": 490,
+    "ro_zip": 34613
+  },
+  {
+    "id": 134,
+    "nama": "Kabupaten Pesawaran",
+    "slug": "kabupaten-pesawaran",
+    "pid": 1809,
+    "prov_id": 18,
+    "ro_city_id": 355,
+    "ro_zip": 35312
+  },
+  {
+    "id": 135,
+    "nama": "Kabupaten Pringsewu",
+    "slug": "kabupaten-pringsewu",
+    "pid": 1810,
+    "prov_id": 18,
+    "ro_city_id": 368,
+    "ro_zip": 35719
+  },
+  {
+    "id": 136,
+    "nama": "Kabupaten Mesuji",
+    "slug": "kabupaten-mesuji",
+    "pid": 1811,
+    "prov_id": 18,
+    "ro_city_id": 282,
+    "ro_zip": 34911
+  },
+  {
+    "id": 137,
+    "nama": "Kabupaten Tulang Bawang Barat",
+    "slug": "kabupaten-tulang-bawang-barat",
+    "pid": 1812,
+    "prov_id": 18,
+    "ro_city_id": 491,
+    "ro_zip": 34419
+  },
+  {
+    "id": 138,
+    "nama": "Kabupaten Pesisir Barat",
+    "slug": "kabupaten-pesisir-barat",
+    "pid": 1813,
+    "prov_id": 18,
+    "ro_city_id": 356,
+    "ro_zip": 35974
+  },
+  {
+    "id": 139,
+    "nama": "Kota Bandar Lampung",
+    "slug": "kota-bandar-lampung",
+    "pid": 1871,
+    "prov_id": 18,
+    "ro_city_id": 21,
+    "ro_zip": 35139
+  },
+  {
+    "id": 140,
+    "nama": "Kota Metro",
+    "slug": "kota-metro",
+    "pid": 1872,
+    "prov_id": 18,
+    "ro_city_id": 283,
+    "ro_zip": 34111
+  },
+  {
+    "id": 141,
+    "nama": "Kabupaten Bangka",
+    "slug": "kabupaten-bangka",
+    "pid": 1901,
+    "prov_id": 19,
+    "ro_city_id": 27,
+    "ro_zip": 33212
+  },
+  {
+    "id": 142,
+    "nama": "Kabupaten Belitung",
+    "slug": "kabupaten-belitung",
+    "pid": 1902,
+    "prov_id": 19,
+    "ro_city_id": 56,
+    "ro_zip": 33419
+  },
+  {
+    "id": 143,
+    "nama": "Kabupaten Bangka Barat",
+    "slug": "kabupaten-bangka-barat",
+    "pid": 1903,
+    "prov_id": 19,
+    "ro_city_id": 28,
+    "ro_zip": 33315
+  },
+  {
+    "id": 144,
+    "nama": "Kabupaten Bangka Tengah",
+    "slug": "kabupaten-bangka-tengah",
+    "pid": 1904,
+    "prov_id": 19,
+    "ro_city_id": 30,
+    "ro_zip": 33613
+  },
+  {
+    "id": 145,
+    "nama": "Kabupaten Bangka Selatan",
+    "slug": "kabupaten-bangka-selatan",
+    "pid": 1905,
+    "prov_id": 19,
+    "ro_city_id": 29,
+    "ro_zip": 33719
+  },
+  {
+    "id": 146,
+    "nama": "Kabupaten Belitung Timur",
+    "slug": "kabupaten-belitung-timur",
+    "pid": 1906,
+    "prov_id": 19,
+    "ro_city_id": 57,
+    "ro_zip": 33519
+  },
+  {
+    "id": 147,
+    "nama": "Kota Pangkal Pinang",
+    "slug": "kota-pangkal-pinang",
+    "pid": 1971,
+    "prov_id": 19,
+    "ro_city_id": 334,
+    "ro_zip": 33115
+  },
+  {
+    "id": 148,
+    "nama": "Kabupaten Karimun",
+    "slug": "kabupaten-karimun",
+    "pid": 2101,
+    "prov_id": 21,
+    "ro_city_id": 172,
+    "ro_zip": 29611
+  },
+  {
+    "id": 149,
+    "nama": "Kabupaten Bintan",
+    "slug": "kabupaten-bintan",
+    "pid": 2102,
+    "prov_id": 21,
+    "ro_city_id": 71,
+    "ro_zip": 29135
+  },
+  {
+    "id": 150,
+    "nama": "Kabupaten Natuna",
+    "slug": "kabupaten-natuna",
+    "pid": 2103,
+    "prov_id": 21,
+    "ro_city_id": 302,
+    "ro_zip": 29711
+  },
+  {
+    "id": 151,
+    "nama": "Kabupaten Lingga",
+    "slug": "kabupaten-lingga",
+    "pid": 2104,
+    "prov_id": 21,
+    "ro_city_id": 237,
+    "ro_zip": 29811
+  },
+  {
+    "id": 152,
+    "nama": "Kabupaten Kepulauan Anambas",
+    "slug": "kabupaten-kepulauan-anambas",
+    "pid": 2105,
+    "prov_id": 21,
+    "ro_city_id": 184,
+    "ro_zip": 29991
+  },
+  {
+    "id": 153,
+    "nama": "Kota B A T A M",
+    "slug": "kota-b-a-t-a-m",
+    "pid": 2171,
+    "prov_id": 21,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 154,
+    "nama": "Kota Tanjung Pinang",
+    "slug": "kota-tanjung-pinang",
+    "pid": 2172,
+    "prov_id": 21,
+    "ro_city_id": 462,
+    "ro_zip": 29111
+  },
+  {
+    "id": 155,
+    "nama": "Kabupaten Kepulauan Seribu",
+    "slug": "kabupaten-kepulauan-seribu",
+    "pid": 3101,
+    "prov_id": 31,
+    "ro_city_id": 189,
+    "ro_zip": 14550
+  },
+  {
+    "id": 156,
+    "nama": "Kota Jakarta Selatan",
+    "slug": "kota-jakarta-selatan",
+    "pid": 3171,
+    "prov_id": 31,
+    "ro_city_id": 153,
+    "ro_zip": 12230
+  },
+  {
+    "id": 157,
+    "nama": "Kota Jakarta Timur",
+    "slug": "kota-jakarta-timur",
+    "pid": 3172,
+    "prov_id": 31,
+    "ro_city_id": 154,
+    "ro_zip": 13330
+  },
+  {
+    "id": 158,
+    "nama": "Kota Jakarta Pusat",
+    "slug": "kota-jakarta-pusat",
+    "pid": 3173,
+    "prov_id": 31,
+    "ro_city_id": 152,
+    "ro_zip": 10540
+  },
+  {
+    "id": 159,
+    "nama": "Kota Jakarta Barat",
+    "slug": "kota-jakarta-barat",
+    "pid": 3174,
+    "prov_id": 31,
+    "ro_city_id": 151,
+    "ro_zip": 11220
+  },
+  {
+    "id": 160,
+    "nama": "Kota Jakarta Utara",
+    "slug": "kota-jakarta-utara",
+    "pid": 3175,
+    "prov_id": 31,
+    "ro_city_id": 155,
+    "ro_zip": 14140
+  },
+  {
+    "id": 161,
+    "nama": "Kabupaten Bogor",
+    "slug": "kabupaten-bogor",
+    "pid": 3201,
+    "prov_id": 32,
+    "ro_city_id": 79,
+    "ro_zip": 16119
+  },
+  {
+    "id": 162,
+    "nama": "Kabupaten Sukabumi",
+    "slug": "kabupaten-sukabumi",
+    "pid": 3202,
+    "prov_id": 32,
+    "ro_city_id": 431,
+    "ro_zip": 43114
+  },
+  {
+    "id": 163,
+    "nama": "Kabupaten Cianjur",
+    "slug": "kabupaten-cianjur",
+    "pid": 3203,
+    "prov_id": 32,
+    "ro_city_id": 104,
+    "ro_zip": 43217
+  },
+  {
+    "id": 164,
+    "nama": "Kabupaten Bandung",
+    "slug": "kabupaten-bandung",
+    "pid": 3204,
+    "prov_id": 32,
+    "ro_city_id": 23,
+    "ro_zip": 40111
+  },
+  {
+    "id": 165,
+    "nama": "Kabupaten Garut",
+    "slug": "kabupaten-garut",
+    "pid": 3205,
+    "prov_id": 32,
+    "ro_city_id": 126,
+    "ro_zip": 44126
+  },
+  {
+    "id": 166,
+    "nama": "Kabupaten Tasikmalaya",
+    "slug": "kabupaten-tasikmalaya",
+    "pid": 3206,
+    "prov_id": 32,
+    "ro_city_id": 469,
+    "ro_zip": 46116
+  },
+  {
+    "id": 167,
+    "nama": "Kabupaten Ciamis",
+    "slug": "kabupaten-ciamis",
+    "pid": 3207,
+    "prov_id": 32,
+    "ro_city_id": 103,
+    "ro_zip": 46211
+  },
+  {
+    "id": 168,
+    "nama": "Kabupaten Kuningan",
+    "slug": "kabupaten-kuningan",
+    "pid": 3208,
+    "prov_id": 32,
+    "ro_city_id": 211,
+    "ro_zip": 45511
+  },
+  {
+    "id": 169,
+    "nama": "Kabupaten Cirebon",
+    "slug": "kabupaten-cirebon",
+    "pid": 3209,
+    "prov_id": 32,
+    "ro_city_id": 109,
+    "ro_zip": 45116
+  },
+  {
+    "id": 170,
+    "nama": "Kabupaten Majalengka",
+    "slug": "kabupaten-majalengka",
+    "pid": 3210,
+    "prov_id": 32,
+    "ro_city_id": 252,
+    "ro_zip": 45412
+  },
+  {
+    "id": 171,
+    "nama": "Kabupaten Sumedang",
+    "slug": "kabupaten-sumedang",
+    "pid": 3211,
+    "prov_id": 32,
+    "ro_city_id": 440,
+    "ro_zip": 45326
+  },
+  {
+    "id": 172,
+    "nama": "Kabupaten Indramayu",
+    "slug": "kabupaten-indramayu",
+    "pid": 3212,
+    "prov_id": 32,
+    "ro_city_id": 149,
+    "ro_zip": 45214
+  },
+  {
+    "id": 173,
+    "nama": "Kabupaten Subang",
+    "slug": "kabupaten-subang",
+    "pid": 3213,
+    "prov_id": 32,
+    "ro_city_id": 428,
+    "ro_zip": 41215
+  },
+  {
+    "id": 174,
+    "nama": "Kabupaten Purwakarta",
+    "slug": "kabupaten-purwakarta",
+    "pid": 3214,
+    "prov_id": 32,
+    "ro_city_id": 376,
+    "ro_zip": 41119
+  },
+  {
+    "id": 175,
+    "nama": "Kabupaten Karawang",
+    "slug": "kabupaten-karawang",
+    "pid": 3215,
+    "prov_id": 32,
+    "ro_city_id": 171,
+    "ro_zip": 41311
+  },
+  {
+    "id": 176,
+    "nama": "Kabupaten Bekasi",
+    "slug": "kabupaten-bekasi",
+    "pid": 3216,
+    "prov_id": 32,
+    "ro_city_id": 55,
+    "ro_zip": 17121
+  },
+  {
+    "id": 177,
+    "nama": "Kabupaten Bandung Barat",
+    "slug": "kabupaten-bandung-barat",
+    "pid": 3217,
+    "prov_id": 32,
+    "ro_city_id": 24,
+    "ro_zip": 40721
+  },
+  {
+    "id": 178,
+    "nama": "Kabupaten Pangandaran",
+    "slug": "kabupaten-pangandaran",
+    "pid": 3218,
+    "prov_id": 32,
+    "ro_city_id": 332,
+    "ro_zip": 46511
+  },
+  {
+    "id": 179,
+    "nama": "Kota Bogor",
+    "slug": "kota-bogor",
+    "pid": 3271,
+    "prov_id": 32,
+    "ro_city_id": 79,
+    "ro_zip": 16119
+  },
+  {
+    "id": 180,
+    "nama": "Kota Sukabumi",
+    "slug": "kota-sukabumi",
+    "pid": 3272,
+    "prov_id": 32,
+    "ro_city_id": 431,
+    "ro_zip": 43114
+  },
+  {
+    "id": 181,
+    "nama": "Kota Bandung",
+    "slug": "kota-bandung",
+    "pid": 3273,
+    "prov_id": 32,
+    "ro_city_id": 23,
+    "ro_zip": 40111
+  },
+  {
+    "id": 182,
+    "nama": "Kota Cirebon",
+    "slug": "kota-cirebon",
+    "pid": 3274,
+    "prov_id": 32,
+    "ro_city_id": 109,
+    "ro_zip": 45116
+  },
+  {
+    "id": 183,
+    "nama": "Kota Bekasi",
+    "slug": "kota-bekasi",
+    "pid": 3275,
+    "prov_id": 32,
+    "ro_city_id": 55,
+    "ro_zip": 17121
+  },
+  {
+    "id": 184,
+    "nama": "Kota Depok",
+    "slug": "kota-depok",
+    "pid": 3276,
+    "prov_id": 32,
+    "ro_city_id": 115,
+    "ro_zip": 16416
+  },
+  {
+    "id": 185,
+    "nama": "Kota Cimahi",
+    "slug": "kota-cimahi",
+    "pid": 3277,
+    "prov_id": 32,
+    "ro_city_id": 107,
+    "ro_zip": 40512
+  },
+  {
+    "id": 186,
+    "nama": "Kota Tasikmalaya",
+    "slug": "kota-tasikmalaya",
+    "pid": 3278,
+    "prov_id": 32,
+    "ro_city_id": 469,
+    "ro_zip": 46116
+  },
+  {
+    "id": 187,
+    "nama": "Kota Banjar",
+    "slug": "kota-banjar",
+    "pid": 3279,
+    "prov_id": 32,
+    "ro_city_id": 34,
+    "ro_zip": 46311
+  },
+  {
+    "id": 188,
+    "nama": "Kabupaten Cilacap",
+    "slug": "kabupaten-cilacap",
+    "pid": 3301,
+    "prov_id": 33,
+    "ro_city_id": 105,
+    "ro_zip": 53211
+  },
+  {
+    "id": 189,
+    "nama": "Kabupaten Banyumas",
+    "slug": "kabupaten-banyumas",
+    "pid": 3302,
+    "prov_id": 33,
+    "ro_city_id": 41,
+    "ro_zip": 53114
+  },
+  {
+    "id": 190,
+    "nama": "Kabupaten Purbalingga",
+    "slug": "kabupaten-purbalingga",
+    "pid": 3303,
+    "prov_id": 33,
+    "ro_city_id": 375,
+    "ro_zip": 53312
+  },
+  {
+    "id": 191,
+    "nama": "Kabupaten Banjarnegara",
+    "slug": "kabupaten-banjarnegara",
+    "pid": 3304,
+    "prov_id": 33,
+    "ro_city_id": 37,
+    "ro_zip": 53419
+  },
+  {
+    "id": 192,
+    "nama": "Kabupaten Kebumen",
+    "slug": "kabupaten-kebumen",
+    "pid": 3305,
+    "prov_id": 33,
+    "ro_city_id": 177,
+    "ro_zip": 54319
+  },
+  {
+    "id": 193,
+    "nama": "Kabupaten Purworejo",
+    "slug": "kabupaten-purworejo",
+    "pid": 3306,
+    "prov_id": 33,
+    "ro_city_id": 377,
+    "ro_zip": 54111
+  },
+  {
+    "id": 194,
+    "nama": "Kabupaten Wonosobo",
+    "slug": "kabupaten-wonosobo",
+    "pid": 3307,
+    "prov_id": 33,
+    "ro_city_id": 498,
+    "ro_zip": 56311
+  },
+  {
+    "id": 195,
+    "nama": "Kabupaten Magelang",
+    "slug": "kabupaten-magelang",
+    "pid": 3308,
+    "prov_id": 33,
+    "ro_city_id": 250,
+    "ro_zip": 56133
+  },
+  {
+    "id": 196,
+    "nama": "Kabupaten Boyolali",
+    "slug": "kabupaten-boyolali",
+    "pid": 3309,
+    "prov_id": 33,
+    "ro_city_id": 91,
+    "ro_zip": 57312
+  },
+  {
+    "id": 197,
+    "nama": "Kabupaten Klaten",
+    "slug": "kabupaten-klaten",
+    "pid": 3310,
+    "prov_id": 33,
+    "ro_city_id": 196,
+    "ro_zip": 57411
+  },
+  {
+    "id": 198,
+    "nama": "Kabupaten Sukoharjo",
+    "slug": "kabupaten-sukoharjo",
+    "pid": 3311,
+    "prov_id": 33,
+    "ro_city_id": 433,
+    "ro_zip": 57514
+  },
+  {
+    "id": 199,
+    "nama": "Kabupaten Wonogiri",
+    "slug": "kabupaten-wonogiri",
+    "pid": 3312,
+    "prov_id": 33,
+    "ro_city_id": 497,
+    "ro_zip": 57619
+  },
+  {
+    "id": 200,
+    "nama": "Kabupaten Karanganyar",
+    "slug": "kabupaten-karanganyar",
+    "pid": 3313,
+    "prov_id": 33,
+    "ro_city_id": 169,
+    "ro_zip": 57718
+  },
+  {
+    "id": 201,
+    "nama": "Kabupaten Sragen",
+    "slug": "kabupaten-sragen",
+    "pid": 3314,
+    "prov_id": 33,
+    "ro_city_id": 427,
+    "ro_zip": 57211
+  },
+  {
+    "id": 202,
+    "nama": "Kabupaten Grobogan",
+    "slug": "kabupaten-grobogan",
+    "pid": 3315,
+    "prov_id": 33,
+    "ro_city_id": 134,
+    "ro_zip": 58111
+  },
+  {
+    "id": 203,
+    "nama": "Kabupaten Blora",
+    "slug": "kabupaten-blora",
+    "pid": 3316,
+    "prov_id": 33,
+    "ro_city_id": 76,
+    "ro_zip": 58219
+  },
+  {
+    "id": 204,
+    "nama": "Kabupaten Rembang",
+    "slug": "kabupaten-rembang",
+    "pid": 3317,
+    "prov_id": 33,
+    "ro_city_id": 380,
+    "ro_zip": 59219
+  },
+  {
+    "id": 205,
+    "nama": "Kabupaten Pati",
+    "slug": "kabupaten-pati",
+    "pid": 3318,
+    "prov_id": 33,
+    "ro_city_id": 344,
+    "ro_zip": 59114
+  },
+  {
+    "id": 206,
+    "nama": "Kabupaten Kudus",
+    "slug": "kabupaten-kudus",
+    "pid": 3319,
+    "prov_id": 33,
+    "ro_city_id": 209,
+    "ro_zip": 59311
+  },
+  {
+    "id": 207,
+    "nama": "Kabupaten Jepara",
+    "slug": "kabupaten-jepara",
+    "pid": 3320,
+    "prov_id": 33,
+    "ro_city_id": 163,
+    "ro_zip": 59419
+  },
+  {
+    "id": 208,
+    "nama": "Kabupaten Demak",
+    "slug": "kabupaten-demak",
+    "pid": 3321,
+    "prov_id": 33,
+    "ro_city_id": 113,
+    "ro_zip": 59519
+  },
+  {
+    "id": 209,
+    "nama": "Kabupaten Semarang",
+    "slug": "kabupaten-semarang",
+    "pid": 3322,
+    "prov_id": 33,
+    "ro_city_id": 399,
+    "ro_zip": 50135
+  },
+  {
+    "id": 210,
+    "nama": "Kabupaten Temanggung",
+    "slug": "kabupaten-temanggung",
+    "pid": 3323,
+    "prov_id": 33,
+    "ro_city_id": 476,
+    "ro_zip": 56212
+  },
+  {
+    "id": 211,
+    "nama": "Kabupaten Kendal",
+    "slug": "kabupaten-kendal",
+    "pid": 3324,
+    "prov_id": 33,
+    "ro_city_id": 181,
+    "ro_zip": 51314
+  },
+  {
+    "id": 212,
+    "nama": "Kabupaten Batang",
+    "slug": "kabupaten-batang",
+    "pid": 3325,
+    "prov_id": 33,
+    "ro_city_id": 49,
+    "ro_zip": 51211
+  },
+  {
+    "id": 213,
+    "nama": "Kabupaten Pekalongan",
+    "slug": "kabupaten-pekalongan",
+    "pid": 3326,
+    "prov_id": 33,
+    "ro_city_id": 349,
+    "ro_zip": 51122
+  },
+  {
+    "id": 214,
+    "nama": "Kabupaten Pemalang",
+    "slug": "kabupaten-pemalang",
+    "pid": 3327,
+    "prov_id": 33,
+    "ro_city_id": 352,
+    "ro_zip": 52319
+  },
+  {
+    "id": 215,
+    "nama": "Kabupaten Tegal",
+    "slug": "kabupaten-tegal",
+    "pid": 3328,
+    "prov_id": 33,
+    "ro_city_id": 473,
+    "ro_zip": 52114
+  },
+  {
+    "id": 216,
+    "nama": "Kabupaten Brebes",
+    "slug": "kabupaten-brebes",
+    "pid": 3329,
+    "prov_id": 33,
+    "ro_city_id": 92,
+    "ro_zip": 52212
+  },
+  {
+    "id": 217,
+    "nama": "Kota Magelang",
+    "slug": "kota-magelang",
+    "pid": 3371,
+    "prov_id": 33,
+    "ro_city_id": 250,
+    "ro_zip": 56133
+  },
+  {
+    "id": 218,
+    "nama": "Kota Surakarta",
+    "slug": "kota-surakarta",
+    "pid": 3372,
+    "prov_id": 33,
+    "ro_city_id": 445,
+    "ro_zip": 57113
+  },
+  {
+    "id": 219,
+    "nama": "Kota Salatiga",
+    "slug": "kota-salatiga",
+    "pid": 3373,
+    "prov_id": 33,
+    "ro_city_id": 386,
+    "ro_zip": 50711
+  },
+  {
+    "id": 220,
+    "nama": "Kota Semarang",
+    "slug": "kota-semarang",
+    "pid": 3374,
+    "prov_id": 33,
+    "ro_city_id": 399,
+    "ro_zip": 50135
+  },
+  {
+    "id": 221,
+    "nama": "Kota Pekalongan",
+    "slug": "kota-pekalongan",
+    "pid": 3375,
+    "prov_id": 33,
+    "ro_city_id": 349,
+    "ro_zip": 51122
+  },
+  {
+    "id": 222,
+    "nama": "Kota Tegal",
+    "slug": "kota-tegal",
+    "pid": 3376,
+    "prov_id": 33,
+    "ro_city_id": 473,
+    "ro_zip": 52114
+  },
+  {
+    "id": 223,
+    "nama": "Kabupaten Kulon Progo",
+    "slug": "kabupaten-kulon-progo",
+    "pid": 3401,
+    "prov_id": 34,
+    "ro_city_id": 210,
+    "ro_zip": 55611
+  },
+  {
+    "id": 224,
+    "nama": "Kabupaten Bantul",
+    "slug": "kabupaten-bantul",
+    "pid": 3402,
+    "prov_id": 34,
+    "ro_city_id": 39,
+    "ro_zip": 55715
+  },
+  {
+    "id": 225,
+    "nama": "Kabupaten Gunung Kidul",
+    "slug": "kabupaten-gunung-kidul",
+    "pid": 3403,
+    "prov_id": 34,
+    "ro_city_id": 135,
+    "ro_zip": 55812
+  },
+  {
+    "id": 226,
+    "nama": "Kabupaten Sleman",
+    "slug": "kabupaten-sleman",
+    "pid": 3404,
+    "prov_id": 34,
+    "ro_city_id": 419,
+    "ro_zip": 55513
+  },
+  {
+    "id": 227,
+    "nama": "Kota Yogyakarta",
+    "slug": "kota-yogyakarta",
+    "pid": 3471,
+    "prov_id": 34,
+    "ro_city_id": 501,
+    "ro_zip": 55111
+  },
+  {
+    "id": 228,
+    "nama": "Kabupaten Pacitan",
+    "slug": "kabupaten-pacitan",
+    "pid": 3501,
+    "prov_id": 35,
+    "ro_city_id": 317,
+    "ro_zip": 63512
+  },
+  {
+    "id": 229,
+    "nama": "Kabupaten Ponorogo",
+    "slug": "kabupaten-ponorogo",
+    "pid": 3502,
+    "prov_id": 35,
+    "ro_city_id": 363,
+    "ro_zip": 63411
+  },
+  {
+    "id": 230,
+    "nama": "Kabupaten Trenggalek",
+    "slug": "kabupaten-trenggalek",
+    "pid": 3503,
+    "prov_id": 35,
+    "ro_city_id": 487,
+    "ro_zip": 66312
+  },
+  {
+    "id": 231,
+    "nama": "Kabupaten Tulungagung",
+    "slug": "kabupaten-tulungagung",
+    "pid": 3504,
+    "prov_id": 35,
+    "ro_city_id": 492,
+    "ro_zip": 66212
+  },
+  {
+    "id": 232,
+    "nama": "Kabupaten Blitar",
+    "slug": "kabupaten-blitar",
+    "pid": 3505,
+    "prov_id": 35,
+    "ro_city_id": 75,
+    "ro_zip": 66124
+  },
+  {
+    "id": 233,
+    "nama": "Kabupaten Kediri",
+    "slug": "kabupaten-kediri",
+    "pid": 3506,
+    "prov_id": 35,
+    "ro_city_id": 179,
+    "ro_zip": 64125
+  },
+  {
+    "id": 234,
+    "nama": "Kabupaten Malang",
+    "slug": "kabupaten-malang",
+    "pid": 3507,
+    "prov_id": 35,
+    "ro_city_id": 256,
+    "ro_zip": 65112
+  },
+  {
+    "id": 235,
+    "nama": "Kabupaten Lumajang",
+    "slug": "kabupaten-lumajang",
+    "pid": 3508,
+    "prov_id": 35,
+    "ro_city_id": 243,
+    "ro_zip": 67319
+  },
+  {
+    "id": 236,
+    "nama": "Kabupaten Jember",
+    "slug": "kabupaten-jember",
+    "pid": 3509,
+    "prov_id": 35,
+    "ro_city_id": 160,
+    "ro_zip": 68113
+  },
+  {
+    "id": 237,
+    "nama": "Kabupaten Banyuwangi",
+    "slug": "kabupaten-banyuwangi",
+    "pid": 3510,
+    "prov_id": 35,
+    "ro_city_id": 42,
+    "ro_zip": 68416
+  },
+  {
+    "id": 238,
+    "nama": "Kabupaten Bondowoso",
+    "slug": "kabupaten-bondowoso",
+    "pid": 3511,
+    "prov_id": 35,
+    "ro_city_id": 86,
+    "ro_zip": 68219
+  },
+  {
+    "id": 239,
+    "nama": "Kabupaten Situbondo",
+    "slug": "kabupaten-situbondo",
+    "pid": 3512,
+    "prov_id": 35,
+    "ro_city_id": 418,
+    "ro_zip": 68316
+  },
+  {
+    "id": 240,
+    "nama": "Kabupaten Probolinggo",
+    "slug": "kabupaten-probolinggo",
+    "pid": 3513,
+    "prov_id": 35,
+    "ro_city_id": 370,
+    "ro_zip": 67215
+  },
+  {
+    "id": 241,
+    "nama": "Kabupaten Pasuruan",
+    "slug": "kabupaten-pasuruan",
+    "pid": 3514,
+    "prov_id": 35,
+    "ro_city_id": 343,
+    "ro_zip": 67118
+  },
+  {
+    "id": 242,
+    "nama": "Kabupaten Sidoarjo",
+    "slug": "kabupaten-sidoarjo",
+    "pid": 3515,
+    "prov_id": 35,
+    "ro_city_id": 409,
+    "ro_zip": 61219
+  },
+  {
+    "id": 243,
+    "nama": "Kabupaten Mojokerto",
+    "slug": "kabupaten-mojokerto",
+    "pid": 3516,
+    "prov_id": 35,
+    "ro_city_id": 290,
+    "ro_zip": 61316
+  },
+  {
+    "id": 244,
+    "nama": "Kabupaten Jombang",
+    "slug": "kabupaten-jombang",
+    "pid": 3517,
+    "prov_id": 35,
+    "ro_city_id": 164,
+    "ro_zip": 61415
+  },
+  {
+    "id": 245,
+    "nama": "Kabupaten Nganjuk",
+    "slug": "kabupaten-nganjuk",
+    "pid": 3518,
+    "prov_id": 35,
+    "ro_city_id": 305,
+    "ro_zip": 64414
+  },
+  {
+    "id": 246,
+    "nama": "Kabupaten Madiun",
+    "slug": "kabupaten-madiun",
+    "pid": 3519,
+    "prov_id": 35,
+    "ro_city_id": 248,
+    "ro_zip": 63122
+  },
+  {
+    "id": 247,
+    "nama": "Kabupaten Magetan",
+    "slug": "kabupaten-magetan",
+    "pid": 3520,
+    "prov_id": 35,
+    "ro_city_id": 251,
+    "ro_zip": 63314
+  },
+  {
+    "id": 248,
+    "nama": "Kabupaten Ngawi",
+    "slug": "kabupaten-ngawi",
+    "pid": 3521,
+    "prov_id": 35,
+    "ro_city_id": 306,
+    "ro_zip": 63219
+  },
+  {
+    "id": 249,
+    "nama": "Kabupaten Bojonegoro",
+    "slug": "kabupaten-bojonegoro",
+    "pid": 3522,
+    "prov_id": 35,
+    "ro_city_id": 80,
+    "ro_zip": 62119
+  },
+  {
+    "id": 250,
+    "nama": "Kabupaten Tuban",
+    "slug": "kabupaten-tuban",
+    "pid": 3523,
+    "prov_id": 35,
+    "ro_city_id": 489,
+    "ro_zip": 62319
+  },
+  {
+    "id": 251,
+    "nama": "Kabupaten Lamongan",
+    "slug": "kabupaten-lamongan",
+    "pid": 3524,
+    "prov_id": 35,
+    "ro_city_id": 222,
+    "ro_zip": 64125
+  },
+  {
+    "id": 252,
+    "nama": "Kabupaten Gresik",
+    "slug": "kabupaten-gresik",
+    "pid": 3525,
+    "prov_id": 35,
+    "ro_city_id": 133,
+    "ro_zip": 61115
+  },
+  {
+    "id": 253,
+    "nama": "Kabupaten Bangkalan",
+    "slug": "kabupaten-bangkalan",
+    "pid": 3526,
+    "prov_id": 35,
+    "ro_city_id": 31,
+    "ro_zip": 69118
+  },
+  {
+    "id": 254,
+    "nama": "Kabupaten Sampang",
+    "slug": "kabupaten-sampang",
+    "pid": 3527,
+    "prov_id": 35,
+    "ro_city_id": 390,
+    "ro_zip": 69219
+  },
+  {
+    "id": 255,
+    "nama": "Kabupaten Pamekasan",
+    "slug": "kabupaten-pamekasan",
+    "pid": 3528,
+    "prov_id": 35,
+    "ro_city_id": 330,
+    "ro_zip": 69319
+  },
+  {
+    "id": 256,
+    "nama": "Kabupaten Sumenep",
+    "slug": "kabupaten-sumenep",
+    "pid": 3529,
+    "prov_id": 35,
+    "ro_city_id": 441,
+    "ro_zip": 69413
+  },
+  {
+    "id": 257,
+    "nama": "Kota Kediri",
+    "slug": "kota-kediri",
+    "pid": 3571,
+    "prov_id": 35,
+    "ro_city_id": 179,
+    "ro_zip": 64125
+  },
+  {
+    "id": 258,
+    "nama": "Kota Blitar",
+    "slug": "kota-blitar",
+    "pid": 3572,
+    "prov_id": 35,
+    "ro_city_id": 75,
+    "ro_zip": 66124
+  },
+  {
+    "id": 259,
+    "nama": "Kota Malang",
+    "slug": "kota-malang",
+    "pid": 3573,
+    "prov_id": 35,
+    "ro_city_id": 256,
+    "ro_zip": 65112
+  },
+  {
+    "id": 260,
+    "nama": "Kota Probolinggo",
+    "slug": "kota-probolinggo",
+    "pid": 3574,
+    "prov_id": 35,
+    "ro_city_id": 370,
+    "ro_zip": 67215
+  },
+  {
+    "id": 261,
+    "nama": "Kota Pasuruan",
+    "slug": "kota-pasuruan",
+    "pid": 3575,
+    "prov_id": 35,
+    "ro_city_id": 343,
+    "ro_zip": 67118
+  },
+  {
+    "id": 262,
+    "nama": "Kota Mojokerto",
+    "slug": "kota-mojokerto",
+    "pid": 3576,
+    "prov_id": 35,
+    "ro_city_id": 290,
+    "ro_zip": 61316
+  },
+  {
+    "id": 263,
+    "nama": "Kota Madiun",
+    "slug": "kota-madiun",
+    "pid": 3577,
+    "prov_id": 35,
+    "ro_city_id": 248,
+    "ro_zip": 63122
+  },
+  {
+    "id": 264,
+    "nama": "Kota Surabaya",
+    "slug": "kota-surabaya",
+    "pid": 3578,
+    "prov_id": 35,
+    "ro_city_id": 444,
+    "ro_zip": 60119
+  },
+  {
+    "id": 265,
+    "nama": "Kota Batu",
+    "slug": "kota-batu",
+    "pid": 3579,
+    "prov_id": 35,
+    "ro_city_id": 51,
+    "ro_zip": 65311
+  },
+  {
+    "id": 266,
+    "nama": "Kabupaten Pandeglang",
+    "slug": "kabupaten-pandeglang",
+    "pid": 3601,
+    "prov_id": 36,
+    "ro_city_id": 331,
+    "ro_zip": 42212
+  },
+  {
+    "id": 267,
+    "nama": "Kabupaten Lebak",
+    "slug": "kabupaten-lebak",
+    "pid": 3602,
+    "prov_id": 36,
+    "ro_city_id": 232,
+    "ro_zip": 42319
+  },
+  {
+    "id": 268,
+    "nama": "Kabupaten Tangerang",
+    "slug": "kabupaten-tangerang",
+    "pid": 3603,
+    "prov_id": 36,
+    "ro_city_id": 456,
+    "ro_zip": 15111
+  },
+  {
+    "id": 269,
+    "nama": "Kabupaten Serang",
+    "slug": "kabupaten-serang",
+    "pid": 3604,
+    "prov_id": 36,
+    "ro_city_id": 403,
+    "ro_zip": 42111
+  },
+  {
+    "id": 270,
+    "nama": "Kota Tangerang",
+    "slug": "kota-tangerang",
+    "pid": 3671,
+    "prov_id": 36,
+    "ro_city_id": 456,
+    "ro_zip": 15111
+  },
+  {
+    "id": 271,
+    "nama": "Kota Cilegon",
+    "slug": "kota-cilegon",
+    "pid": 3672,
+    "prov_id": 36,
+    "ro_city_id": 106,
+    "ro_zip": 42417
+  },
+  {
+    "id": 272,
+    "nama": "Kota Serang",
+    "slug": "kota-serang",
+    "pid": 3673,
+    "prov_id": 36,
+    "ro_city_id": 403,
+    "ro_zip": 42111
+  },
+  {
+    "id": 273,
+    "nama": "Kota Tangerang Selatan",
+    "slug": "kota-tangerang-selatan",
+    "pid": 3674,
+    "prov_id": 36,
+    "ro_city_id": 457,
+    "ro_zip": 15332
+  },
+  {
+    "id": 274,
+    "nama": "Kabupaten Jembrana",
+    "slug": "kabupaten-jembrana",
+    "pid": 5101,
+    "prov_id": 51,
+    "ro_city_id": 161,
+    "ro_zip": 82251
+  },
+  {
+    "id": 275,
+    "nama": "Kabupaten Tabanan",
+    "slug": "kabupaten-tabanan",
+    "pid": 5102,
+    "prov_id": 51,
+    "ro_city_id": 447,
+    "ro_zip": 82119
+  },
+  {
+    "id": 276,
+    "nama": "Kabupaten Badung",
+    "slug": "kabupaten-badung",
+    "pid": 5103,
+    "prov_id": 51,
+    "ro_city_id": 17,
+    "ro_zip": 80351
+  },
+  {
+    "id": 277,
+    "nama": "Kabupaten Gianyar",
+    "slug": "kabupaten-gianyar",
+    "pid": 5104,
+    "prov_id": 51,
+    "ro_city_id": 128,
+    "ro_zip": 80519
+  },
+  {
+    "id": 278,
+    "nama": "Kabupaten Klungkung",
+    "slug": "kabupaten-klungkung",
+    "pid": 5105,
+    "prov_id": 51,
+    "ro_city_id": 197,
+    "ro_zip": 80719
+  },
+  {
+    "id": 279,
+    "nama": "Kabupaten Bangli",
+    "slug": "kabupaten-bangli",
+    "pid": 5106,
+    "prov_id": 51,
+    "ro_city_id": 32,
+    "ro_zip": 80619
+  },
+  {
+    "id": 280,
+    "nama": "Kabupaten Karang Asem",
+    "slug": "kabupaten-karang-asem",
+    "pid": 5107,
+    "prov_id": 51,
+    "ro_city_id": 170,
+    "ro_zip": 80819
+  },
+  {
+    "id": 281,
+    "nama": "Kabupaten Buleleng",
+    "slug": "kabupaten-buleleng",
+    "pid": 5108,
+    "prov_id": 51,
+    "ro_city_id": 94,
+    "ro_zip": 81111
+  },
+  {
+    "id": 282,
+    "nama": "Kota Denpasar",
+    "slug": "kota-denpasar",
+    "pid": 5171,
+    "prov_id": 51,
+    "ro_city_id": 114,
+    "ro_zip": 80227
+  },
+  {
+    "id": 283,
+    "nama": "Kabupaten Lombok Barat",
+    "slug": "kabupaten-lombok-barat",
+    "pid": 5201,
+    "prov_id": 52,
+    "ro_city_id": 238,
+    "ro_zip": 83311
+  },
+  {
+    "id": 284,
+    "nama": "Kabupaten Lombok Tengah",
+    "slug": "kabupaten-lombok-tengah",
+    "pid": 5202,
+    "prov_id": 52,
+    "ro_city_id": 239,
+    "ro_zip": 83511
+  },
+  {
+    "id": 285,
+    "nama": "Kabupaten Lombok Timur",
+    "slug": "kabupaten-lombok-timur",
+    "pid": 5203,
+    "prov_id": 52,
+    "ro_city_id": 240,
+    "ro_zip": 83612
+  },
+  {
+    "id": 286,
+    "nama": "Kabupaten Sumbawa",
+    "slug": "kabupaten-sumbawa",
+    "pid": 5204,
+    "prov_id": 52,
+    "ro_city_id": 438,
+    "ro_zip": 84315
+  },
+  {
+    "id": 287,
+    "nama": "Kabupaten Dompu",
+    "slug": "kabupaten-dompu",
+    "pid": 5205,
+    "prov_id": 52,
+    "ro_city_id": 118,
+    "ro_zip": 84217
+  },
+  {
+    "id": 288,
+    "nama": "Kabupaten Bima",
+    "slug": "kabupaten-bima",
+    "pid": 5206,
+    "prov_id": 52,
+    "ro_city_id": 69,
+    "ro_zip": 84139
+  },
+  {
+    "id": 289,
+    "nama": "Kabupaten Sumbawa Barat",
+    "slug": "kabupaten-sumbawa-barat",
+    "pid": 5207,
+    "prov_id": 52,
+    "ro_city_id": 439,
+    "ro_zip": 84419
+  },
+  {
+    "id": 290,
+    "nama": "Kabupaten Lombok Utara",
+    "slug": "kabupaten-lombok-utara",
+    "pid": 5208,
+    "prov_id": 52,
+    "ro_city_id": 241,
+    "ro_zip": 83711
+  },
+  {
+    "id": 291,
+    "nama": "Kota Mataram",
+    "slug": "kota-mataram",
+    "pid": 5271,
+    "prov_id": 52,
+    "ro_city_id": 276,
+    "ro_zip": 83131
+  },
+  {
+    "id": 292,
+    "nama": "Kota Bima",
+    "slug": "kota-bima",
+    "pid": 5272,
+    "prov_id": 52,
+    "ro_city_id": 69,
+    "ro_zip": 84139
+  },
+  {
+    "id": 293,
+    "nama": "Kabupaten Sumba Barat",
+    "slug": "kabupaten-sumba-barat",
+    "pid": 5301,
+    "prov_id": 53,
+    "ro_city_id": 439,
+    "ro_zip": 84419
+  },
+  {
+    "id": 294,
+    "nama": "Kabupaten Sumba Timur",
+    "slug": "kabupaten-sumba-timur",
+    "pid": 5302,
+    "prov_id": 53,
+    "ro_city_id": 437,
+    "ro_zip": 87112
+  },
+  {
+    "id": 295,
+    "nama": "Kabupaten Kupang",
+    "slug": "kabupaten-kupang",
+    "pid": 5303,
+    "prov_id": 53,
+    "ro_city_id": 213,
+    "ro_zip": 85119
+  },
+  {
+    "id": 296,
+    "nama": "Kabupaten Timor Tengah Selatan",
+    "slug": "kabupaten-timor-tengah-selatan",
+    "pid": 5304,
+    "prov_id": 53,
+    "ro_city_id": 479,
+    "ro_zip": 85562
+  },
+  {
+    "id": 297,
+    "nama": "Kabupaten Timor Tengah Utara",
+    "slug": "kabupaten-timor-tengah-utara",
+    "pid": 5305,
+    "prov_id": 53,
+    "ro_city_id": 480,
+    "ro_zip": 85612
+  },
+  {
+    "id": 298,
+    "nama": "Kabupaten Belu",
+    "slug": "kabupaten-belu",
+    "pid": 5306,
+    "prov_id": 53,
+    "ro_city_id": 58,
+    "ro_zip": 85711
+  },
+  {
+    "id": 299,
+    "nama": "Kabupaten Alor",
+    "slug": "kabupaten-alor",
+    "pid": 5307,
+    "prov_id": 53,
+    "ro_city_id": 13,
+    "ro_zip": 85811
+  },
+  {
+    "id": 300,
+    "nama": "Kabupaten Lembata",
+    "slug": "kabupaten-lembata",
+    "pid": 5308,
+    "prov_id": 53,
+    "ro_city_id": 234,
+    "ro_zip": 86611
+  },
+  {
+    "id": 301,
+    "nama": "Kabupaten Flores Timur",
+    "slug": "kabupaten-flores-timur",
+    "pid": 5309,
+    "prov_id": 53,
+    "ro_city_id": 125,
+    "ro_zip": 86213
+  },
+  {
+    "id": 302,
+    "nama": "Kabupaten Sikka",
+    "slug": "kabupaten-sikka",
+    "pid": 5310,
+    "prov_id": 53,
+    "ro_city_id": 412,
+    "ro_zip": 86121
+  },
+  {
+    "id": 303,
+    "nama": "Kabupaten Ende",
+    "slug": "kabupaten-ende",
+    "pid": 5311,
+    "prov_id": 53,
+    "ro_city_id": 122,
+    "ro_zip": 86351
+  },
+  {
+    "id": 304,
+    "nama": "Kabupaten Ngada",
+    "slug": "kabupaten-ngada",
+    "pid": 5312,
+    "prov_id": 53,
+    "ro_city_id": 304,
+    "ro_zip": 86413
+  },
+  {
+    "id": 305,
+    "nama": "Kabupaten Manggarai",
+    "slug": "kabupaten-manggarai",
+    "pid": 5313,
+    "prov_id": 53,
+    "ro_city_id": 269,
+    "ro_zip": 86551
+  },
+  {
+    "id": 306,
+    "nama": "Kabupaten Rote Ndao",
+    "slug": "kabupaten-rote-ndao",
+    "pid": 5314,
+    "prov_id": 53,
+    "ro_city_id": 383,
+    "ro_zip": 85982
+  },
+  {
+    "id": 307,
+    "nama": "Kabupaten Manggarai Barat",
+    "slug": "kabupaten-manggarai-barat",
+    "pid": 5315,
+    "prov_id": 53,
+    "ro_city_id": 270,
+    "ro_zip": 86711
+  },
+  {
+    "id": 308,
+    "nama": "Kabupaten Sumba Tengah",
+    "slug": "kabupaten-sumba-tengah",
+    "pid": 5316,
+    "prov_id": 53,
+    "ro_city_id": 436,
+    "ro_zip": 87358
+  },
+  {
+    "id": 309,
+    "nama": "Kabupaten Sumba Barat Daya",
+    "slug": "kabupaten-sumba-barat-daya",
+    "pid": 5317,
+    "prov_id": 53,
+    "ro_city_id": 435,
+    "ro_zip": 87453
+  },
+  {
+    "id": 310,
+    "nama": "Kabupaten Nagekeo",
+    "slug": "kabupaten-nagekeo",
+    "pid": 5318,
+    "prov_id": 53,
+    "ro_city_id": 301,
+    "ro_zip": 86911
+  },
+  {
+    "id": 311,
+    "nama": "Kabupaten Manggarai Timur",
+    "slug": "kabupaten-manggarai-timur",
+    "pid": 5319,
+    "prov_id": 53,
+    "ro_city_id": 271,
+    "ro_zip": 86811
+  },
+  {
+    "id": 312,
+    "nama": "Kabupaten Sabu Raijua",
+    "slug": "kabupaten-sabu-raijua",
+    "pid": 5320,
+    "prov_id": 53,
+    "ro_city_id": 385,
+    "ro_zip": 85391
+  },
+  {
+    "id": 313,
+    "nama": "Kabupaten Malaka",
+    "slug": "kabupaten-malaka",
+    "pid": 5321,
+    "prov_id": 53,
+    "ro_city_id": 58,
+    "ro_zip": 85711
+  },
+  {
+    "id": 314,
+    "nama": "Kota Kupang",
+    "slug": "kota-kupang",
+    "pid": 5371,
+    "prov_id": 53,
+    "ro_city_id": 213,
+    "ro_zip": 85119
+  },
+  {
+    "id": 315,
+    "nama": "Kabupaten Sambas",
+    "slug": "kabupaten-sambas",
+    "pid": 6101,
+    "prov_id": 61,
+    "ro_city_id": 388,
+    "ro_zip": 79453
+  },
+  {
+    "id": 316,
+    "nama": "Kabupaten Bengkayang",
+    "slug": "kabupaten-bengkayang",
+    "pid": 6102,
+    "prov_id": 61,
+    "ro_city_id": 61,
+    "ro_zip": 79213
+  },
+  {
+    "id": 317,
+    "nama": "Kabupaten Landak",
+    "slug": "kabupaten-landak",
+    "pid": 6103,
+    "prov_id": 61,
+    "ro_city_id": 228,
+    "ro_zip": 78319
+  },
+  {
+    "id": 318,
+    "nama": "Kabupaten Mempawah",
+    "slug": "kabupaten-mempawah",
+    "pid": 6104,
+    "prov_id": 61,
+    "ro_city_id": 415,
+    "ro_zip": 78319
+  },
+  {
+    "id": 319,
+    "nama": "Kabupaten Sanggau",
+    "slug": "kabupaten-sanggau",
+    "pid": 6105,
+    "prov_id": 61,
+    "ro_city_id": 391,
+    "ro_zip": 78557
+  },
+  {
+    "id": 320,
+    "nama": "Kabupaten Ketapang",
+    "slug": "kabupaten-ketapang",
+    "pid": 6106,
+    "prov_id": 61,
+    "ro_city_id": 195,
+    "ro_zip": 78874
+  },
+  {
+    "id": 321,
+    "nama": "Kabupaten Sintang",
+    "slug": "kabupaten-sintang",
+    "pid": 6107,
+    "prov_id": 61,
+    "ro_city_id": 417,
+    "ro_zip": 78619
+  },
+  {
+    "id": 322,
+    "nama": "Kabupaten Kapuas Hulu",
+    "slug": "kabupaten-kapuas-hulu",
+    "pid": 6108,
+    "prov_id": 61,
+    "ro_city_id": 168,
+    "ro_zip": 78719
+  },
+  {
+    "id": 323,
+    "nama": "Kabupaten Sekadau",
+    "slug": "kabupaten-sekadau",
+    "pid": 6109,
+    "prov_id": 61,
+    "ro_city_id": 395,
+    "ro_zip": 79583
+  },
+  {
+    "id": 324,
+    "nama": "Kabupaten Melawi",
+    "slug": "kabupaten-melawi",
+    "pid": 6110,
+    "prov_id": 61,
+    "ro_city_id": 279,
+    "ro_zip": 78619
+  },
+  {
+    "id": 325,
+    "nama": "Kabupaten Kayong Utara",
+    "slug": "kabupaten-kayong-utara",
+    "pid": 6111,
+    "prov_id": 61,
+    "ro_city_id": 176,
+    "ro_zip": 78852
+  },
+  {
+    "id": 326,
+    "nama": "Kabupaten Kubu Raya",
+    "slug": "kabupaten-kubu-raya",
+    "pid": 6112,
+    "prov_id": 61,
+    "ro_city_id": 208,
+    "ro_zip": 78311
+  },
+  {
+    "id": 327,
+    "nama": "Kota Pontianak",
+    "slug": "kota-pontianak",
+    "pid": 6171,
+    "prov_id": 61,
+    "ro_city_id": 365,
+    "ro_zip": 78112
+  },
+  {
+    "id": 328,
+    "nama": "Kota Singkawang",
+    "slug": "kota-singkawang",
+    "pid": 6172,
+    "prov_id": 61,
+    "ro_city_id": 415,
+    "ro_zip": 79117
+  },
+  {
+    "id": 329,
+    "nama": "Kabupaten Kotawaringin Barat",
+    "slug": "kabupaten-kotawaringin-barat",
+    "pid": 6201,
+    "prov_id": 62,
+    "ro_city_id": 205,
+    "ro_zip": 74119
+  },
+  {
+    "id": 330,
+    "nama": "Kabupaten Kotawaringin Timur",
+    "slug": "kabupaten-kotawaringin-timur",
+    "pid": 6202,
+    "prov_id": 62,
+    "ro_city_id": 206,
+    "ro_zip": 74364
+  },
+  {
+    "id": 331,
+    "nama": "Kabupaten Kapuas",
+    "slug": "kabupaten-kapuas",
+    "pid": 6203,
+    "prov_id": 62,
+    "ro_city_id": 167,
+    "ro_zip": 73583
+  },
+  {
+    "id": 332,
+    "nama": "Kabupaten Barito Selatan",
+    "slug": "kabupaten-barito-selatan",
+    "pid": 6204,
+    "prov_id": 62,
+    "ro_city_id": 44,
+    "ro_zip": 73711
+  },
+  {
+    "id": 333,
+    "nama": "Kabupaten Barito Utara",
+    "slug": "kabupaten-barito-utara",
+    "pid": 6205,
+    "prov_id": 62,
+    "ro_city_id": 46,
+    "ro_zip": 73881
+  },
+  {
+    "id": 334,
+    "nama": "Kabupaten Sukamara",
+    "slug": "kabupaten-sukamara",
+    "pid": 6206,
+    "prov_id": 62,
+    "ro_city_id": 432,
+    "ro_zip": 74712
+  },
+  {
+    "id": 335,
+    "nama": "Kabupaten Lamandau",
+    "slug": "kabupaten-lamandau",
+    "pid": 6207,
+    "prov_id": 62,
+    "ro_city_id": 221,
+    "ro_zip": 74611
+  },
+  {
+    "id": 336,
+    "nama": "Kabupaten Seruyan",
+    "slug": "kabupaten-seruyan",
+    "pid": 6208,
+    "prov_id": 62,
+    "ro_city_id": 405,
+    "ro_zip": 74211
+  },
+  {
+    "id": 337,
+    "nama": "Kabupaten Katingan",
+    "slug": "kabupaten-katingan",
+    "pid": 6209,
+    "prov_id": 62,
+    "ro_city_id": 174,
+    "ro_zip": 74411
+  },
+  {
+    "id": 338,
+    "nama": "Kabupaten Pulang Pisau",
+    "slug": "kabupaten-pulang-pisau",
+    "pid": 6210,
+    "prov_id": 62,
+    "ro_city_id": 371,
+    "ro_zip": 74811
+  },
+  {
+    "id": 339,
+    "nama": "Kabupaten Gunung Mas",
+    "slug": "kabupaten-gunung-mas",
+    "pid": 6211,
+    "prov_id": 62,
+    "ro_city_id": 136,
+    "ro_zip": 74511
+  },
+  {
+    "id": 340,
+    "nama": "Kabupaten Barito Timur",
+    "slug": "kabupaten-barito-timur",
+    "pid": 6212,
+    "prov_id": 62,
+    "ro_city_id": 45,
+    "ro_zip": 73671
+  },
+  {
+    "id": 341,
+    "nama": "Kabupaten Murung Raya",
+    "slug": "kabupaten-murung-raya",
+    "pid": 6213,
+    "prov_id": 62,
+    "ro_city_id": 296,
+    "ro_zip": 73911
+  },
+  {
+    "id": 342,
+    "nama": "Kota Palangka Raya",
+    "slug": "kota-palangka-raya",
+    "pid": 6271,
+    "prov_id": 62,
+    "ro_city_id": 326,
+    "ro_zip": 73112
+  },
+  {
+    "id": 343,
+    "nama": "Kabupaten Tanah Laut",
+    "slug": "kabupaten-tanah-laut",
+    "pid": 6301,
+    "prov_id": 63,
+    "ro_city_id": 454,
+    "ro_zip": 70811
+  },
+  {
+    "id": 344,
+    "nama": "Kabupaten Kota Baru",
+    "slug": "kabupaten-kota-baru",
+    "pid": 6302,
+    "prov_id": 63,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 345,
+    "nama": "Kabupaten Banjar",
+    "slug": "kabupaten-banjar",
+    "pid": 6303,
+    "prov_id": 63,
+    "ro_city_id": 34,
+    "ro_zip": 46311
+  },
+  {
+    "id": 346,
+    "nama": "Kabupaten Barito Kuala",
+    "slug": "kabupaten-barito-kuala",
+    "pid": 6304,
+    "prov_id": 63,
+    "ro_city_id": 43,
+    "ro_zip": 70511
+  },
+  {
+    "id": 347,
+    "nama": "Kabupaten Tapin",
+    "slug": "kabupaten-tapin",
+    "pid": 6305,
+    "prov_id": 63,
+    "ro_city_id": 466,
+    "ro_zip": 71119
+  },
+  {
+    "id": 348,
+    "nama": "Kabupaten Hulu Sungai Selatan",
+    "slug": "kabupaten-hulu-sungai-selatan",
+    "pid": 6306,
+    "prov_id": 63,
+    "ro_city_id": 143,
+    "ro_zip": 71212
+  },
+  {
+    "id": 349,
+    "nama": "Kabupaten Hulu Sungai Tengah",
+    "slug": "kabupaten-hulu-sungai-tengah",
+    "pid": 6307,
+    "prov_id": 63,
+    "ro_city_id": 144,
+    "ro_zip": 71313
+  },
+  {
+    "id": 350,
+    "nama": "Kabupaten Hulu Sungai Utara",
+    "slug": "kabupaten-hulu-sungai-utara",
+    "pid": 6308,
+    "prov_id": 63,
+    "ro_city_id": 145,
+    "ro_zip": 71419
+  },
+  {
+    "id": 351,
+    "nama": "Kabupaten Tabalong",
+    "slug": "kabupaten-tabalong",
+    "pid": 6309,
+    "prov_id": 63,
+    "ro_city_id": 446,
+    "ro_zip": 71513
+  },
+  {
+    "id": 352,
+    "nama": "Kabupaten Tanah Bumbu",
+    "slug": "kabupaten-tanah-bumbu",
+    "pid": 6310,
+    "prov_id": 63,
+    "ro_city_id": 452,
+    "ro_zip": 72211
+  },
+  {
+    "id": 353,
+    "nama": "Kabupaten Balangan",
+    "slug": "kabupaten-balangan",
+    "pid": 6311,
+    "prov_id": 63,
+    "ro_city_id": 18,
+    "ro_zip": 71611
+  },
+  {
+    "id": 354,
+    "nama": "Kota Banjarmasin",
+    "slug": "kota-banjarmasin",
+    "pid": 6371,
+    "prov_id": 63,
+    "ro_city_id": 36,
+    "ro_zip": 70117
+  },
+  {
+    "id": 355,
+    "nama": "Kota Banjar Baru",
+    "slug": "kota-banjar-baru",
+    "pid": 6372,
+    "prov_id": 63,
+    "ro_city_id": 34,
+    "ro_zip": 46311
+  },
+  {
+    "id": 356,
+    "nama": "Kabupaten Paser",
+    "slug": "kabupaten-paser",
+    "pid": 6401,
+    "prov_id": 64,
+    "ro_city_id": 341,
+    "ro_zip": 76211
+  },
+  {
+    "id": 357,
+    "nama": "Kabupaten Kutai Barat",
+    "slug": "kabupaten-kutai-barat",
+    "pid": 6402,
+    "prov_id": 64,
+    "ro_city_id": 214,
+    "ro_zip": 75711
+  },
+  {
+    "id": 358,
+    "nama": "Kabupaten Kutai Kartanegara",
+    "slug": "kabupaten-kutai-kartanegara",
+    "pid": 6403,
+    "prov_id": 64,
+    "ro_city_id": 215,
+    "ro_zip": 75511
+  },
+  {
+    "id": 359,
+    "nama": "Kabupaten Kutai Timur",
+    "slug": "kabupaten-kutai-timur",
+    "pid": 6404,
+    "prov_id": 64,
+    "ro_city_id": 216,
+    "ro_zip": 75611
+  },
+  {
+    "id": 360,
+    "nama": "Kabupaten Berau",
+    "slug": "kabupaten-berau",
+    "pid": 6405,
+    "prov_id": 64,
+    "ro_city_id": 66,
+    "ro_zip": 77311
+  },
+  {
+    "id": 361,
+    "nama": "Kabupaten Penajam Paser Utara",
+    "slug": "kabupaten-penajam-paser-utara",
+    "pid": 6409,
+    "prov_id": 64,
+    "ro_city_id": 354,
+    "ro_zip": 76311
+  },
+  {
+    "id": 362,
+    "nama": "Kabupaten Mahakam Hulu",
+    "slug": "kabupaten-mahakam-hulu",
+    "pid": 6411,
+    "prov_id": 64,
+    "ro_city_id": 382,
+    "ro_zip": 28511
+  },
+  {
+    "id": 363,
+    "nama": "Kota Balikpapan",
+    "slug": "kota-balikpapan",
+    "pid": 6471,
+    "prov_id": 64,
+    "ro_city_id": 19,
+    "ro_zip": 76111
+  },
+  {
+    "id": 364,
+    "nama": "Kota Samarinda",
+    "slug": "kota-samarinda",
+    "pid": 6472,
+    "prov_id": 64,
+    "ro_city_id": 387,
+    "ro_zip": 75133
+  },
+  {
+    "id": 365,
+    "nama": "Kota Bontang",
+    "slug": "kota-bontang",
+    "pid": 6474,
+    "prov_id": 64,
+    "ro_city_id": 89,
+    "ro_zip": 75313
+  },
+  {
+    "id": 366,
+    "nama": "Kabupaten Malinau",
+    "slug": "kabupaten-malinau",
+    "pid": 6501,
+    "prov_id": 65,
+    "ro_city_id": 257,
+    "ro_zip": 77511
+  },
+  {
+    "id": 367,
+    "nama": "Kabupaten Bulungan",
+    "slug": "kabupaten-bulungan",
+    "pid": 6502,
+    "prov_id": 65,
+    "ro_city_id": 96,
+    "ro_zip": 77211
+  },
+  {
+    "id": 368,
+    "nama": "Kabupaten Tana Tidung",
+    "slug": "kabupaten-tana-tidung",
+    "pid": 6503,
+    "prov_id": 65,
+    "ro_city_id": 450,
+    "ro_zip": 77611
+  },
+  {
+    "id": 369,
+    "nama": "Kabupaten Nunukan",
+    "slug": "kabupaten-nunukan",
+    "pid": 6504,
+    "prov_id": 65,
+    "ro_city_id": 311,
+    "ro_zip": 77421
+  },
+  {
+    "id": 370,
+    "nama": "Kota Tarakan",
+    "slug": "kota-tarakan",
+    "pid": 6571,
+    "prov_id": 65,
+    "ro_city_id": 467,
+    "ro_zip": 77114
+  },
+  {
+    "id": 371,
+    "nama": "Kabupaten Bolaang Mongondow",
+    "slug": "kabupaten-bolaang-mongondow",
+    "pid": 7101,
+    "prov_id": 71,
+    "ro_city_id": 84,
+    "ro_zip": 95765
+  },
+  {
+    "id": 372,
+    "nama": "Kabupaten Minahasa",
+    "slug": "kabupaten-minahasa",
+    "pid": 7102,
+    "prov_id": 71,
+    "ro_city_id": 285,
+    "ro_zip": 95614
+  },
+  {
+    "id": 373,
+    "nama": "Kabupaten Kepulauan Sangihe",
+    "slug": "kabupaten-kepulauan-sangihe",
+    "pid": 7103,
+    "prov_id": 71,
+    "ro_city_id": 188,
+    "ro_zip": 95819
+  },
+  {
+    "id": 374,
+    "nama": "Kabupaten Kepulauan Talaud",
+    "slug": "kabupaten-kepulauan-talaud",
+    "pid": 7104,
+    "prov_id": 71,
+    "ro_city_id": 192,
+    "ro_zip": 95885
+  },
+  {
+    "id": 375,
+    "nama": "Kabupaten Minahasa Selatan",
+    "slug": "kabupaten-minahasa-selatan",
+    "pid": 7105,
+    "prov_id": 71,
+    "ro_city_id": 286,
+    "ro_zip": 95914
+  },
+  {
+    "id": 376,
+    "nama": "Kabupaten Minahasa Utara",
+    "slug": "kabupaten-minahasa-utara",
+    "pid": 7106,
+    "prov_id": 71,
+    "ro_city_id": 288,
+    "ro_zip": 95316
+  },
+  {
+    "id": 377,
+    "nama": "Kabupaten Bolaang Mongondow Utara",
+    "slug": "kabupaten-bolaang-mongondow-utara",
+    "pid": 7107,
+    "prov_id": 71,
+    "ro_city_id": 84,
+    "ro_zip": 95765
+  },
+  {
+    "id": 378,
+    "nama": "Kabupaten Siau Tagulandang Biaro",
+    "slug": "kabupaten-siau-tagulandang-biaro",
+    "pid": 7108,
+    "prov_id": 71,
+    "ro_city_id": 190,
+    "ro_zip": 95862
+  },
+  {
+    "id": 379,
+    "nama": "Kabupaten Minahasa Tenggara",
+    "slug": "kabupaten-minahasa-tenggara",
+    "pid": 7109,
+    "prov_id": 71,
+    "ro_city_id": 287,
+    "ro_zip": 95995
+  },
+  {
+    "id": 380,
+    "nama": "Kabupaten Bolaang Mongondow Selatan",
+    "slug": "kabupaten-bolaang-mongondow-selatan",
+    "pid": 7110,
+    "prov_id": 71,
+    "ro_city_id": 82,
+    "ro_zip": 95774
+  },
+  {
+    "id": 381,
+    "nama": "Kabupaten Bolaang Mongondow Timur",
+    "slug": "kabupaten-bolaang-mongondow-timur",
+    "pid": 7111,
+    "prov_id": 71,
+    "ro_city_id": 83,
+    "ro_zip": 95783
+  },
+  {
+    "id": 382,
+    "nama": "Kota Manado",
+    "slug": "kota-manado",
+    "pid": 7171,
+    "prov_id": 71,
+    "ro_city_id": 267,
+    "ro_zip": 95247
+  },
+  {
+    "id": 383,
+    "nama": "Kota Bitung",
+    "slug": "kota-bitung",
+    "pid": 7172,
+    "prov_id": 71,
+    "ro_city_id": 73,
+    "ro_zip": 95512
+  },
+  {
+    "id": 384,
+    "nama": "Kota Tomohon",
+    "slug": "kota-tomohon",
+    "pid": 7173,
+    "prov_id": 71,
+    "ro_city_id": 485,
+    "ro_zip": 95416
+  },
+  {
+    "id": 385,
+    "nama": "Kota Kotamobagu",
+    "slug": "kota-kotamobagu",
+    "pid": 7174,
+    "prov_id": 71,
+    "ro_city_id": 204,
+    "ro_zip": 95711
+  },
+  {
+    "id": 386,
+    "nama": "Kabupaten Banggai Kepulauan",
+    "slug": "kabupaten-banggai-kepulauan",
+    "pid": 7201,
+    "prov_id": 72,
+    "ro_city_id": 26,
+    "ro_zip": 94881
+  },
+  {
+    "id": 387,
+    "nama": "Kabupaten Banggai",
+    "slug": "kabupaten-banggai",
+    "pid": 7202,
+    "prov_id": 72,
+    "ro_city_id": 25,
+    "ro_zip": 94711
+  },
+  {
+    "id": 388,
+    "nama": "Kabupaten Morowali",
+    "slug": "kabupaten-morowali",
+    "pid": 7203,
+    "prov_id": 72,
+    "ro_city_id": 291,
+    "ro_zip": 94911
+  },
+  {
+    "id": 389,
+    "nama": "Kabupaten Poso",
+    "slug": "kabupaten-poso",
+    "pid": 7204,
+    "prov_id": 72,
+    "ro_city_id": 366,
+    "ro_zip": 94615
+  },
+  {
+    "id": 390,
+    "nama": "Kabupaten Donggala",
+    "slug": "kabupaten-donggala",
+    "pid": 7205,
+    "prov_id": 72,
+    "ro_city_id": 119,
+    "ro_zip": 94341
+  },
+  {
+    "id": 391,
+    "nama": "Kabupaten Toli-Toli",
+    "slug": "kabupaten-toli-toli",
+    "pid": 7206,
+    "prov_id": 72,
+    "ro_city_id": 483,
+    "ro_zip": 94542
+  },
+  {
+    "id": 392,
+    "nama": "Kabupaten Buol",
+    "slug": "kabupaten-buol",
+    "pid": 7207,
+    "prov_id": 72,
+    "ro_city_id": 98,
+    "ro_zip": 94564
+  },
+  {
+    "id": 393,
+    "nama": "Kabupaten Parigi Moutong",
+    "slug": "kabupaten-parigi-moutong",
+    "pid": 7208,
+    "prov_id": 72,
+    "ro_city_id": 338,
+    "ro_zip": 94411
+  },
+  {
+    "id": 394,
+    "nama": "Kabupaten Tojo Una-Una",
+    "slug": "kabupaten-tojo-una-una",
+    "pid": 7209,
+    "prov_id": 72,
+    "ro_city_id": 482,
+    "ro_zip": 94683
+  },
+  {
+    "id": 395,
+    "nama": "Kabupaten Sigi",
+    "slug": "kabupaten-sigi",
+    "pid": 7210,
+    "prov_id": 72,
+    "ro_city_id": 410,
+    "ro_zip": 94364
+  },
+  {
+    "id": 396,
+    "nama": "Kabupaten Banggai Laut",
+    "slug": "kabupaten-banggai-laut",
+    "pid": 7211,
+    "prov_id": 72,
+    "ro_city_id": 25,
+    "ro_zip": 94711
+  },
+  {
+    "id": 397,
+    "nama": "Kabupaten Morowali Utara",
+    "slug": "kabupaten-morowali-utara",
+    "pid": 7212,
+    "prov_id": 72,
+    "ro_city_id": 291,
+    "ro_zip": 94911
+  },
+  {
+    "id": 398,
+    "nama": "Kota Palu",
+    "slug": "kota-palu",
+    "pid": 7271,
+    "prov_id": 72,
+    "ro_city_id": 329,
+    "ro_zip": 94111
+  },
+  {
+    "id": 399,
+    "nama": "Kabupaten Kepulauan Selayar",
+    "slug": "kabupaten-kepulauan-selayar",
+    "pid": 7301,
+    "prov_id": 73,
+    "ro_city_id": 396,
+    "ro_zip": 92812
+  },
+  {
+    "id": 400,
+    "nama": "Kabupaten Bulukumba",
+    "slug": "kabupaten-bulukumba",
+    "pid": 7302,
+    "prov_id": 73,
+    "ro_city_id": 95,
+    "ro_zip": 92511
+  },
+  {
+    "id": 401,
+    "nama": "Kabupaten Bantaeng",
+    "slug": "kabupaten-bantaeng",
+    "pid": 7303,
+    "prov_id": 73,
+    "ro_city_id": 38,
+    "ro_zip": 92411
+  },
+  {
+    "id": 402,
+    "nama": "Kabupaten Jeneponto",
+    "slug": "kabupaten-jeneponto",
+    "pid": 7304,
+    "prov_id": 73,
+    "ro_city_id": 162,
+    "ro_zip": 92319
+  },
+  {
+    "id": 403,
+    "nama": "Kabupaten Takalar",
+    "slug": "kabupaten-takalar",
+    "pid": 7305,
+    "prov_id": 73,
+    "ro_city_id": 448,
+    "ro_zip": 92212
+  },
+  {
+    "id": 404,
+    "nama": "Kabupaten Gowa",
+    "slug": "kabupaten-gowa",
+    "pid": 7306,
+    "prov_id": 73,
+    "ro_city_id": 132,
+    "ro_zip": 92111
+  },
+  {
+    "id": 405,
+    "nama": "Kabupaten Sinjai",
+    "slug": "kabupaten-sinjai",
+    "pid": 7307,
+    "prov_id": 73,
+    "ro_city_id": 416,
+    "ro_zip": 92615
+  },
+  {
+    "id": 406,
+    "nama": "Kabupaten Maros",
+    "slug": "kabupaten-maros",
+    "pid": 7308,
+    "prov_id": 73,
+    "ro_city_id": 275,
+    "ro_zip": 90511
+  },
+  {
+    "id": 407,
+    "nama": "Kabupaten Pangkajene Dan Kepulauan",
+    "slug": "kabupaten-pangkajene-dan-kepulauan",
+    "pid": 7309,
+    "prov_id": 73,
+    "ro_city_id": 333,
+    "ro_zip": 90611
+  },
+  {
+    "id": 408,
+    "nama": "Kabupaten Barru",
+    "slug": "kabupaten-barru",
+    "pid": 7310,
+    "prov_id": 73,
+    "ro_city_id": 47,
+    "ro_zip": 90719
+  },
+  {
+    "id": 409,
+    "nama": "Kabupaten Bone",
+    "slug": "kabupaten-bone",
+    "pid": 7311,
+    "prov_id": 73,
+    "ro_city_id": 87,
+    "ro_zip": 92713
+  },
+  {
+    "id": 410,
+    "nama": "Kabupaten Soppeng",
+    "slug": "kabupaten-soppeng",
+    "pid": 7312,
+    "prov_id": 73,
+    "ro_city_id": 423,
+    "ro_zip": 90812
+  },
+  {
+    "id": 411,
+    "nama": "Kabupaten Wajo",
+    "slug": "kabupaten-wajo",
+    "pid": 7313,
+    "prov_id": 73,
+    "ro_city_id": 493,
+    "ro_zip": 90911
+  },
+  {
+    "id": 412,
+    "nama": "Kabupaten Sidenreng Rappang",
+    "slug": "kabupaten-sidenreng-rappang",
+    "pid": 7314,
+    "prov_id": 73,
+    "ro_city_id": 408,
+    "ro_zip": 91613
+  },
+  {
+    "id": 413,
+    "nama": "Kabupaten Pinrang",
+    "slug": "kabupaten-pinrang",
+    "pid": 7315,
+    "prov_id": 73,
+    "ro_city_id": 360,
+    "ro_zip": 91251
+  },
+  {
+    "id": 414,
+    "nama": "Kabupaten Enrekang",
+    "slug": "kabupaten-enrekang",
+    "pid": 7316,
+    "prov_id": 73,
+    "ro_city_id": 123,
+    "ro_zip": 91719
+  },
+  {
+    "id": 415,
+    "nama": "Kabupaten Luwu",
+    "slug": "kabupaten-luwu",
+    "pid": 7317,
+    "prov_id": 73,
+    "ro_city_id": 244,
+    "ro_zip": 91994
+  },
+  {
+    "id": 416,
+    "nama": "Kabupaten Tana Toraja",
+    "slug": "kabupaten-tana-toraja",
+    "pid": 7318,
+    "prov_id": 73,
+    "ro_city_id": 451,
+    "ro_zip": 91819
+  },
+  {
+    "id": 417,
+    "nama": "Kabupaten Luwu Utara",
+    "slug": "kabupaten-luwu-utara",
+    "pid": 7322,
+    "prov_id": 73,
+    "ro_city_id": 246,
+    "ro_zip": 92911
+  },
+  {
+    "id": 418,
+    "nama": "Kabupaten Luwu Timur",
+    "slug": "kabupaten-luwu-timur",
+    "pid": 7325,
+    "prov_id": 73,
+    "ro_city_id": 245,
+    "ro_zip": 92981
+  },
+  {
+    "id": 419,
+    "nama": "Kabupaten Toraja Utara",
+    "slug": "kabupaten-toraja-utara",
+    "pid": 7326,
+    "prov_id": 73,
+    "ro_city_id": 486,
+    "ro_zip": 91831
+  },
+  {
+    "id": 420,
+    "nama": "Kota Makassar",
+    "slug": "kota-makassar",
+    "pid": 7371,
+    "prov_id": 73,
+    "ro_city_id": 254,
+    "ro_zip": 90111
+  },
+  {
+    "id": 421,
+    "nama": "Kota Parepare",
+    "slug": "kota-parepare",
+    "pid": 7372,
+    "prov_id": 73,
+    "ro_city_id": 336,
+    "ro_zip": 91123
+  },
+  {
+    "id": 422,
+    "nama": "Kota Palopo",
+    "slug": "kota-palopo",
+    "pid": 7373,
+    "prov_id": 73,
+    "ro_city_id": 328,
+    "ro_zip": 91911
+  },
+  {
+    "id": 423,
+    "nama": "Kabupaten Buton",
+    "slug": "kabupaten-buton",
+    "pid": 7401,
+    "prov_id": 74,
+    "ro_city_id": 101,
+    "ro_zip": 93754
+  },
+  {
+    "id": 424,
+    "nama": "Kabupaten Muna",
+    "slug": "kabupaten-muna",
+    "pid": 7402,
+    "prov_id": 74,
+    "ro_city_id": 295,
+    "ro_zip": 93611
+  },
+  {
+    "id": 425,
+    "nama": "Kabupaten Konawe",
+    "slug": "kabupaten-konawe",
+    "pid": 7403,
+    "prov_id": 74,
+    "ro_city_id": 200,
+    "ro_zip": 93411
+  },
+  {
+    "id": 426,
+    "nama": "Kabupaten Kolaka",
+    "slug": "kabupaten-kolaka",
+    "pid": 7404,
+    "prov_id": 74,
+    "ro_city_id": 198,
+    "ro_zip": 93511
+  },
+  {
+    "id": 427,
+    "nama": "Kabupaten Konawe Selatan",
+    "slug": "kabupaten-konawe-selatan",
+    "pid": 7405,
+    "prov_id": 74,
+    "ro_city_id": 201,
+    "ro_zip": 93811
+  },
+  {
+    "id": 428,
+    "nama": "Kabupaten Bombana",
+    "slug": "kabupaten-bombana",
+    "pid": 7406,
+    "prov_id": 74,
+    "ro_city_id": 85,
+    "ro_zip": 93771
+  },
+  {
+    "id": 429,
+    "nama": "Kabupaten Wakatobi",
+    "slug": "kabupaten-wakatobi",
+    "pid": 7407,
+    "prov_id": 74,
+    "ro_city_id": 494,
+    "ro_zip": 93791
+  },
+  {
+    "id": 430,
+    "nama": "Kabupaten Kolaka Utara",
+    "slug": "kabupaten-kolaka-utara",
+    "pid": 7408,
+    "prov_id": 74,
+    "ro_city_id": 199,
+    "ro_zip": 93911
+  },
+  {
+    "id": 431,
+    "nama": "Kabupaten Buton Utara",
+    "slug": "kabupaten-buton-utara",
+    "pid": 7409,
+    "prov_id": 74,
+    "ro_city_id": 102,
+    "ro_zip": 93745
+  },
+  {
+    "id": 432,
+    "nama": "Kabupaten Konawe Utara",
+    "slug": "kabupaten-konawe-utara",
+    "pid": 7410,
+    "prov_id": 74,
+    "ro_city_id": 202,
+    "ro_zip": 93311
+  },
+  {
+    "id": 433,
+    "nama": "Kabupaten Kolaka Timur",
+    "slug": "kabupaten-kolaka-timur",
+    "pid": 7411,
+    "prov_id": 74,
+    "ro_city_id": 198,
+    "ro_zip": 93511
+  },
+  {
+    "id": 434,
+    "nama": "Kabupaten Konawe Kepulauan",
+    "slug": "kabupaten-konawe-kepulauan",
+    "pid": 7412,
+    "prov_id": 74,
+    "ro_city_id": 478,
+    "ro_zip": 97815
+  },
+  {
+    "id": 435,
+    "nama": "Kabupaten Muna Barat",
+    "slug": "kabupaten-muna-barat",
+    "pid": 7413,
+    "prov_id": 74,
+    "ro_city_id": 439,
+    "ro_zip": 84419
+  },
+  {
+    "id": 436,
+    "nama": "Kabupaten Buton Tengah",
+    "slug": "kabupaten-buton-tengah",
+    "pid": 7414,
+    "prov_id": 74,
+    "ro_city_id": 101,
+    "ro_zip": 93754
+  },
+  {
+    "id": 437,
+    "nama": "Kabupaten Buton Selatan",
+    "slug": "kabupaten-buton-selatan",
+    "pid": 7415,
+    "prov_id": 74,
+    "ro_city_id": 101,
+    "ro_zip": 93754
+  },
+  {
+    "id": 438,
+    "nama": "Kota Kendari",
+    "slug": "kota-kendari",
+    "pid": 7471,
+    "prov_id": 74,
+    "ro_city_id": 182,
+    "ro_zip": 93126
+  },
+  {
+    "id": 439,
+    "nama": "Kota Baubau",
+    "slug": "kota-baubau",
+    "pid": 7472,
+    "prov_id": 74,
+    "ro_city_id": 236,
+    "ro_zip": 26671
+  },
+  {
+    "id": 440,
+    "nama": "Kabupaten Boalemo",
+    "slug": "kabupaten-boalemo",
+    "pid": 7501,
+    "prov_id": 75,
+    "ro_city_id": 77,
+    "ro_zip": 96319
+  },
+  {
+    "id": 441,
+    "nama": "Kabupaten Gorontalo",
+    "slug": "kabupaten-gorontalo",
+    "pid": 7502,
+    "prov_id": 75,
+    "ro_city_id": 130,
+    "ro_zip": 96115
+  },
+  {
+    "id": 442,
+    "nama": "Kabupaten Pohuwato",
+    "slug": "kabupaten-pohuwato",
+    "pid": 7503,
+    "prov_id": 75,
+    "ro_city_id": 361,
+    "ro_zip": 96419
+  },
+  {
+    "id": 443,
+    "nama": "Kabupaten Bone Bolango",
+    "slug": "kabupaten-bone-bolango",
+    "pid": 7504,
+    "prov_id": 75,
+    "ro_city_id": 88,
+    "ro_zip": 96511
+  },
+  {
+    "id": 444,
+    "nama": "Kabupaten Gorontalo Utara",
+    "slug": "kabupaten-gorontalo-utara",
+    "pid": 7505,
+    "prov_id": 75,
+    "ro_city_id": 131,
+    "ro_zip": 96611
+  },
+  {
+    "id": 445,
+    "nama": "Kota Gorontalo",
+    "slug": "kota-gorontalo",
+    "pid": 7571,
+    "prov_id": 75,
+    "ro_city_id": 130,
+    "ro_zip": 96115
+  },
+  {
+    "id": 446,
+    "nama": "Kabupaten Majene",
+    "slug": "kabupaten-majene",
+    "pid": 7601,
+    "prov_id": 76,
+    "ro_city_id": 253,
+    "ro_zip": 91411
+  },
+  {
+    "id": 447,
+    "nama": "Kabupaten Polewali Mandar",
+    "slug": "kabupaten-polewali-mandar",
+    "pid": 7602,
+    "prov_id": 76,
+    "ro_city_id": 362,
+    "ro_zip": 91311
+  },
+  {
+    "id": 448,
+    "nama": "Kabupaten Mamasa",
+    "slug": "kabupaten-mamasa",
+    "pid": 7603,
+    "prov_id": 76,
+    "ro_city_id": 262,
+    "ro_zip": 91362
+  },
+  {
+    "id": 449,
+    "nama": "Kabupaten Mamuju",
+    "slug": "kabupaten-mamuju",
+    "pid": 7604,
+    "prov_id": 76,
+    "ro_city_id": 265,
+    "ro_zip": 91519
+  },
+  {
+    "id": 450,
+    "nama": "Kabupaten Mamuju Utara",
+    "slug": "kabupaten-mamuju-utara",
+    "pid": 7605,
+    "prov_id": 76,
+    "ro_city_id": 266,
+    "ro_zip": 91571
+  },
+  {
+    "id": 451,
+    "nama": "Kabupaten Mamuju Tengah",
+    "slug": "kabupaten-mamuju-tengah",
+    "pid": 7606,
+    "prov_id": 76,
+    "ro_city_id": 265,
+    "ro_zip": 91519
+  },
+  {
+    "id": 452,
+    "nama": "Kabupaten Maluku Tenggara Barat",
+    "slug": "kabupaten-maluku-tenggara-barat",
+    "pid": 8101,
+    "prov_id": 81,
+    "ro_city_id": 261,
+    "ro_zip": 97465
+  },
+  {
+    "id": 453,
+    "nama": "Kabupaten Maluku Tenggara",
+    "slug": "kabupaten-maluku-tenggara",
+    "pid": 8102,
+    "prov_id": 81,
+    "ro_city_id": 260,
+    "ro_zip": 97651
+  },
+  {
+    "id": 454,
+    "nama": "Kabupaten Maluku Tengah",
+    "slug": "kabupaten-maluku-tengah",
+    "pid": 8103,
+    "prov_id": 81,
+    "ro_city_id": 259,
+    "ro_zip": 97513
+  },
+  {
+    "id": 455,
+    "nama": "Kabupaten Buru",
+    "slug": "kabupaten-buru",
+    "pid": 8104,
+    "prov_id": 81,
+    "ro_city_id": 99,
+    "ro_zip": 97371
+  },
+  {
+    "id": 456,
+    "nama": "Kabupaten Kepulauan Aru",
+    "slug": "kabupaten-kepulauan-aru",
+    "pid": 8105,
+    "prov_id": 81,
+    "ro_city_id": 185,
+    "ro_zip": 97681
+  },
+  {
+    "id": 457,
+    "nama": "Kabupaten Seram Bagian Barat",
+    "slug": "kabupaten-seram-bagian-barat",
+    "pid": 8106,
+    "prov_id": 81,
+    "ro_city_id": 400,
+    "ro_zip": 97561
+  },
+  {
+    "id": 458,
+    "nama": "Kabupaten Seram Bagian Timur",
+    "slug": "kabupaten-seram-bagian-timur",
+    "pid": 8107,
+    "prov_id": 81,
+    "ro_city_id": 401,
+    "ro_zip": 97581
+  },
+  {
+    "id": 459,
+    "nama": "Kabupaten Maluku Barat Daya",
+    "slug": "kabupaten-maluku-barat-daya",
+    "pid": 8108,
+    "prov_id": 81,
+    "ro_city_id": 258,
+    "ro_zip": 97451
+  },
+  {
+    "id": 460,
+    "nama": "Kabupaten Buru Selatan",
+    "slug": "kabupaten-buru-selatan",
+    "pid": 8109,
+    "prov_id": 81,
+    "ro_city_id": 100,
+    "ro_zip": 97351
+  },
+  {
+    "id": 461,
+    "nama": "Kota Ambon",
+    "slug": "kota-ambon",
+    "pid": 8171,
+    "prov_id": 81,
+    "ro_city_id": 14,
+    "ro_zip": 97222
+  },
+  {
+    "id": 462,
+    "nama": "Kota Tual",
+    "slug": "kota-tual",
+    "pid": 8172,
+    "prov_id": 81,
+    "ro_city_id": 488,
+    "ro_zip": 97612
+  },
+  {
+    "id": 463,
+    "nama": "Kabupaten Halmahera Barat",
+    "slug": "kabupaten-halmahera-barat",
+    "pid": 8201,
+    "prov_id": 82,
+    "ro_city_id": 138,
+    "ro_zip": 97757
+  },
+  {
+    "id": 464,
+    "nama": "Kabupaten Halmahera Tengah",
+    "slug": "kabupaten-halmahera-tengah",
+    "pid": 8202,
+    "prov_id": 82,
+    "ro_city_id": 140,
+    "ro_zip": 97853
+  },
+  {
+    "id": 465,
+    "nama": "Kabupaten Kepulauan Sula",
+    "slug": "kabupaten-kepulauan-sula",
+    "pid": 8203,
+    "prov_id": 82,
+    "ro_city_id": 191,
+    "ro_zip": 97995
+  },
+  {
+    "id": 466,
+    "nama": "Kabupaten Halmahera Selatan",
+    "slug": "kabupaten-halmahera-selatan",
+    "pid": 8204,
+    "prov_id": 82,
+    "ro_city_id": 139,
+    "ro_zip": 97911
+  },
+  {
+    "id": 467,
+    "nama": "Kabupaten Halmahera Utara",
+    "slug": "kabupaten-halmahera-utara",
+    "pid": 8205,
+    "prov_id": 82,
+    "ro_city_id": 142,
+    "ro_zip": 97762
+  },
+  {
+    "id": 468,
+    "nama": "Kabupaten Halmahera Timur",
+    "slug": "kabupaten-halmahera-timur",
+    "pid": 8206,
+    "prov_id": 82,
+    "ro_city_id": 141,
+    "ro_zip": 97862
+  },
+  {
+    "id": 469,
+    "nama": "Kabupaten Pulau Morotai",
+    "slug": "kabupaten-pulau-morotai",
+    "pid": 8207,
+    "prov_id": 82,
+    "ro_city_id": 372,
+    "ro_zip": 97771
+  },
+  {
+    "id": 470,
+    "nama": "Kabupaten Pulau Taliabu",
+    "slug": "kabupaten-pulau-taliabu",
+    "pid": 8208,
+    "prov_id": 82,
+    "ro_city_id": 372,
+    "ro_zip": 97771
+  },
+  {
+    "id": 471,
+    "nama": "Kota Ternate",
+    "slug": "kota-ternate",
+    "pid": 8271,
+    "prov_id": 82,
+    "ro_city_id": 477,
+    "ro_zip": 97714
+  },
+  {
+    "id": 472,
+    "nama": "Kota Tidore Kepulauan",
+    "slug": "kota-tidore-kepulauan",
+    "pid": 8272,
+    "prov_id": 82,
+    "ro_city_id": 478,
+    "ro_zip": 97815
+  },
+  {
+    "id": 473,
+    "nama": "Kabupaten Fakfak",
+    "slug": "kabupaten-fakfak",
+    "pid": 9101,
+    "prov_id": 91,
+    "ro_city_id": 124,
+    "ro_zip": 98651
+  },
+  {
+    "id": 474,
+    "nama": "Kabupaten Kaimana",
+    "slug": "kabupaten-kaimana",
+    "pid": 9102,
+    "prov_id": 91,
+    "ro_city_id": 165,
+    "ro_zip": 98671
+  },
+  {
+    "id": 475,
+    "nama": "Kabupaten Teluk Wondama",
+    "slug": "kabupaten-teluk-wondama",
+    "pid": 9103,
+    "prov_id": 91,
+    "ro_city_id": 475,
+    "ro_zip": 98591
+  },
+  {
+    "id": 476,
+    "nama": "Kabupaten Teluk Bintuni",
+    "slug": "kabupaten-teluk-bintuni",
+    "pid": 9104,
+    "prov_id": 91,
+    "ro_city_id": 474,
+    "ro_zip": 98551
+  },
+  {
+    "id": 477,
+    "nama": "Kabupaten Manokwari",
+    "slug": "kabupaten-manokwari",
+    "pid": 9105,
+    "prov_id": 91,
+    "ro_city_id": 272,
+    "ro_zip": 98311
+  },
+  {
+    "id": 478,
+    "nama": "Kabupaten Sorong Selatan",
+    "slug": "kabupaten-sorong-selatan",
+    "pid": 9106,
+    "prov_id": 91,
+    "ro_city_id": 426,
+    "ro_zip": 98454
+  },
+  {
+    "id": 479,
+    "nama": "Kabupaten Sorong",
+    "slug": "kabupaten-sorong",
+    "pid": 9107,
+    "prov_id": 91,
+    "ro_city_id": 425,
+    "ro_zip": 98411
+  },
+  {
+    "id": 480,
+    "nama": "Kabupaten Raja Ampat",
+    "slug": "kabupaten-raja-ampat",
+    "pid": 9108,
+    "prov_id": 91,
+    "ro_city_id": 378,
+    "ro_zip": 98489
+  },
+  {
+    "id": 481,
+    "nama": "Kabupaten Tambrauw",
+    "slug": "kabupaten-tambrauw",
+    "pid": 9109,
+    "prov_id": 91,
+    "ro_city_id": 449,
+    "ro_zip": 98475
+  },
+  {
+    "id": 482,
+    "nama": "Kabupaten Maybrat",
+    "slug": "kabupaten-maybrat",
+    "pid": 9110,
+    "prov_id": 91,
+    "ro_city_id": 277,
+    "ro_zip": 98051
+  },
+  {
+    "id": 483,
+    "nama": "Kabupaten Manokwari Selatan",
+    "slug": "kabupaten-manokwari-selatan",
+    "pid": 9111,
+    "prov_id": 91,
+    "ro_city_id": 273,
+    "ro_zip": 98355
+  },
+  {
+    "id": 484,
+    "nama": "Kabupaten Pegunungan Arfak",
+    "slug": "kabupaten-pegunungan-arfak",
+    "pid": 9112,
+    "prov_id": 91,
+    "ro_city_id": 346,
+    "ro_zip": 98354
+  },
+  {
+    "id": 485,
+    "nama": "Kota Sorong",
+    "slug": "kota-sorong",
+    "pid": 9171,
+    "prov_id": 91,
+    "ro_city_id": 425,
+    "ro_zip": 98411
+  },
+  {
+    "id": 486,
+    "nama": "Kabupaten Merauke",
+    "slug": "kabupaten-merauke",
+    "pid": 9401,
+    "prov_id": 94,
+    "ro_city_id": 281,
+    "ro_zip": 99613
+  },
+  {
+    "id": 487,
+    "nama": "Kabupaten Jayawijaya",
+    "slug": "kabupaten-jayawijaya",
+    "pid": 9402,
+    "prov_id": 94,
+    "ro_city_id": 159,
+    "ro_zip": 99511
+  },
+  {
+    "id": 488,
+    "nama": "Kabupaten Jayapura",
+    "slug": "kabupaten-jayapura",
+    "pid": 9403,
+    "prov_id": 94,
+    "ro_city_id": 158,
+    "ro_zip": 99114
+  },
+  {
+    "id": 489,
+    "nama": "Kabupaten Nabire",
+    "slug": "kabupaten-nabire",
+    "pid": 9404,
+    "prov_id": 94,
+    "ro_city_id": 299,
+    "ro_zip": 98816
+  },
+  {
+    "id": 490,
+    "nama": "Kabupaten Kepulauan Yapen",
+    "slug": "kabupaten-kepulauan-yapen",
+    "pid": 9408,
+    "prov_id": 94,
+    "ro_city_id": 193,
+    "ro_zip": 98211
+  },
+  {
+    "id": 491,
+    "nama": "Kabupaten Biak Numfor",
+    "slug": "kabupaten-biak-numfor",
+    "pid": 9409,
+    "prov_id": 94,
+    "ro_city_id": 67,
+    "ro_zip": 98119
+  },
+  {
+    "id": 492,
+    "nama": "Kabupaten Paniai",
+    "slug": "kabupaten-paniai",
+    "pid": 9410,
+    "prov_id": 94,
+    "ro_city_id": 335,
+    "ro_zip": 98765
+  },
+  {
+    "id": 493,
+    "nama": "Kabupaten Puncak Jaya",
+    "slug": "kabupaten-puncak-jaya",
+    "pid": 9411,
+    "prov_id": 94,
+    "ro_city_id": 374,
+    "ro_zip": 98979
+  },
+  {
+    "id": 494,
+    "nama": "Kabupaten Mimika",
+    "slug": "kabupaten-mimika",
+    "pid": 9412,
+    "prov_id": 94,
+    "ro_city_id": 284,
+    "ro_zip": 99962
+  },
+  {
+    "id": 495,
+    "nama": "Kabupaten Boven Digoel",
+    "slug": "kabupaten-boven-digoel",
+    "pid": 9413,
+    "prov_id": 94,
+    "ro_city_id": 90,
+    "ro_zip": 99662
+  },
+  {
+    "id": 496,
+    "nama": "Kabupaten Mappi",
+    "slug": "kabupaten-mappi",
+    "pid": 9414,
+    "prov_id": 94,
+    "ro_city_id": 274,
+    "ro_zip": 99853
+  },
+  {
+    "id": 497,
+    "nama": "Kabupaten Asmat",
+    "slug": "kabupaten-asmat",
+    "pid": 9415,
+    "prov_id": 94,
+    "ro_city_id": 16,
+    "ro_zip": 99777
+  },
+  {
+    "id": 498,
+    "nama": "Kabupaten Yahukimo",
+    "slug": "kabupaten-yahukimo",
+    "pid": 9416,
+    "prov_id": 94,
+    "ro_city_id": 499,
+    "ro_zip": 99041
+  },
+  {
+    "id": 499,
+    "nama": "Kabupaten Pegunungan Bintang",
+    "slug": "kabupaten-pegunungan-bintang",
+    "pid": 9417,
+    "prov_id": 94,
+    "ro_city_id": 347,
+    "ro_zip": 99573
+  },
+  {
+    "id": 500,
+    "nama": "Kabupaten Tolikara",
+    "slug": "kabupaten-tolikara",
+    "pid": 9418,
+    "prov_id": 94,
+    "ro_city_id": 484,
+    "ro_zip": 99411
+  },
+  {
+    "id": 501,
+    "nama": "Kabupaten Sarmi",
+    "slug": "kabupaten-sarmi",
+    "pid": 9419,
+    "prov_id": 94,
+    "ro_city_id": 392,
+    "ro_zip": 99373
+  },
+  {
+    "id": 502,
+    "nama": "Kabupaten Keerom",
+    "slug": "kabupaten-keerom",
+    "pid": 9420,
+    "prov_id": 94,
+    "ro_city_id": 180,
+    "ro_zip": 99461
+  },
+  {
+    "id": 503,
+    "nama": "Kabupaten Waropen",
+    "slug": "kabupaten-waropen",
+    "pid": 9426,
+    "prov_id": 94,
+    "ro_city_id": 495,
+    "ro_zip": 98269
+  },
+  {
+    "id": 504,
+    "nama": "Kabupaten Supiori",
+    "slug": "kabupaten-supiori",
+    "pid": 9427,
+    "prov_id": 94,
+    "ro_city_id": 443,
+    "ro_zip": 98164
+  },
+  {
+    "id": 505,
+    "nama": "Kabupaten Mamberamo Raya",
+    "slug": "kabupaten-mamberamo-raya",
+    "pid": 9428,
+    "prov_id": 94,
+    "ro_city_id": 263,
+    "ro_zip": 99381
+  },
+  {
+    "id": 506,
+    "nama": "Kabupaten Nduga",
+    "slug": "kabupaten-nduga",
+    "pid": 9429,
+    "prov_id": 94,
+    "ro_city_id": 303,
+    "ro_zip": 99541
+  },
+  {
+    "id": 507,
+    "nama": "Kabupaten Lanny Jaya",
+    "slug": "kabupaten-lanny-jaya",
+    "pid": 9430,
+    "prov_id": 94,
+    "ro_city_id": 231,
+    "ro_zip": 99531
+  },
+  {
+    "id": 508,
+    "nama": "Kabupaten Mamberamo Tengah",
+    "slug": "kabupaten-mamberamo-tengah",
+    "pid": 9431,
+    "prov_id": 94,
+    "ro_city_id": 264,
+    "ro_zip": 99553
+  },
+  {
+    "id": 509,
+    "nama": "Kabupaten Yalimo",
+    "slug": "kabupaten-yalimo",
+    "pid": 9432,
+    "prov_id": 94,
+    "ro_city_id": 500,
+    "ro_zip": 99481
+  },
+  {
+    "id": 510,
+    "nama": "Kabupaten Puncak",
+    "slug": "kabupaten-puncak",
+    "pid": 9433,
+    "prov_id": 94,
+    "ro_city_id": 373,
+    "ro_zip": 98981
+  },
+  {
+    "id": 511,
+    "nama": "Kabupaten Dogiyai",
+    "slug": "kabupaten-dogiyai",
+    "pid": 9434,
+    "prov_id": 94,
+    "ro_city_id": 117,
+    "ro_zip": 98866
+  },
+  {
+    "id": 512,
+    "nama": "Kabupaten Intan Jaya",
+    "slug": "kabupaten-intan-jaya",
+    "pid": 9435,
+    "prov_id": 94,
+    "ro_city_id": 150,
+    "ro_zip": 98771
+  },
+  {
+    "id": 513,
+    "nama": "Kabupaten Deiyai",
+    "slug": "kabupaten-deiyai",
+    "pid": 9436,
+    "prov_id": 94,
+    "ro_city_id": 111,
+    "ro_zip": 98784
+  },
+  {
+    "id": 514,
+    "nama": "Kota Jayapura",
+    "slug": "kota-jayapura",
+    "pid": 9471,
+    "prov_id": 94,
+    "ro_city_id": 158,
+    "ro_zip": 99114
+  }
+]

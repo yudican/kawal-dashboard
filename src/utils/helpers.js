@@ -39,3 +39,33 @@ export const getItem = key => {
 export const setItem = (key, value) => {
   typeof window !== 'undefined' && localStorage.setItem(key, value)
 }
+
+export const getBase64 = (img, callback) => {
+  const reader = new FileReader()
+  reader.addEventListener('load', () => callback(reader.result))
+  reader.readAsDataURL(img)
+}
+
+export const getDateTime = timestamp => {
+  if (timestamp) {
+    const date = new Date(timestamp)
+
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const day = String(date.getDate()).padStart(2, '0')
+    const hours = String(date.getHours()).padStart(2, '0')
+    const minutes = String(date.getMinutes()).padStart(2, '0')
+    const seconds = String(date.getSeconds()).padStart(2, '0')
+
+    const YMDHISFormat = `${year}-${month}-${day} ${hours - 1}:${minutes}:${seconds}`
+    return YMDHISFormat
+  }
+
+  return null
+}
+export const conevertDate = dateString => {
+  const date = new Date(dateString)
+  const isoString = date.toISOString()
+
+  return isoString
+}

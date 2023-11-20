@@ -13,6 +13,7 @@ export const profileService = createApi({
       return headers
     }
   }),
+  tagTypes: ['userList'],
   endpoints: builder => ({
     updateProfile: builder.mutation({
       query: body => ({
@@ -32,12 +33,35 @@ export const profileService = createApi({
         body
       })
     }),
+    createUser: builder.mutation({
+      query: body => ({
+        url: '/users',
+        method: 'POST',
+        body
+      }),
+      invalidatesTags: ['userList']
+    }),
+    updateUser: builder.mutation({
+      query: body => ({
+        url: '/users/' + body.id,
+        method: 'PATCH',
+        body
+      }),
+      invalidatesTags: ['userList']
+    }),
     getUsers: builder.query({
-      query: page => `/users${page ? page : ''}`
+      query: page => `/users${page ? page : ''}`,
+      providesTags: ['userList']
     })
 
     // Add other endpoints here if needed
   })
 })
 
-export const { useUpdateProfileMutation, useUpdatePasswordMutation, useGetUsersQuery } = profileService
+export const {
+  useUpdateProfileMutation,
+  useUpdatePasswordMutation,
+  useGetUsersQuery,
+  useCreateUserMutation,
+  useUpdateUserMutation
+} = profileService
