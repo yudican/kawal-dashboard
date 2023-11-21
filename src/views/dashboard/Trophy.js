@@ -34,7 +34,7 @@ const Trophy = ({ data }) => {
       <CardContent>
         <Typography variant='h6'>Congratulations {userData?.name}! 🥳</Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          Progress Anda
+          Total Data
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
           {data?.total || '0'}

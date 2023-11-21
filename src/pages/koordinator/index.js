@@ -100,7 +100,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
   }
   return (
     <div>
-      <Button onClick={() => setIsModalOpen(!isModalOpen)}>{update ? 'Edit' : 'Tambah Relawan'}</Button>
+      <Button onClick={() => setIsModalOpen(!isModalOpen)}>{update ? 'Edit' : 'Tambah Koordinator'}</Button>
       <Modal
         title={update ? 'Ubah Data Koordinator' : 'Input Data Koordinator'}
         open={isModalOpen}

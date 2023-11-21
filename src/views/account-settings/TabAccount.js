@@ -60,9 +60,10 @@ const TabAccount = () => {
     name: null,
     email: null,
     telepon: null,
-    photo: null
+    photo: null,
+    role: null
   })
-
+  console.log(user, 'user')
   const [updateProfile, { isLoading: updateProfileLoading }] = useUpdateProfileMutation()
 
   useEffect(() => {
@@ -71,10 +72,11 @@ const TabAccount = () => {
       email: null,
       telepon: null,
       photo: null,
+      role: null,
       ...user
     })
   }, [])
-
+  console.log(form, 'form')
   const onChange = file => {
     const reader = new FileReader()
     const { files } = file.target
@@ -182,11 +184,12 @@ const TabAccount = () => {
               <InputLabel>Role</InputLabel>
               <Select
                 label='Role'
-                defaultValue={form?.role}
+                value={form?.role}
+                disabled
                 onChange={e =>
                   setForm({
                     ...form,
-                    role: e
+                    role: e.target.value
                   })
                 }
               >
