@@ -115,6 +115,7 @@ const Dashboard = () => {
       value: 'pertanyaan5Result'
     }
   ]
+
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
