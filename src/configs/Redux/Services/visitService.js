@@ -62,6 +62,13 @@ export const visitService = createApi({
         body
       }),
       invalidatesTags: ['settingList']
+    }),
+    getRealisasi: builder.mutation({
+      query: body => ({
+        url: '/visits/report/realisasi',
+        method: 'POST',
+        body
+      })
     })
     // Add other endpoints here if needed
   })
@@ -75,5 +82,6 @@ export const {
   useGetVisitReportQuery,
   useGetVisitReportQuestionQuery,
   useGetVisitReportCityQuery,
-  useShareVisitMutation
+  useShareVisitMutation,
+  useGetRealisasiMutation
 } = visitService

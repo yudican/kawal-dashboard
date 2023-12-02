@@ -69,3 +69,7 @@ export const conevertDate = dateString => {
 
   return isoString
 }
+
+export function calculatePercentage(part, whole) {
+  return (part / whole) * 100
+}

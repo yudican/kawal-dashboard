@@ -11,6 +11,7 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 // ** Demo Components Imports
 import { Card, Progress, Table } from 'antd'
 import {
+  useGetRealisasiMutation,
   useGetVisitQuery,
   useGetVisitReportCityQuery,
   useGetVisitReportQuery,
@@ -24,13 +25,14 @@ import { ProtectedRouter } from './_app'
 import MapWithMarkers from 'src/views/dashboard/MapWithMarkers'
 import LineChart from 'src/views/dashboard/LineChart'
 import PieChart from 'src/views/dashboard/PieChart'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import provinsiData from './relawan/Wilayah/provinsi.json'
+import dataTarget from './relawan/Wilayah/data_target.json'
 import kabupatenData from './relawan/Wilayah/kabupaten.json'
 import kecamatanData from './relawan/Wilayah/kecamatan.json'
 import kelurahanData from './relawan/Wilayah/kelurahan.json'
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
+import { calculatePercentage } from 'src/utils/helpers'
 
 // provinsi
 const columns = [
@@ -40,46 +42,20 @@ const columns = [
     key: 'target',
     align: 'center',
     render: value => value || 0
-  },
-  {
-    title: 'Realisasi',
-    dataIndex: 'realisasi',
-    key: 'realisasi',
-    align: 'center',
-    render: value => value || 0
-  },
-  {
-    title: 'Persentase %',
-    dataIndex: 'persentase',
-    key: 'persentase',
-    align: 'center',
-    render: (value, record) => {
-      if (record.target > 0 && record.realisasi > 0) {
-        const percent = (record.target * record.realisasi) / 100
-        return <Progress type='circle' percent={percent} size={40} />
-      }
-      return <Progress type='circle' percent={0} size={40} />
-    }
   }
 ]
 
 const Dashboard = () => {
+  console.log(dataTarget, 'dataTarget')
   const { data, isLoading } = useGetVisitQuery('?limit=30')
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
   const { data: reportCityData, isLoading: loadingCitydata } = useGetVisitReportCityQuery()
+  const [getRealisasi, { data: realisasiData, loading: realisasiLoading }] = useGetRealisasiMutation()
 
-  const [selectedProvinsi, setSelectedProvinsi] = useState({
-    id: 23,
-    nama: 'Kalimantan Timur',
-    slug: 'kalimantan-timur',
-    pid: 64,
-    ro_id: 15
-  })
   const [stage, setStage] = useState('selectedProvinsi')
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
   const [selectedKecamatan, setSelectedKecamatan] = useState(null)
-  const [selectedKelurahan, setSelectedKelurahan] = useState(null)
 
   const cityData =
     (reportCityData &&
@@ -91,6 +67,10 @@ const Dashboard = () => {
       })) ||
     []
 
+  useEffect(() => {
+    getRealisasi({ kotakab: '$kotakab' })
+  }, [])
+  console.log(realisasiData, 'realisasiData')
   const questions = [
     {
       label:
@@ -129,9 +109,9 @@ const Dashboard = () => {
 
           <Grid item xs={12} md={12}>
             {stage === 'selectedProvinsi' && (
-              <Card title={`Laporan Wilayah ${selectedProvinsi['nama']}`}>
+              <Card title={`Laporan Wilayah ${dataTarget[0]['nama']}`}>
                 <Table
-                  dataSource={kabupatenData.filter(item => item.prov_id === selectedProvinsi.pid)}
+                  dataSource={dataTarget[0]['kabupaten']}
                   columns={[
                     {
                       title: 'Nama Kabupaten',
@@ -143,6 +123,7 @@ const Dashboard = () => {
                             onClick={() => {
                               setStage('selectedKabupaten')
                               setSelectedKabupaten(record)
+                              getRealisasi({ kecamatan: '$kecamatan' })
                             }}
                             style={{ cursor: 'pointer' }}
                           >
@@ -151,7 +132,35 @@ const Dashboard = () => {
                         )
                       }
                     },
-                    ...columns
+                    ...columns,
+                    {
+                      title: 'Realisasi',
+                      dataIndex: 'realisasi',
+                      key: 'realisasi',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kotakab === record.nama)
+                        if (realisasi) {
+                          return realisasi.count
+                        }
+                        return 0
+                      }
+                    },
+                    {
+                      title: 'Persentase %',
+                      dataIndex: 'persentase',
+                      key: 'persentase',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kotakab === record.nama)
+                        if (realisasi) {
+                          const percent = calculatePercentage(realisasi.count, record.target)
+                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                        }
+
+                        return <Progress type='circle' percent={0} size={50} />
+                      }
+                    }
                   ]}
                   pagination={true}
                 />
@@ -166,6 +175,7 @@ const Dashboard = () => {
                       onClick={() => {
                         setStage('selectedProvinsi')
                         setSelectedKecamatan(null)
+                        getRealisasi({ kotakab: '$kotakab' })
                       }}
                     >
                       <ArrowLeftBoldOutline />
@@ -175,7 +185,7 @@ const Dashboard = () => {
                 }
               >
                 <Table
-                  dataSource={kecamatanData.filter(item => item.kab_id === selectedKabupaten.pid)}
+                  dataSource={selectedKabupaten.kecamatan}
                   columns={[
                     {
                       title: 'Nama Kecamatan',
@@ -187,6 +197,7 @@ const Dashboard = () => {
                             onClick={() => {
                               setStage('selectedKecamatan')
                               setSelectedKecamatan(record)
+                              getRealisasi({ kelurahan: '$kelurahan' })
                             }}
                             style={{ cursor: 'pointer' }}
                           >
@@ -195,7 +206,35 @@ const Dashboard = () => {
                         )
                       }
                     },
-                    ...columns
+                    ...columns,
+                    {
+                      title: 'Realisasi',
+                      dataIndex: 'realisasi',
+                      key: 'realisasi',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kecamatan === record.nama)
+                        if (realisasi) {
+                          return realisasi.count
+                        }
+                        return 0
+                      }
+                    },
+                    {
+                      title: 'Persentase %',
+                      dataIndex: 'persentase',
+                      key: 'persentase',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kecamatan === record.nama)
+                        if (realisasi) {
+                          const percent = calculatePercentage(realisasi.count, record.target)
+                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                        }
+
+                        return <Progress type='circle' percent={0} size={50} />
+                      }
+                    }
                   ]}
                   pagination={true}
                 />
@@ -209,7 +248,7 @@ const Dashboard = () => {
                       style={{ marginRight: 10, cursor: 'pointer' }}
                       onClick={() => {
                         setStage('selectedKabupaten')
-                        setSelectedKelurahan(null)
+                        getRealisasi({ kecamatan: '$kecamatan' })
                       }}
                     >
                       <ArrowLeftBoldOutline />
@@ -219,14 +258,42 @@ const Dashboard = () => {
                 }
               >
                 <Table
-                  dataSource={kelurahanData.filter(item => item.kec_id === selectedKecamatan.pid)}
+                  dataSource={selectedKecamatan.kelurahan}
                   columns={[
                     {
                       title: 'Nama Kelurahan',
                       dataIndex: 'nama',
                       key: 'nama'
                     },
-                    ...columns
+                    ...columns,
+                    {
+                      title: 'Realisasi',
+                      dataIndex: 'realisasi',
+                      key: 'realisasi',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kelurahan === record.nama)
+                        if (realisasi) {
+                          return realisasi.count
+                        }
+                        return 0
+                      }
+                    },
+                    {
+                      title: 'Persentase %',
+                      dataIndex: 'persentase',
+                      key: 'persentase',
+                      align: 'center',
+                      render: (value, record) => {
+                        const realisasi = realisasiData?.find(item => item._id.kelurahan === record.nama)
+                        if (realisasi) {
+                          const percent = calculatePercentage(realisasi.count, record.target)
+                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                        }
+
+                        return <Progress type='circle' percent={0} size={50} />
+                      }
+                    }
                   ]}
                   pagination={true}
                 />
