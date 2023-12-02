@@ -10,6 +10,7 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
 import { Card, Progress, Table } from 'antd'
+import { useEffect, useState } from 'react'
 import {
   useGetRealisasiMutation,
   useGetVisitQuery,
@@ -18,21 +19,17 @@ import {
   useGetVisitReportQuestionQuery
 } from 'src/configs/Redux/Services/visitService'
 import BarChart from 'src/layouts/components/chart'
+import LineChart from 'src/views/dashboard/LineChart'
 import MapPoligon from 'src/views/dashboard/MapPoligon'
+import MapWithMarkers from 'src/views/dashboard/MapWithMarkers'
+import PieChart from 'src/views/dashboard/PieChart'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import Trophy from 'src/views/dashboard/Trophy'
 import { ProtectedRouter } from './_app'
-import MapWithMarkers from 'src/views/dashboard/MapWithMarkers'
-import LineChart from 'src/views/dashboard/LineChart'
-import PieChart from 'src/views/dashboard/PieChart'
-import { useEffect, useState } from 'react'
 
-import dataTarget from './relawan/Wilayah/data_target.json'
-import kabupatenData from './relawan/Wilayah/kabupaten.json'
-import kecamatanData from './relawan/Wilayah/kecamatan.json'
-import kelurahanData from './relawan/Wilayah/kelurahan.json'
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
 import { calculatePercentage } from 'src/utils/helpers'
+import dataTarget from './relawan/Wilayah/data_target.json'
 
 // provinsi
 const columns = [
@@ -46,7 +43,6 @@ const columns = [
 ]
 
 const Dashboard = () => {
-  console.log(dataTarget, 'dataTarget')
   const { data, isLoading } = useGetVisitQuery('?limit=30')
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
@@ -70,7 +66,6 @@ const Dashboard = () => {
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
   }, [])
-  console.log(realisasiData, 'realisasiData')
   const questions = [
     {
       label:
@@ -96,6 +91,7 @@ const Dashboard = () => {
     }
   ]
 
+  const sumOfTargets = dataTarget?.reduce((sum, student) => sum + student.target, 0) || 0
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
@@ -104,7 +100,7 @@ const Dashboard = () => {
             <Trophy data={data} />
           </Grid>
           <Grid item xs={12} md={8}>
-            <StatisticsCard visit={data} />
+            <StatisticsCard visit={data} target={sumOfTargets} />
           </Grid>
 
           <Grid item xs={12} md={12}>

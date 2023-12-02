@@ -14,12 +14,13 @@ import CurrencyUsd from 'mdi-material-ui/CurrencyUsd'
 import DotsVertical from 'mdi-material-ui/DotsVertical'
 import CellphoneLink from 'mdi-material-ui/CellphoneLink'
 import AccountOutline from 'mdi-material-ui/AccountOutline'
+import { calculatePercentage } from 'src/utils/helpers'
 
-const RenderStats = ({ visit }) => {
+const RenderStats = ({ visit, target }) => {
   console.log(visit, 'visit')
   const salesData = [
     {
-      stats: '0',
+      stats: target,
       color: 'info',
       title: 'Target',
       icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
@@ -37,7 +38,7 @@ const RenderStats = ({ visit }) => {
       icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
     },
     {
-      stats: '0',
+      stats: calculatePercentage(visit?.total, target).toFixed(3) + '%',
       color: 'warning',
       title: 'Realisasi',
       icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
@@ -68,7 +69,7 @@ const RenderStats = ({ visit }) => {
   ))
 }
 
-const StatisticsCard = ({ visit }) => {
+const StatisticsCard = ({ visit, target = 0 }) => {
   return (
     <Card>
       <CardHeader
@@ -81,9 +82,8 @@ const StatisticsCard = ({ visit }) => {
         subheader={
           <Typography variant='body2'>
             <Box component='span' sx={{ fontWeight: 600, color: 'text.primary' }}>
-              Total 48.5% growth
+              Total {calculatePercentage(visit?.total, target).toFixed(3)}% realisasi
             </Box>{' '}
-            😎 this month
           </Typography>
         }
         titleTypographyProps={{
@@ -96,7 +96,7 @@ const StatisticsCard = ({ visit }) => {
       />
       <CardContent sx={{ pt: theme => `${theme.spacing(3)} !important` }}>
         <Grid container spacing={[5, 0]}>
-          <RenderStats visit={visit} />
+          <RenderStats visit={visit} target={target} />
         </Grid>
       </CardContent>
     </Card>
