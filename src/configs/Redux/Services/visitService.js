@@ -14,8 +14,12 @@ export const visitService = createApi({
   }),
   tagTypes: ['visitList', 'visitReport', 'settingList'],
   endpoints: builder => ({
-    getVisit: builder.query({
-      query: params => `/visits${params}`,
+    getVisit: builder.mutation({
+      query: ({ body, params }) => ({
+        url: '/visits/lists' + params,
+        method: 'POST',
+        body
+      }),
       providesTags: ['visitList']
     }),
     getVisitReport: builder.query({
@@ -76,7 +80,7 @@ export const visitService = createApi({
 
 export const {
   useCreateVisitMutation,
-  useGetVisitQuery,
+  useGetVisitMutation,
   useGetSettingQuery,
   useUpdateSettingMutation,
   useGetVisitReportQuery,

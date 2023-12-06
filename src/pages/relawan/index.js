@@ -3,16 +3,16 @@ import CardHeader from '@mui/material/CardHeader'
 import Grid from '@mui/material/Grid'
 
 // ** Demo Components Imports
-import { Button, Col, Form, Image, Input, Modal, Row, Select, Table, Upload, message } from 'antd'
-import { useCreateVisitMutation, useGetVisitQuery } from 'src/configs/Redux/Services/visitService'
-import { ProtectedRouter } from '../_app'
-import { useState } from 'react'
+import { Button, Col, Form, Image, Input, Modal, Pagination, Row, Select, Table, Upload, message } from 'antd'
+import { useEffect, useState } from 'react'
+import { useCreateVisitMutation, useGetVisitMutation } from 'src/configs/Redux/Services/visitService'
 import { conevertDate, getBase64, getDateTime, getItem } from 'src/utils/helpers'
 import { v4 as uuidv4 } from 'uuid'
-import provinsiData from './Wilayah/provinsi.json'
+import { ProtectedRouter } from '../_app'
 import kabupatenData from './Wilayah/kabupaten.json'
 import kecamatanData from './Wilayah/kecamatan.json'
 import kelurahanData from './Wilayah/kelurahan.json'
+import provinsiData from './Wilayah/provinsi.json'
 
 const columns = [
   {
@@ -58,13 +58,24 @@ const columns = [
 ]
 
 const VisitPage = () => {
-  const { data, isLoading, refetch } = useGetVisitQuery(`?limit=1000`)
+  const [getVisit, { data, isLoading }] = useGetVisitMutation()
+  useEffect(() => {
+    getVisit({ body: { limit: 10 }, params: '' })
+  }, [])
   return (
     <ProtectedRouter>
       <Grid item xs={12}>
         <Card>
           <CardHeader title='Data Relawan' titleTypographyProps={{ variant: 'h6' }} action={<ModalForm />} />
-          <Table dataSource={data?.visits || []} columns={columns} pagination={true} />
+          <Table dataSource={data?.visits || []} columns={columns} pagination={false} loading={isLoading} />
+          <Pagination
+            style={{ paddingTop: 20, paddingBottom: 20 }}
+            defaultCurrent={1}
+            current={data?.page}
+            total={data?.total}
+            className='mt-4 text-center'
+            onChange={(page, limit) => getVisit({ body: { limit, page }, params: '' })}
+          />
         </Card>
       </Grid>
     </ProtectedRouter>

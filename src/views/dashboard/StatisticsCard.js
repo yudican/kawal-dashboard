@@ -1,26 +1,24 @@
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
 import Avatar from '@mui/material/Avatar'
+import Box from '@mui/material/Box'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 import CardHeader from '@mui/material/CardHeader'
+import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
 
 // ** Icons Imports
-import TrendingUp from 'mdi-material-ui/TrendingUp'
+import CellphoneLink from 'mdi-material-ui/CellphoneLink'
 import CurrencyUsd from 'mdi-material-ui/CurrencyUsd'
 import DotsVertical from 'mdi-material-ui/DotsVertical'
-import CellphoneLink from 'mdi-material-ui/CellphoneLink'
-import AccountOutline from 'mdi-material-ui/AccountOutline'
-import { calculatePercentage } from 'src/utils/helpers'
+import TrendingUp from 'mdi-material-ui/TrendingUp'
+import { calculatePercentage, formatNumber } from 'src/utils/helpers'
 
 const RenderStats = ({ visit, target }) => {
-  console.log(visit, 'visit')
   const salesData = [
     {
-      stats: target,
+      stats: formatNumber(target),
       color: 'info',
       title: 'Target',
       icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
@@ -32,12 +30,6 @@ const RenderStats = ({ visit, target }) => {
       icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
     },
     {
-      stats: '0',
-      title: 'Koordinator',
-      color: 'success',
-      icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
-    },
-    {
       stats: calculatePercentage(visit?.total, target).toFixed(3) + '%',
       color: 'warning',
       title: 'Realisasi',
@@ -45,7 +37,7 @@ const RenderStats = ({ visit, target }) => {
     }
   ]
   return salesData.map((item, index) => (
-    <Grid item xs={12} sm={3} key={index}>
+    <Grid item xs={12} sm={4} key={index}>
       <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
         <Avatar
           variant='rounded'
