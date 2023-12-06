@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent'
 import { styled, useTheme } from '@mui/material/styles'
 import { useSelector } from 'react-redux'
 import { getItem } from 'src/utils/helpers'
+import { useRouter } from 'next/router'
 
 // Styled component for the triangle shaped background image
 const TriangleImg = styled('img')({
@@ -24,6 +25,7 @@ const TrophyImg = styled('img')({
 })
 
 const Trophy = ({ data }) => {
+  const router = useRouter()
   const userData = getItem('userData')
   // ** Hook
   const theme = useTheme()
@@ -39,7 +41,7 @@ const Trophy = ({ data }) => {
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
           {data?.total || '0'}
         </Typography>
-        <Button size='small' variant='contained'>
+        <Button size='small' variant='contained' onClick={() => router.push('/relawan')}>
           Lihat List
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />

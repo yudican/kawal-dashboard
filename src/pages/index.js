@@ -13,6 +13,7 @@ import { Card, Progress, Table } from 'antd'
 import { useEffect, useState } from 'react'
 import {
   useGetRealisasiMutation,
+  useGetVisitMutation,
   useGetVisitQuery,
   useGetVisitReportCityQuery,
   useGetVisitReportQuery,
@@ -43,7 +44,10 @@ const columns = [
 ]
 
 const Dashboard = () => {
-  const { data, isLoading } = useGetVisitQuery('?limit=30')
+  const [getVisit, { data, isLoading }] = useGetVisitMutation()
+  useEffect(() => {
+    getVisit({ body: { limit: 10 }, params: '' })
+  }, [])
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
   const { data: reportCityData, isLoading: loadingCitydata } = useGetVisitReportCityQuery()
@@ -92,6 +96,7 @@ const Dashboard = () => {
   ]
 
   const sumOfTargets = dataTarget?.reduce((sum, student) => sum + student.target, 0) || 0
+  console
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
