@@ -17,7 +17,7 @@ const MapWithMarkers = ({ data }) => {
       // Create a default Marker, colored black, rotated 45 degrees.
       coordinates.forEach(item => new mapboxgl.Marker({ color: 'black' }).setLngLat(item).addTo(map))
     })
-  }, [])
+  }, [data])
 
   return <div id='map-marker' className='map-container' style={{ height: 500 }} />
 }
