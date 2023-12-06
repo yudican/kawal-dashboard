@@ -195,11 +195,11 @@ const Dashboard = () => {
                       render: (text, record) => {
                         return (
                           <span
-                            onClick={() => {
-                              setStage('selectedKecamatan')
-                              setSelectedKecamatan(record)
-                              getRealisasi({ kelurahan: '$kelurahan' })
-                            }}
+                            // onClick={() => {
+                            //   setStage('selectedKecamatan')
+                            //   setSelectedKecamatan(record)
+                            //   getRealisasi({ kelurahan: '$kelurahan' })
+                            // }}
                             style={{ cursor: 'pointer' }}
                           >
                             {text}
