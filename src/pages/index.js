@@ -46,7 +46,7 @@ const columns = [
 const Dashboard = () => {
   const [getVisit, { data, isLoading }] = useGetVisitMutation()
   useEffect(() => {
-    getVisit({ body: { limit: 10 }, params: '' })
+    getVisit({ body: { limit: 1000 }, params: '' })
   }, [])
   const { data: reportData, isLoading: loadingdata } = useGetVisitReportQuery()
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
@@ -338,16 +338,20 @@ const Dashboard = () => {
               )
             })}
 
-          <Grid item xs={12} md={12} lg={12}>
-            <Card>
-              <MapPoligon data={data?.visits || []} cities={cityData || []} />
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={12} lg={12}>
-            <Card>
-              <MapWithMarkers data={data?.visits || []} />
-            </Card>
-          </Grid>
+          {!loadingCitydata && (
+            <Grid item xs={12} md={12} lg={12}>
+              <Card>
+                <MapPoligon data={data?.visits || []} cities={cityData || []} />
+              </Card>
+            </Grid>
+          )}
+          {!isLoading && (
+            <Grid item xs={12} md={12} lg={12}>
+              <Card>
+                <MapWithMarkers data={data?.visits || []} />
+              </Card>
+            </Grid>
+          )}
           {/* <Grid item xs={12} md={6} lg={4}>
             <TotalEarning />
           </Grid>

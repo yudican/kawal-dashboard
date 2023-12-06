@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 mapboxgl.accessToken = 'pk.eyJ1IjoieXVkaWNhbmRyYTEiLCJhIjoiY2tuemd6dXhoMDR1ZDJ2cGMzbGk0dHpoaSJ9.Y5TZzkmHQd4Q2hWpDllpsQ'
 const MapWithMarkers = ({ data }) => {
   const coordinates = data.map(item => item.geolocation.coordinates)
+  console.log(coordinates)
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: 'map-marker',
