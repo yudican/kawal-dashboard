@@ -24,8 +24,8 @@ const RenderStats = ({ visit, target }) => {
       icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
     },
     {
-      stats: formatNumber(visit?.total) || 0,
-      title: 'Relawan',
+      stats: visit?.total || 0,
+      title: 'Rumah Warga Yang Dikunjungi',
       color: 'primary',
       icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
     },
