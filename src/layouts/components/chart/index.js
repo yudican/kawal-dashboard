@@ -1,12 +1,12 @@
 import Chart from 'chart.js/auto'
 import { Bar } from 'react-chartjs-2'
 
-const BarChart = ({ labels, values, title }) => {
+const BarChart = ({ labels, values, title, label = 'Data Rumah Yang Sudah di Kunjungi' }) => {
   const data = {
     labels: labels,
     datasets: [
       {
-        label: 'Laporan Relawan',
+        label,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1,

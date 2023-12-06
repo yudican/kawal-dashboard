@@ -10,6 +10,7 @@ const mapboxToken = 'pk.eyJ1IjoieXVkaWNhbmRyYTEiLCJhIjoiY2tuemd6dXhoMDR1ZDJ2cGMz
 
 mapboxgl.accessToken = mapboxToken
 const MapPoligon = ({ cities = [] }) => {
+  console.log(cities, 'cities')
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: 'map', // container ID

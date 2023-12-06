@@ -16,13 +16,13 @@ const navigation = () => {
       path: '/account-settings'
     },
 
+    // {
+    //   title: 'Koordinator',
+    //   icon: FormatLetterCase,
+    //   path: '/koordinator'
+    // },
     {
-      title: 'Koordinator',
-      icon: FormatLetterCase,
-      path: '/koordinator'
-    },
-    {
-      title: 'Relawan',
+      title: 'Data Warga',
       icon: FormatLetterCase,
       path: '/relawan'
     }

@@ -22,30 +22,30 @@ const columns = [
     render: (_, record, index) => index + 1
   },
   {
-    title: 'Koordinator',
-    dataIndex: 'nama',
-    key: 'nama',
+    title: 'Nama Lengkap Relawan',
+    dataIndex: 'nama_relawan',
+    key: 'nama_relawan',
     render: (_, record) => record?.user?.name || '-'
   },
   {
-    title: 'Nama Lengkap',
+    title: 'Nama Lengkap Warga',
     dataIndex: 'nama_lengkap',
     key: 'nama_lengkap'
   },
   {
-    title: 'Jenis Kelamin',
-    dataIndex: 'jenis_kelamin',
-    key: 'jenis_kelamin'
+    title: 'Kabupaten',
+    dataIndex: 'kotakab',
+    key: 'kotakab'
+  },
+  {
+    title: 'Kecamatan',
+    dataIndex: 'kecamatan',
+    key: 'kecamatan'
   },
   {
     title: 'Alamat',
     dataIndex: 'alamat',
     key: 'alamat'
-  },
-  {
-    title: 'Pegikut',
-    dataIndex: 'pengikut',
-    key: 'pengikut'
   },
   {
     title: 'Foto',
@@ -54,6 +54,11 @@ const columns = [
     render: text => {
       return <Image src={text} className='w-10 h-10' style={{ width: 40, height: 40 }} />
     }
+  },
+  {
+    title: 'Tanggal Input',
+    dataIndex: 'date',
+    key: 'date'
   }
 ]
 
@@ -66,7 +71,11 @@ const VisitPage = () => {
     <ProtectedRouter>
       <Grid item xs={12}>
         <Card>
-          <CardHeader title='Data Relawan' titleTypographyProps={{ variant: 'h6' }} action={<ModalForm />} />
+          <CardHeader
+            title='Data Rumah Yang Dikunjungi'
+            titleTypographyProps={{ variant: 'h6' }}
+            action={<ModalForm />}
+          />
           <Table dataSource={data?.visits || []} columns={columns} pagination={false} loading={isLoading} />
           <Pagination
             style={{ paddingTop: 20, paddingBottom: 20 }}
@@ -100,7 +109,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
 
   const handleCreateVisit = value => {
     const formData = new FormData()
-    formData.append('nik', value.nik)
+    formData.append('nama_relawan', value.nama_relawan)
     formData.append('nama_lengkap', value.nama_lengkap)
     formData.append('jenis_kelamin', value.jenis_kelamin)
     formData.append('nomor_telepon', value.nomor_telepon)
@@ -185,10 +194,10 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
           setIsModalOpen(!isModalOpen)
         }}
       >
-        {update ? 'Edit' : 'Tambah Relawan'}
+        {update ? 'Edit' : 'Tambah Data Rumah Dikunjungi'}
       </Button>
       <Modal
-        title={update ? 'Ubah Data Relawan' : 'Input Data Relawan'}
+        title={update ? 'Ubah Data Rumah Dikunjungi' : 'Tambah Data Rumah Dikunjungi'}
         open={isModalOpen}
         onCancel={() => setIsModalOpen(!isModalOpen)}
         onOk={() => form.submit()}
@@ -206,26 +215,26 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
             <Row gutter={16}>
               <Col span={12}>
                 <Form.Item
-                  name='nik'
-                  label='NIK'
+                  name='nama_relawan'
+                  label='Nama Lengkap Relawan'
                   rules={[
                     {
                       required: false
                     }
                   ]}
                 >
-                  <Input placeholder='Input NIK' />
+                  <Input placeholder='Input Nama Lengkap Relawan' />
                 </Form.Item>
                 <Form.Item
                   name='nama_lengkap'
-                  label='Nama Lengkap'
+                  label='Nama Lengkap Warga'
                   rules={[
                     {
                       required: true
                     }
                   ]}
                 >
-                  <Input placeholder='Input Nama Lengkap' />
+                  <Input placeholder='Input Nama Lengkap Warga' />
                 </Form.Item>
               </Col>
               <Col span={12}>

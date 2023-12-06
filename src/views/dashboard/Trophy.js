@@ -42,7 +42,7 @@ const Trophy = ({ data }) => {
           {data?.total || '0'}
         </Typography>
         <Button size='small' variant='contained' onClick={() => router.push('/relawan')}>
-          Lihat List
+          Lihat Rumah Yang Dikunjungi
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
         <TrophyImg alt='trophy' src='/images/misc/trophy.png' />

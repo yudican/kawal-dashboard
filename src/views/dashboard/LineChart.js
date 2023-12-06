@@ -1,14 +1,14 @@
 import Chart from 'chart.js/auto'
 import { Line } from 'react-chartjs-2'
 
-const LineChart = ({ values, labels }) => {
+const LineChart = ({ values, labels, label = 'Data Rumah Yang Sudah di Kunjungi' }) => {
   console.log(values, labels)
   // Sample data for the line chart
   const data = {
     labels,
     datasets: [
       {
-        label: 'Data Kunjungan',
+        label,
         data: values, // Replace with your data
         fill: false, // Fill area under the line
         borderColor: 'rgba(75, 192, 192, 1)' // Line color

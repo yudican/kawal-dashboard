@@ -70,6 +70,7 @@ const Dashboard = () => {
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
   }, [])
+  console.log(cityData, 'cityData')
   const questions = [
     {
       label:
@@ -311,18 +312,18 @@ const Dashboard = () => {
               <LineChart values={reportData?.counts} labels={reportData?.months} />
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <Card>
               <PieChart values={reportData?.counts} labels={reportData?.months} />
             </Card>
-          </Grid>
-          <Grid item xs={12} md={8}>
+          </Grid> */}
+          <Grid item xs={12} md={6}>
             <Card>
               <BarChart values={cityData.map(item => item.value)} labels={cityData.map(item => item.label)} />
             </Card>
           </Grid>
           {isSuccess &&
-            questions.map(item => {
+            questions.map((item, index) => {
               return (
                 <Grid item xs={12} md={6}>
                   <Card>
@@ -330,6 +331,7 @@ const Dashboard = () => {
                       values={reportQuestionData[item.value]?.map(row => row[row._id])}
                       labels={reportQuestionData[item.value]?.map(row => row._id)}
                       title={item.label}
+                      label={'Pertanyaan ' + (index + 1)}
                     />
                   </Card>
                 </Grid>
