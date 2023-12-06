@@ -27,7 +27,7 @@ const RenderStats = ({ visit, target }) => {
     },
     {
       stats: visit?.total || 0,
-      title: 'Relawan',
+      title: 'Rumah Warga Yang Dikunjungi',
       color: 'primary',
       icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
     },
