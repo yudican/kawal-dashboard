@@ -24,8 +24,7 @@ const columns = [
   {
     title: 'Nama Lengkap Relawan',
     dataIndex: 'nama_relawan',
-    key: 'nama_relawan',
-    render: (_, record) => record?.user?.name || '-'
+    key: 'nama_relawan'
   },
   {
     title: 'Nama Lengkap Warga',
@@ -67,6 +66,8 @@ const VisitPage = () => {
   useEffect(() => {
     getVisit({ body: { limit: 10 }, params: '' })
   }, [])
+
+  console.log(data, 'data')
   return (
     <ProtectedRouter>
       <Grid item xs={12}>
