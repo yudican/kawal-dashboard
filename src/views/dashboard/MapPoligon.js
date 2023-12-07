@@ -26,7 +26,6 @@ const MapPoligon = ({ cities = [] }) => {
   }
   const [modalOpen, setModalOpen] = useState(false)
   const [modalOpenKey, setModalOpenKey] = useState('berau')
-  const [modalTitle, setModalTitle] = useState('')
   const [jumlahData, setJumlahData] = useState(0)
 
   const kabupatens = dataTarget[0]['kabupaten']
