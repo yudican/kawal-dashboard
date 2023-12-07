@@ -67,7 +67,6 @@ const VisitPage = () => {
     getVisit({ body: { limit: 10 }, params: '' })
   }, [])
 
-  console.log(data, 'data')
   return (
     <ProtectedRouter>
       <Grid item xs={12}>

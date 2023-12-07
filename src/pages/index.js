@@ -70,7 +70,7 @@ const Dashboard = () => {
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
   }, [])
-  console.log(cityData, 'cityData')
+
   const questions = [
     {
       label:

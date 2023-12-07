@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import ReactMapGL, { Source, Layer } from 'react-map-gl'
 
 import mapboxgl from 'mapbox-gl'
-
+import { Modal, Progress, Table } from 'antd'
+import dataTarget from '../../pages/relawan/Wilayah/data_target.json'
+import { useGetRealisasiMutation } from 'src/configs/Redux/Services/visitService'
+import { calculatePercentage } from 'src/utils/helpers'
 // Replace 'YOUR_MAPBOX_ACCESS_TOKEN' with your actual Mapbox access token
 
 // Mengatur token Mapbox Anda di sini
@@ -10,7 +12,28 @@ const mapboxToken = 'pk.eyJ1IjoieXVkaWNhbmRyYTEiLCJhIjoiY2tuemd6dXhoMDR1ZDJ2cGMz
 
 mapboxgl.accessToken = mapboxToken
 const MapPoligon = ({ cities = [] }) => {
+  const [getRealisasi, { data: realisasiData, loading: realisasiLoading }] = useGetRealisasiMutation()
+  const modalList = {
+    berau: 'Kabupaten Berau',
+    'kutai-barat': 'Kabupaten Kutai Barat',
+    'kutai-kartanegara': 'Kabupaten Kutai Kartanegara',
+    'kutai-timur': 'Kabupaten Kutai Timur',
+    balikpapan: 'Kota Balikpapan',
+    bontang: 'Kota Bontang',
+    pasir: 'Kabupaten Paser',
+    'penajam-paser-utara': 'Kabupaten Penajam Paser Utara',
+    samarinda: 'Kota Samarinda'
+  }
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpenKey, setModalOpenKey] = useState('berau')
+  const [modalTitle, setModalTitle] = useState('')
+  const [jumlahData, setJumlahData] = useState(0)
+
+  const kabupatens = dataTarget[0]['kabupaten']
+  const kabupaten = kabupatens.filter(item => item.nama == modalList[modalOpenKey])
+
   useEffect(() => {
+    getRealisasi({ kecamatan: '$kecamatan' })
     const map = new mapboxgl.Map({
       container: 'map', // container ID
       // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -4580,36 +4603,7 @@ const MapPoligon = ({ cities = [] }) => {
           'fill-opacity': 0.5
         }
       })
-      // map.addLayer({
-      //   id: 'bulongan',
-      //   type: 'fill',
-      //   source: 'bulongan', // reference the data source
-      //   layout: {},
-      //   paint: {
-      //     'fill-color': '#f1c40f', // blue color fill
-      //     'fill-opacity': 0.5
-      //   }
-      // })
-      // map.addLayer({
-      //   id: 'malinau',
-      //   type: 'fill',
-      //   source: 'malinau', // reference the data source
-      //   layout: {},
-      //   paint: {
-      //     'fill-color': '#1B1464', // blue color fill
-      //     'fill-opacity': 0.5
-      //   }
-      // })
-      // map.addLayer({
-      //   id: 'nunukan',
-      //   type: 'fill',
-      //   source: 'nunukan', // reference the data source
-      //   layout: {},
-      //   paint: {
-      //     'fill-color': '#009432', // blue color fill
-      //     'fill-opacity': 0.5
-      //   }
-      // })
+
       map.addLayer({
         id: 'pasir',
         type: 'fill',
@@ -4640,237 +4634,204 @@ const MapPoligon = ({ cities = [] }) => {
           'fill-opacity': 0.5
         }
       })
-      // map.addLayer({
-      //   id: 'tarakan',
-      //   type: 'fill',
-      //   source: 'tarakan', // reference the data source
-      //   layout: {},
-      //   paint: {
-      //     'fill-color': '#0652DD', // blue color fill
-      //     'fill-opacity': 0.5
-      //   }
-      // })
 
       map.on('click', 'berau', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Berau</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Berau')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('berau')
+        setJumlahData(getTotal(cities, 'Kabupaten Berau'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Berau</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Berau')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'kutai-barat', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Kutai Barat</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Kutai Barat')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('kutai-barat')
+        setJumlahData(getTotal(cities, 'Kabupaten Kutai Barat'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Kutai Barat</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Kutai Barat')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'kutai-kartanegara', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Kutai Kartanegara</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Kutai Kartanegara')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('kutai-kartanegara')
+        setJumlahData(getTotal(cities, 'Kabupaten Kutai Kartanegara'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Kutai Kartanegara</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Kutai Kartanegara')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'kutai-timur', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Kutai Timur</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Timur')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('kutai-timur')
+        setJumlahData(getTotal(cities, 'Kabupaten Kutai Timur'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Kutai Timur</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Timur')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'balikpapan', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kota Balikpapan</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kota Balikpapan')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('balikpapan')
+        setJumlahData(getTotal(cities, 'Kota Balikpapan'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kota Balikpapan</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kota Balikpapan')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'bontang', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kota Bontang</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kota Bontang')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('bontang')
+        setJumlahData(getTotal(cities, 'Kota Bontang'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kota Bontang</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kota Bontang')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
-      // map.on('click', 'bulongan', e => {
-      //   new mapboxgl.Popup()
-      //     .setLngLat(e.lngLat)
-      //     .setHTML(
-      //       `<div>
-      //         <h3>Kabupaten bulongan</h3>
-      //         <p>Jumlah: 30</p>
-      //       </div>`
-      //     )
-      //     .addTo(map)
-      // })
-      // map.on('click', 'malinau', e => {
-      //   new mapboxgl.Popup()
-      //     .setLngLat(e.lngLat)
-      //     .setHTML(
-      //       `<div>
-      //         <h3>Kabupaten malinau</h3>
-      //         <p>Jumlah: 30</p>
-      //       </div>`
-      //     )
-      //     .addTo(map)
-      // })
-      // map.on('click', 'nunukan', e => {
-      //   new mapboxgl.Popup()
-      //     .setLngLat(e.lngLat)
-      //     .setHTML(
-      //       `<div>
-      //         <h3>Kabupaten nunukan</h3>
-      //         <p>Jumlah: 30</p>
-      //       </div>`
-      //     )
-      //     .addTo(map)
-      // })
+
       map.on('click', 'pasir', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Paser</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Paser')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('pasir')
+        setJumlahData(getTotal(cities, 'Kota Paser'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Paser</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Paser')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'penajam-paser-utara', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kabupaten Penajam Paser Utara</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kabupaten Penajam Paser Utara')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('penajam-paser-utara')
+        setJumlahData(getTotal(cities, 'Kabupaten Penajam Paser Utara'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kabupaten Penajam Paser Utara</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kabupaten Penajam Paser Utara')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
       map.on('click', 'samarinda', e => {
-        new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(
-            `<div>
-              <h3>Kota Samarinda</h3>
-              <p>Jumlah: ${getTotal(cities, 'Kota Samarinda')}</p>
-            </div>`
-          )
-          .addTo(map)
+        setModalOpen(true)
+        setModalOpenKey('samarinda')
+        setJumlahData(getTotal(cities, 'Kota Samarinda'))
+        // new mapboxgl.Popup()
+        //   .setLngLat(e.lngLat)
+        //   .setHTML(
+        //     `<div>
+        //       <h3>Kota Samarinda</h3>
+        //       <p>Jumlah: ${getTotal(cities, 'Kota Samarinda')}</p>
+        //     </div>`
+        //   )
+        //   .addTo(map)
       })
-      // map.on('click', 'tarakan', e => {
-      //   new mapboxgl.Popup()
-      //     .setLngLat(e.lngLat)
-      //     .setHTML(
-      //       `<div>
-      //         <h3>Kabupaten tarakan</h3>
-      //         <p>Jumlah: 30</p>
-      //       </div>`
-      //     )
-      //     .addTo(map)
-      // })
-
-      // const cities = [
-      //   {
-      //     label: 'Samarinda',
-      //     value: 0,
-      //     color: '#B53471'
-      //   },
-      //   {
-      //     label: 'Tarakan',
-      //     value: 0,
-      //     color: '#0652DD'
-      //   },
-      //   {
-      //     label: 'Penajem Paser Utara',
-      //     value: 0,
-      //     color: '#5758BB'
-      //   },
-      //   {
-      //     label: 'Pasir',
-      //     value: 0,
-      //     color: '#EA2027'
-      //   },
-      //   {
-      //     label: 'Nunukan',
-      //     value: 0,
-      //     color: '#009432'
-      //   },
-      //   {
-      //     label: 'Malinau',
-      //     value: 0,
-      //     color: '#1B1464'
-      //   },
-      //   {
-      //     label: 'Bulongan',
-      //     value: 0,
-      //     color: '#f1c40f'
-      //   },
-      //   {
-      //     label: 'Balikpapan',
-      //     value: 0,
-      //     color: '#8e44ad'
-      //   },
-      //   {
-      //     label: 'Bontang',
-      //     value: 0,
-      //     color: '#2c3e50'
-      //   },
-      //   {
-      //     label: 'Kutai Kartanegara',
-      //     value: 0,
-      //     color: '#27ae60'
-      //   },
-      //   {
-      //     label: 'Kutai Timur',
-      //     value: 0,
-      //     color: '#e74c3c'
-      //   },
-      //   {
-      //     label: 'Berau',
-      //     value: 0,
-      //     color: '#0080ff'
-      //   },
-      //   {
-      //     label: 'Kutai Barat',
-      //     value: 0,
-      //     color: '#e67e22'
-      //   }
-      // ]
     })
   }, [cities])
 
-  return <div id='map' style={{ height: 500 }}></div>
+  return (
+    <div id='map' style={{ height: 500 }}>
+      <Modal
+        title={`${modalList[modalOpenKey]} - ${jumlahData}`}
+        open={modalOpen}
+        onCancel={() => setModalOpen(!modalOpen)}
+        onOk={() => setModalOpen(!modalOpen)}
+        width={800}
+      >
+        <div style={{ marginTop: 20 }}>
+          <Table
+            dataSource={(kabupaten && kabupaten.length > 0 && kabupaten[0]['kecamatan']) || []}
+            columns={[
+              {
+                title: 'Nama Kecamatan',
+                dataIndex: 'nama',
+                key: 'nama',
+                render: (text, record) => {
+                  return <span style={{ cursor: 'pointer' }}>{text}</span>
+                }
+              },
+              {
+                title: 'Target',
+                dataIndex: 'target',
+                key: 'target',
+                align: 'center',
+                render: value => value || 0
+              },
+              {
+                title: 'Realisasi',
+                dataIndex: 'realisasi',
+                key: 'realisasi',
+                align: 'center',
+                render: (value, record) => {
+                  const realisasi = realisasiData?.find(item => item._id.kecamatan === record.nama)
+                  if (realisasi) {
+                    return realisasi.count
+                  }
+                  return 0
+                }
+              },
+              {
+                title: 'Persentase %',
+                dataIndex: 'persentase',
+                key: 'persentase',
+                align: 'center',
+                render: (value, record) => {
+                  const realisasi = realisasiData?.find(item => item._id.kecamatan === record.nama)
+                  if (realisasi) {
+                    const percent = calculatePercentage(realisasi.count, record.target)
+                    return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                  }
+
+                  return <Progress type='circle' percent={0} size={50} />
+                }
+              }
+            ]}
+            pagination={true}
+          />
+        </div>
+      </Modal>
+    </div>
+  )
 }
 
 const getTotal = (cities, label) => {
   const city = cities.find(item => item.label === label)
-  console.log(city, 'city')
   if (city) {
     return city.value
   }
