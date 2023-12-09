@@ -4,7 +4,7 @@ import mapboxgl from 'mapbox-gl'
 import { Modal, Progress, Table } from 'antd'
 import dataTarget from '../../pages/relawan/Wilayah/data_target.json'
 import { useGetRealisasiMutation } from 'src/configs/Redux/Services/visitService'
-import { calculatePercentage } from 'src/utils/helpers'
+import { calculatePercentage, formatNumber } from 'src/utils/helpers'
 // Replace 'YOUR_MAPBOX_ACCESS_TOKEN' with your actual Mapbox access token
 
 // Mengatur token Mapbox Anda di sini
@@ -4790,7 +4790,7 @@ const MapPoligon = ({ cities = [] }) => {
                 dataIndex: 'target',
                 key: 'target',
                 align: 'center',
-                render: value => value || 0
+                render: value => formatNumber(value) || 0
               },
               {
                 title: 'Realisasi',

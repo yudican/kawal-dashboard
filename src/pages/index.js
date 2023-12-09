@@ -29,7 +29,7 @@ import Trophy from 'src/views/dashboard/Trophy'
 import { ProtectedRouter } from './_app'
 
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
-import { calculatePercentage } from 'src/utils/helpers'
+import { calculatePercentage, formatNumber } from 'src/utils/helpers'
 import dataTarget from './relawan/Wilayah/data_target.json'
 
 // provinsi
@@ -39,7 +39,7 @@ const columns = [
     dataIndex: 'target',
     key: 'target',
     align: 'center',
-    render: value => value || 0
+    render: value => formatNumber(value) || 0
   }
 ]
 
