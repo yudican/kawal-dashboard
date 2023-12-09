@@ -1,6 +1,6 @@
 const themeConfig = {
   // ** Layout Configs
-  templateName: '!Kawal' /* App Name */,
+  templateName: 'Markdata' /* App Name */,
   mode: 'light' /* light | dark */,
   contentWidth: 'boxed' /* full | boxed */,
   // ** Routing Configs
