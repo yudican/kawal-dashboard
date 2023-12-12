@@ -4,7 +4,7 @@
         "nama": "Kalimantan Timur",
         "slug": "kalimantan-timur",
         "pid": 64,
-        "target": 195000,
+        "target": 200000,
         "kabupaten": [
             {
                 "id": 356,
@@ -482,7 +482,7 @@
                 "slug": "kabupaten-kutai-timur",
                 "pid": 6404,
                 "prov_id": 23,
-                "target": 70001,
+                "target": 75000,
                 "kecamatan": [
                     {
                         "id": 5060,
