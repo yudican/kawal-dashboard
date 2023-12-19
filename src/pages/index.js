@@ -12,6 +12,7 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 import { Card, Progress, Table } from 'antd'
 import { useEffect, useState } from 'react'
 import {
+  useGetCoordinatesQuery,
   useGetRealisasiMutation,
   useGetVisitMutation,
   useGetVisitQuery,
@@ -52,6 +53,7 @@ const Dashboard = () => {
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
   const { data: reportCityData, isLoading: loadingCitydata } = useGetVisitReportCityQuery()
   const [getRealisasi, { data: realisasiData, loading: realisasiLoading }] = useGetRealisasiMutation()
+  const { data: cordinatesData, isLoading: coordinatesLoading } = useGetCoordinatesQuery()
 
   const [stage, setStage] = useState('selectedProvinsi')
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
@@ -70,7 +72,7 @@ const Dashboard = () => {
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
   }, [])
-
+  console.log(cordinatesData, 'cordinatesData')
   const questions = [
     {
       label:
@@ -345,10 +347,10 @@ const Dashboard = () => {
               </Card>
             </Grid>
           )}
-          {!isLoading && (
+          {!coordinatesLoading && (
             <Grid item xs={12} md={12} lg={12}>
               <Card>
-                <MapWithMarkers data={data?.visits || []} />
+                <MapWithMarkers data={cordinatesData || []} />
               </Card>
             </Grid>
           )}
