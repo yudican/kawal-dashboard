@@ -38,10 +38,10 @@ export const visitService = createApi({
       query: body => ({
         url: '/visits',
         method: 'POST',
-        body,
-        headers: {
-          'Content-Type': 'multipart/form-data' // Set the Content-Type header to multipart/form-data
-        }
+        body
+        // headers: {
+        //   'Content-Type': 'multipart/form-data' // Set the Content-Type header to multipart/form-data
+        // }
       }),
       invalidatesTags: ['visitList', 'visitReport']
     }),

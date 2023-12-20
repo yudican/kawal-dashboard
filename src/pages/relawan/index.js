@@ -3,7 +3,21 @@ import CardHeader from '@mui/material/CardHeader'
 import Grid from '@mui/material/Grid'
 
 // ** Demo Components Imports
-import { Button, Col, Form, Image, Input, Modal, Pagination, Row, Select, Table, Upload, message } from 'antd'
+import {
+  Button,
+  Col,
+  DatePicker,
+  Form,
+  Image,
+  Input,
+  Modal,
+  Pagination,
+  Row,
+  Select,
+  Table,
+  Upload,
+  message
+} from 'antd'
 import { useEffect, useState } from 'react'
 import { useCreateVisitMutation, useGetVisitMutation } from 'src/configs/Redux/Services/visitService'
 import { conevertDate, getBase64, getDateTime, getItem } from 'src/utils/helpers'
@@ -13,6 +27,8 @@ import kabupatenData from './Wilayah/kabupaten.json'
 import kecamatanData from './Wilayah/kecamatan.json'
 import kelurahanData from './Wilayah/kelurahan.json'
 import provinsiData from './Wilayah/provinsi.json'
+import { LoadingOutlined } from '@ant-design/icons'
+import { PlusBoxOutline } from 'mdi-material-ui'
 
 const columns = [
   {
@@ -62,9 +78,16 @@ const columns = [
 ]
 
 const VisitPage = () => {
+  const [isFilter, setIsFilter] = useState(false)
+  const [filter, setFilter] = useState({})
+  const [selectedValue, setSelectedValue] = useState([])
+  const [pageCurrent, setPageCurrent] = useState({ page: 1, limit: 10 })
+  const params = ''
   const [getVisit, { data, isLoading }] = useGetVisitMutation()
   useEffect(() => {
-    getVisit({ body: { limit: 10 }, params: '' })
+    getVisit({ body: { limit: 10 }, params }).then(res => {
+      setIsFilter(false)
+    })
   }, [])
 
   return (
@@ -74,7 +97,24 @@ const VisitPage = () => {
           <CardHeader
             title='Data Rumah Yang Dikunjungi'
             titleTypographyProps={{ variant: 'h6' }}
-            action={<ModalForm />}
+            action={
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <ModalFormFilter
+                  onFinish={value => {
+                    if (value) {
+                      setIsFilter(true)
+                      setFilter(value)
+                      return getVisit({ body: { limit: 10, ...value }, params })
+                    }
+                    setIsFilter(false)
+                    setFilter({})
+                    return getVisit({ body: { limit: 10 }, params })
+                  }}
+                  isFilter={isFilter}
+                />
+                <ModalForm refetch={() => getVisit({ body: { limit: 10 }, params: '' })} />
+              </div>
+            }
           />
           <Table dataSource={data?.visits || []} columns={columns} pagination={false} loading={isLoading} />
           <Pagination
@@ -83,7 +123,7 @@ const VisitPage = () => {
             current={data?.page}
             total={data?.total}
             className='mt-4 text-center'
-            onChange={(page, limit) => getVisit({ body: { limit, page }, params: '' })}
+            onChange={(page, limit) => getVisit({ body: { limit, page, ...filter }, params: '' })}
           />
         </Card>
       </Grid>
@@ -91,7 +131,7 @@ const VisitPage = () => {
   )
 }
 
-const ModalForm = ({ update = false, initialValue = {} }) => {
+const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
   const [form] = Form.useForm()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [coordinates, setCoordinates] = useState([0, 0])
@@ -136,6 +176,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
       if (error) {
         return message.error('Data Gagal Diinput')
       }
+      refetch()
       setIsModalOpen(!isModalOpen)
       return message.success('Data Berhasil Diinput')
     })
@@ -146,7 +187,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
       navigator.geolocation.getCurrentPosition(
         position => {
           const { latitude, longitude } = position.coords
-          setCoordinates([latitude, longitude])
+          setCoordinates([longitude, latitude])
         },
         error => {
           console.error('Error getting location:', error)
@@ -181,6 +222,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
           marginTop: 8
         }}
       >
+        <PlusBoxOutline />
         Upload
       </div>
     </div>
@@ -540,7 +582,7 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
                   <Upload
                     name='image'
                     listType='picture-card'
-                    className='avatar-uploader'
+                    className='avatar-uploader h-10 w-10'
                     showUploadList={false}
                     multiple={false}
                     beforeUpload={() => false}
@@ -550,12 +592,179 @@ const ModalForm = ({ update = false, initialValue = {} }) => {
                       imageLoading ? (
                         <LoadingOutlined />
                       ) : (
-                        <img src={imageUrl} alt='avatar' className='max-h-[100px] h-28 w-28 aspect-square' />
+                        <img
+                          src={imageUrl}
+                          alt='avatar'
+                          className='h-10 w-10 aspect-square'
+                          style={{ width: 100, height: 100 }}
+                        />
                       )
                     ) : (
                       uploadButton
                     )}
                   </Upload>
+                </Form.Item>
+              </Col>
+            </Row>
+          </Form>
+        </div>
+      </Modal>
+    </div>
+  )
+}
+
+const { RangePicker } = DatePicker
+const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter }) => {
+  const [form] = Form.useForm()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [dates, setDates] = useState([])
+
+  const [selectedProvinsi, setSelectedProvinsi] = useState(null)
+  const [selectedKabupaten, setSelectedKabupaten] = useState(null)
+  const [selectedKecamatan, setSelectedKecamatan] = useState(null)
+
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          if (isFilter) {
+            return onFinish(null)
+          }
+          setIsModalOpen(!isModalOpen)
+        }}
+        style={{ marginRight: 5 }}
+      >
+        {isFilter ? 'Hapus Filter' : 'Filter'}
+      </Button>
+      <Modal
+        title={update ? 'Ubah Data Relawan' : 'Input Data Relawan'}
+        open={isModalOpen}
+        onCancel={() => setIsModalOpen(!isModalOpen)}
+        onOk={() => form.submit()}
+        width={800}
+      >
+        <div style={{ marginTop: 20 }}>
+          <Form
+            form={form}
+            name='control-ref'
+            onFinish={value => {
+              onFinish({ ...value, date: dates })
+              setIsModalOpen(!isModalOpen)
+            }}
+            layout={'vertical'}
+            initialValues={{ ...initialValue }}
+          >
+            <Row gutter={16}>
+              <Col span={24}>
+                <Form.Item
+                  name='nama_relawan'
+                  label='Nama Relawan'
+                  rules={[
+                    {
+                      required: false
+                    }
+                  ]}
+                >
+                  <Input />
+                </Form.Item>
+              </Col>
+              <Col span={24}>
+                <Form.Item
+                  name='date'
+                  label='Tanggal'
+                  rules={[
+                    {
+                      required: false
+                    }
+                  ]}
+                >
+                  <RangePicker
+                    className='w-full'
+                    format={'YYYY-MM-DD'}
+                    style={{ width: '100%' }}
+                    onChange={(date, dateString) => setDates(dateString)}
+                  />
+                </Form.Item>
+              </Col>
+
+              <Col span={12}>
+                <Form.Item name='provinsi' label='Provinsi' rules={[{}]}>
+                  <Select
+                    placeholder='Pilih Provinsi'
+                    allowClear
+                    onChange={value => {
+                      const provinsi = provinsiData.find(row => row.nama === value)
+                      if (provinsi) {
+                        setSelectedProvinsi(provinsi.pid)
+                        form.setFieldValue('kabupaten', null)
+                        form.setFieldValue('kecamatan', null)
+                        form.setFieldValue('kelurahan', null)
+                      }
+                    }}
+                  >
+                    {provinsiData.map(item => (
+                      <Select.Option key={item.id} value={item.nama}>
+                        {item.nama}
+                      </Select.Option>
+                    ))}
+                  </Select>
+                </Form.Item>
+                <Form.Item name='kecamatan' label='Kecamatan' rules={[{}]}>
+                  <Select
+                    placeholder='Pilih Kecamatan'
+                    allowClear
+                    onChange={value => {
+                      const kecamatan = kecamatanData.find(row => row.nama === value)
+                      if (kecamatan) {
+                        setSelectedKecamatan(kecamatan.pid)
+                        form.setFieldValue('kelurahan', null)
+                      }
+                    }}
+                  >
+                    {kecamatanData
+                      .filter(item => item.kab_id === selectedKabupaten)
+                      .map(item => (
+                        <Select.Option key={item.id} value={item.nama}>
+                          {item.nama}
+                        </Select.Option>
+                      ))}
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item name='kotakab' label='Kota/Kabupaten' rules={[{}]}>
+                  <Select
+                    placeholder='Pilih Kota/Kabupaten'
+                    allowClear
+                    onChange={value => {
+                      const kabupaten = kabupatenData.find(row => row.nama === value)
+                      if (kabupaten) {
+                        setSelectedKabupaten(kabupaten.pid)
+                        form.setFieldValue('kecamatan', null)
+                        form.setFieldValue('kelurahan', null)
+                      }
+                    }}
+                  >
+                    {kabupatenData
+                      .filter(item => item.prov_id === selectedProvinsi)
+                      .map(item => (
+                        <Select.Option key={item.id} value={item.nama}>
+                          {item.nama}
+                        </Select.Option>
+                      ))}
+                  </Select>
+                </Form.Item>
+
+                <Form.Item name='kelurahan' label='Kelurahan' rules={[{}]}>
+                  <Select placeholder='Pilih Kelurahan' allowClear>
+                    {kelurahanData
+                      .filter(item => item.kec_id === selectedKecamatan)
+                      .map(item => (
+                        <Select.Option key={item.id} value={item.nama}>
+                          {item.nama}
+                        </Select.Option>
+                      ))}
+                  </Select>
                 </Form.Item>
               </Col>
             </Row>

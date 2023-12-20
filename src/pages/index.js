@@ -72,7 +72,7 @@ const Dashboard = () => {
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
   }, [])
-  console.log(cordinatesData, 'cordinatesData')
+
   const questions = [
     {
       label:
@@ -99,7 +99,6 @@ const Dashboard = () => {
   ]
 
   const sumOfTargets = dataTarget?.reduce((sum, student) => sum + student.target, 0) || 0
-  console
   return (
     <ProtectedRouter>
       <ApexChartWrapper>
@@ -198,11 +197,11 @@ const Dashboard = () => {
                       render: (text, record) => {
                         return (
                           <span
-                            // onClick={() => {
-                            //   setStage('selectedKecamatan')
-                            //   setSelectedKecamatan(record)
-                            //   getRealisasi({ kelurahan: '$kelurahan' })
-                            // }}
+                            onClick={() => {
+                              // setStage('selectedKecamatan')
+                              // setSelectedKecamatan(record)
+                              // getRealisasi({ kelurahan: '$kelurahan' })
+                            }}
                             style={{ cursor: 'pointer' }}
                           >
                             {text}

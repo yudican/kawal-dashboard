@@ -14,7 +14,11 @@ const MapWithMarkers = ({ data }) => {
     map.on('load', () => {
       // Create a default Marker and add it to the map.
       // Create a default Marker, colored black, rotated 45 degrees.
-      data.forEach(item => new mapboxgl.Marker({ color: 'black' }).setLngLat(item).addTo(map))
+      data.forEach(item => {
+        if (item) {
+          new mapboxgl.Marker({ color: 'black' }).setLngLat(item).addTo(map)
+        }
+      })
     })
   }, [data])
 
