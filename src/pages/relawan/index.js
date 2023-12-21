@@ -172,6 +172,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
     formData.append('date', conevertDate(getDateTime(new Date())))
     formData.append('geolocation[coordinates][0]', coordinates[0])
     formData.append('geolocation[coordinates][1]', coordinates[1])
+
     createVisit(formData).then(({ error, data }) => {
       if (error) {
         return message.error('Data Gagal Diinput')
