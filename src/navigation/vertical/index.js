@@ -17,7 +17,7 @@ const navigation = () => {
     },
 
     // {
-    //   title: 'Koordinator',
+    //   title: 'Koordinatordd',
     //   icon: FormatLetterCase,
     //   path: '/koordinator'
     // },
