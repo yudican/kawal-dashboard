@@ -112,7 +112,7 @@ const VisitPage = () => {
                   }}
                   isFilter={isFilter}
                 />
-                <ModalForm refetch={() => getVisit({ body: { limit: 10 }, params: '' })} />
+                {/* <ModalForm refetch={() => getVisit({ body: { limit: 10 }, params: '' })} /> */}
               </div>
             }
           />
