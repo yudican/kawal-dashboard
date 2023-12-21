@@ -63,7 +63,7 @@ const TabAccount = () => {
     photo: null,
     role: null
   })
-  console.log(user, 'user')
+
   const [updateProfile, { isLoading: updateProfileLoading }] = useUpdateProfileMutation()
 
   useEffect(() => {
@@ -76,7 +76,7 @@ const TabAccount = () => {
       ...user
     })
   }, [])
-  console.log(form, 'form')
+
   const onChange = file => {
     const reader = new FileReader()
     const { files } = file.target
@@ -91,6 +91,7 @@ const TabAccount = () => {
   }
 
   const handleSubmit = async () => {
+    return toast.error('Anda tidak di ijinkan untuk melakukan kasi ini')
     try {
       // Validate form data using Yup
       // Submit the form or perform the desired action here
@@ -111,7 +112,7 @@ const TabAccount = () => {
           return toast(error?.data?.message || 'Ubah Profil Gagal')
         }
 
-        toast('Ubah Profil berhasil')
+        toast.success('Ubah Profil berhasil')
 
         dispatch(setUserData(data))
         return setItem('userData', JSON.stringify(data))
@@ -233,10 +234,10 @@ const TabAccount = () => {
           ) : null} */}
 
           <Grid item xs={12}>
-            <Button variant='contained' sx={{ marginRight: 3.5 }} onClick={() => handleSubmit()}>
+            <Button disabled variant='contained' sx={{ marginRight: 3.5 }} onClick={() => handleSubmit()}>
               Save Changes
             </Button>
-            <Button type='reset' variant='outlined' color='secondary'>
+            <Button disabled type='reset' variant='outlined' color='secondary'>
               Reset
             </Button>
           </Grid>

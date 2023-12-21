@@ -71,6 +71,7 @@ const TabSecurity = () => {
   }
 
   const handleSubmit = async () => {
+    return toast.error('Anda tidak di ijinkan untuk melakukan kasi ini')
     try {
       // Validate form data using Yup
       const form = {
@@ -190,10 +191,11 @@ const TabSecurity = () => {
 
       <CardContent>
         <Box sx={{ mt: 11 }}>
-          <Button variant='contained' sx={{ marginRight: 3.5 }} onClick={() => handleSubmit()}>
+          <Button disabled variant='contained' sx={{ marginRight: 3.5 }} onClick={() => handleSubmit()}>
             Save Changes
           </Button>
           <Button
+            disabled
             type='reset'
             variant='outlined'
             color='secondary'
