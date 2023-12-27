@@ -172,7 +172,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
     formData.append('preference_4', value.preference_4)
     formData.append('preference_5', value.preference_5)
     formData.append('image', fileList)
-    formData.append('uuid', uuidv4)
+    formData.append('uuid', uuidv4())
     formData.append('user', user?.id)
     formData.append('date', conevertDate(getDateTime(new Date())))
     formData.append('geolocation[coordinates][0]', coordinates[0])
@@ -181,6 +181,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
       if (error) {
         return message.error('Data Gagal Diinput')
       }
+      form.resetFields()
       refetch()
       setIsModalOpen(!isModalOpen)
       return message.success('Data Berhasil Diinput')

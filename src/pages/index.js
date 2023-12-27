@@ -13,6 +13,7 @@ import { Card, Progress, Table } from 'antd'
 import { useEffect, useState } from 'react'
 import {
   useGetCoordinatesQuery,
+  useGetFilterCoordinatesMutation,
   useGetRealisasiMutation,
   useGetVisitMutation,
   useGetVisitReportCityQuery,
@@ -30,6 +31,7 @@ import { ProtectedRouter } from './_app'
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
 import { calculatePercentage, formatNumber, getColor } from 'src/utils/helpers'
 import dataTarget from './relawan/Wilayah/data_target.json'
+import ModalFormFilterWilayah from 'src/@core/components/filterWilayah'
 
 // provinsi
 const columns = [
@@ -137,7 +139,9 @@ const Dashboard = () => {
   const { data: reportQuestionData, isLoading: loadingQuestiondata, isSuccess } = useGetVisitReportQuestionQuery()
   const { data: reportCityData, isLoading: loadingCitydata } = useGetVisitReportCityQuery()
   const [getRealisasi, { data: realisasiData, loading: realisasiLoading }] = useGetRealisasiMutation()
-  const { data: cordinatesData, isLoading: coordinatesLoading } = useGetCoordinatesQuery()
+  // const { data: cordinatesData, isLoading: coordinatesLoading } = useGetCoordinatesQuery()
+  const [getFilterCoordinates, { data: resultCoordinates, loading: resultCoordinateLoading }] =
+    useGetFilterCoordinatesMutation()
 
   const [stage, setStage] = useState('selectedProvinsi')
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
@@ -155,6 +159,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     getRealisasi({ kotakab: '$kotakab' })
+    getFilterCoordinates({
+      provinsi: 'Kalimantan Timur',
+      kotakab: 'Kabupaten Kutai Kartanegara',
+      kecamatan: 'Marang Kayu',
+      kelurahan: 'Sambera Baru'
+    })
   }, [])
 
   const questions = [
@@ -451,10 +461,10 @@ const Dashboard = () => {
               </Card>
             </Grid>
           )}
-          {!coordinatesLoading && (
+          {!resultCoordinateLoading && (
             <Grid item xs={12} md={12} lg={12}>
-              <Card>
-                <MapWithMarkers data={cordinatesData || []} />
+              <Card extra={<ModalFormFilterWilayah onFinish={value => getFilterCoordinates(value)} />}>
+                <MapWithMarkers data={resultCoordinates || []} />
               </Card>
             </Grid>
           )}
