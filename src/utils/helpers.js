@@ -74,6 +74,10 @@ export function calculatePercentage(part, whole) {
   return (part / whole) * 100
 }
 
+export function round(number = 0) {
+  return Math.round(number)
+}
+
 export function formatNumber(number, prefix = null, defaultValue = 0) {
   // change number format it's number greater than 0
   if (number > 0) {
@@ -87,4 +91,30 @@ export function formatNumber(number, prefix = null, defaultValue = 0) {
   } else {
     return defaultValue
   }
+}
+
+export function createSlug(text) {
+  if (text) {
+    return text
+      .toString() // Memastikan teks menjadi string
+      .toLowerCase() // Mengonversi teks menjadi huruf kecil
+      .trim() // Menghapus spasi di awal dan akhir teks
+      .replace(/\s+/g, '-') // Mengganti spasi dengan tanda hubung
+      .replace(/[^\w\-]+/g, '') // Menghapus karakter selain huruf, angka, tanda hubung
+      .replace(/\-\-+/g, '-') // Mengganti beberapa tanda hubung berurutan dengan satu tanda hubung
+      .replace(/^-+|-+$/g, '') // Menghapus tanda hubung di awal dan akhir teks jika ada
+  }
+
+  return null
+}
+
+export const getColor = percent => {
+  if (percent > 50 && percent < 100) {
+    return '#44bd32'
+  }
+  if (percent < 50) {
+    return '#e74c3c'
+  }
+
+  return '#2980b9'
 }

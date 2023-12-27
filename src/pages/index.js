@@ -30,8 +30,10 @@ import Trophy from 'src/views/dashboard/Trophy'
 import { ProtectedRouter } from './_app'
 
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
-import { calculatePercentage, formatNumber } from 'src/utils/helpers'
+import { calculatePercentage, createSlug, formatNumber, getColor, round } from 'src/utils/helpers'
 import dataTarget from './relawan/Wilayah/data_target.json'
+import dataTargetBaru from './relawan/Wilayah/target_baru.json'
+import targetkelurahan from './relawan/Wilayah/target_kelurahan.json'
 
 // provinsi
 const columns = [
@@ -44,7 +46,93 @@ const columns = [
   }
 ]
 
+// const getTarget = (kelurahan_nama, target = 0) => {
+//   const kel_target = targetkelurahan.find(item => createSlug(item.nama_kelurahan) === kelurahan_nama)
+//   if (kel_target) {
+//     return kel_target.target_kelurahan
+//   }
+//   console.log(kelurahan_nama, 'kelurahan_nama')
+//   return target
+// }
+
+// const getTargetKecamatan = (kecamatan_nama, target = 0) => {
+//   const kel_target = targetkelurahan.find(item => createSlug(item.nama_kecamatan) === kecamatan_nama)
+//   if (kel_target) {
+//     return kel_target.target_kecamatan
+//   }
+//   console.log(kecamatan_nama, 'kecamatan_nama')
+//   return target
+// }
+
 const Dashboard = () => {
+  // // console.log('targetkelurahan', targetkelurahan)
+  // const [getRealisasiKabupaten, { data: realisasiKabupaten }] = useGetRealisasiMutation()
+  // const [getRealisasiKecamatan, { data: realisasiKecamatan }] = useGetRealisasiMutation()
+  // const [getRealisasiKelurahan, { data: realisasiKelurahan }] = useGetRealisasiMutation()
+
+  // useEffect(() => {
+  //   getRealisasiKabupaten({ kotakab: '$kotakab' })
+  //   getRealisasiKecamatan({ kecamatan: '$kecamatan' })
+  //   getRealisasiKelurahan({ kelurahan: '$kelurahan' })
+  // }, [])
+
+  // const targetBaru = dataTargetBaru[0].kabupaten
+  // const newData = dataTarget[0].kabupaten.map(item => {
+  //   const kabupaten = targetBaru.find(row1 => row1.id === item.id)
+  //   const realisasiKab = realisasiKabupaten?.find(itemRe1 => itemRe1._id.kotakab === kabupaten.nama)
+
+  //   return {
+  //     ...item,
+  //     realisasi: realisasiKab ? realisasiKab.count : 0,
+  //     kecamatan: kabupaten.kecamatan.map(itemKec => {
+  //       const realisasiKec = realisasiKecamatan?.find(itemRe2 => itemRe2._id.kecamatan === itemKec.nama)
+  //       return {
+  //         ...itemKec,
+  //         realisasi: realisasiKec ? realisasiKec.count : 0,
+  //         target: round(getTargetKecamatan(createSlug(itemKec.slug, itemKec.target))),
+  //         kelurahan: itemKec.kelurahan?.map(itemKel => {
+  //           const realisasiKel = realisasiKelurahan?.find(itemRe3 => itemRe3._id.kelurahan === itemKel.nama)
+  //           return {
+  //             ...itemKel,
+  //             target: round(getTarget(createSlug(itemKel.slug, itemKel.target))),
+  //             realisasi: realisasiKel ? realisasiKel.count : 0
+  //           }
+  //         })
+  //       }
+  //     })
+  //   }
+  // })
+
+  // console.log(JSON.stringify(newData))
+  // return null
+  // const finalData = newData
+  //   .sort((a, b) => b.target - a.target)
+  //   .map((item, index) => {
+  //     return item.kecamatan
+  //       .sort((a, b) => b.target - a.target)
+  //       .map(itemKec => {
+  //         return itemKec.kelurahan
+  //           .sort((a, b) => b.target - a.target)
+  //           .map(itemKel => {
+  //             return {
+  //               no: index + 1,
+  //               nama_provinsi: 'Kalimantan Timur',
+  //               nama_kabupaten: item.nama,
+  //               target_kabupatem: item.target,
+  //               realisasi_kabupatem: item.realisasi,
+  //               nama_kecamatan: itemKec.nama,
+  //               target_kecamatan: itemKec.target,
+  //               realisasi_kecamatan: itemKec.realisasi,
+  //               nama_kelurahan: itemKel.nama,
+  //               target_kelurahan: itemKel.target,
+  //               realisasi_kelurahan: itemKel.realisasi
+  //             }
+  //           })
+  //       })
+  //   })
+
+  // console.log(JSON.stringify(finalData), 'newData')
+  // return null
   const [getVisit, { data, isLoading }] = useGetVisitMutation()
   useEffect(() => {
     getVisit({ body: { limit: 1000 }, params: '' })
@@ -114,7 +202,7 @@ const Dashboard = () => {
             {stage === 'selectedProvinsi' && (
               <Card title={`Laporan Wilayah ${dataTarget[0]['nama']}`}>
                 <Table
-                  dataSource={dataTarget[0]['kabupaten']}
+                  dataSource={dataTarget[0]['kabupaten'].sort((a, b) => b.target - a.target)}
                   columns={[
                     {
                       title: 'Nama Kabupaten',
@@ -158,10 +246,17 @@ const Dashboard = () => {
                         const realisasi = realisasiData?.find(item => item._id.kotakab === record.nama)
                         if (realisasi) {
                           const percent = calculatePercentage(realisasi.count, record.target)
-                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                          return (
+                            <Progress
+                              type='circle'
+                              percent={percent.toFixed(2)}
+                              size={50}
+                              strokeColor={getColor(percent)}
+                            />
+                          )
                         }
 
-                        return <Progress type='circle' percent={0} size={50} />
+                        return <Progress type='circle' percent={0} size={50} strokeColor={getColor(0)} />
                       }
                     }
                   ]}
@@ -188,7 +283,7 @@ const Dashboard = () => {
                 }
               >
                 <Table
-                  dataSource={selectedKabupaten.kecamatan}
+                  dataSource={selectedKabupaten.kecamatan.sort((a, b) => b.target - a.target)}
                   columns={[
                     {
                       title: 'Nama Kecamatan',
@@ -198,9 +293,9 @@ const Dashboard = () => {
                         return (
                           <span
                             onClick={() => {
-                              // setStage('selectedKecamatan')
-                              // setSelectedKecamatan(record)
-                              // getRealisasi({ kelurahan: '$kelurahan' })
+                              setStage('selectedKecamatan')
+                              setSelectedKecamatan(record)
+                              getRealisasi({ kelurahan: '$kelurahan' })
                             }}
                             style={{ cursor: 'pointer' }}
                           >
@@ -232,10 +327,17 @@ const Dashboard = () => {
                         const realisasi = realisasiData?.find(item => item._id.kecamatan === record.nama)
                         if (realisasi) {
                           const percent = calculatePercentage(realisasi.count, record.target)
-                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                          return (
+                            <Progress
+                              type='circle'
+                              percent={percent.toFixed(2)}
+                              size={50}
+                              strokeColor={getColor(percent)}
+                            />
+                          )
                         }
 
-                        return <Progress type='circle' percent={0} size={50} />
+                        return <Progress type='circle' percent={0} size={50} strokeColor={getColor(0)} />
                       }
                     }
                   ]}
@@ -261,7 +363,7 @@ const Dashboard = () => {
                 }
               >
                 <Table
-                  dataSource={selectedKecamatan.kelurahan}
+                  dataSource={selectedKecamatan.kelurahan.sort((a, b) => b.target - a.target)}
                   columns={[
                     {
                       title: 'Nama Kelurahan',
@@ -291,10 +393,17 @@ const Dashboard = () => {
                         const realisasi = realisasiData?.find(item => item._id.kelurahan === record.nama)
                         if (realisasi) {
                           const percent = calculatePercentage(realisasi.count, record.target)
-                          return <Progress type='circle' percent={percent.toFixed(2)} size={50} />
+                          return (
+                            <Progress
+                              type='circle'
+                              percent={percent.toFixed(2)}
+                              size={50}
+                              strokeColor={getColor(percent)}
+                            />
+                          )
                         }
 
-                        return <Progress type='circle' percent={0} size={50} />
+                        return <Progress type='circle' percent={0} size={50} strokeColor={getColor(0)} />
                       }
                     }
                   ]}
