@@ -29,6 +29,8 @@ import provinsiData from './Wilayah/provinsi.json'
 import { LoadingOutlined } from '@ant-design/icons'
 import { PlusBoxOutline } from 'mdi-material-ui'
 
+import dataTarget from './Wilayah/data_target.json'
+
 const columns = [
   {
     title: 'No.',
@@ -141,6 +143,10 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
   const [selectedProvinsi, setSelectedProvinsi] = useState(null)
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
   const [selectedKecamatan, setSelectedKecamatan] = useState(null)
+  const [selectedKelurahan, setSelectedKelurahan] = useState(null)
+  const [selectedProvinsiPid, setSelectedProvinsiPid] = useState(null)
+  const [selectedKabupatenPid, setSelectedKabupatenPid] = useState(null)
+  const [selectedKecamatanPid, setSelectedKecamatanPid] = useState(null)
 
   const user = getItem('userData')
 
@@ -155,10 +161,10 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
     formData.append('alamat', value.alamat)
     formData.append('rt', value.rt)
     formData.append('rw', value.rw)
-    formData.append('provinsi', value.provinsi)
-    formData.append('kotakab', value.kotakab)
-    formData.append('kecamatan', value.kecamatan)
-    formData.append('kelurahan', value.kelurahan)
+    formData.append('provinsi', selectedProvinsi)
+    formData.append('kotakab', selectedKabupaten)
+    formData.append('kecamatan', selectedKecamatan)
+    formData.append('kelurahan', selectedKelurahan)
     formData.append('pengikut', value.pengikut)
     formData.append('preference_1', value.preference_1)
     formData.append('preference_2', value.preference_2)
@@ -359,59 +365,46 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 </Form.Item>
               </Col>
               <Col span={12}>
-                <Form.Item
-                  name='provinsi'
-                  label='Provinsi'
-                  rules={[
-                    {
-                      required: true
-                    }
-                  ]}
-                >
+                <Form.Item name='provinsi' label='Provinsi' rules={[{}]}>
                   <Select
                     placeholder='Pilih Provinsi'
                     allowClear
                     onChange={value => {
-                      const provinsi = provinsiData.find(row => row.nama === value)
+                      console.log(value, 'value')
+                      const provinsi = provinsiData.find(row => row.pid == value)
                       if (provinsi) {
-                        setSelectedProvinsi(provinsi.pid)
-                        form.setFieldValue('kabupaten', null)
+                        setSelectedProvinsi(provinsi.nama)
+                        setSelectedProvinsiPid(provinsi.pid)
+                        form.setFieldValue('kotakab', null)
                         form.setFieldValue('kecamatan', null)
                         form.setFieldValue('kelurahan', null)
                       }
                     }}
                   >
                     {provinsiData.map(item => (
-                      <Select.Option key={item.id} value={item.nama}>
+                      <Select.Option key={item.id} value={`${item.pid}`}>
                         {item.nama}
                       </Select.Option>
                     ))}
                   </Select>
                 </Form.Item>
-                <Form.Item
-                  name='kecamatan'
-                  label='Kecamatan'
-                  rules={[
-                    {
-                      required: true
-                    }
-                  ]}
-                >
+                <Form.Item name='kecamatan' label='Kecamatan' rules={[{}]}>
                   <Select
                     placeholder='Pilih Kecamatan'
                     allowClear
                     onChange={value => {
-                      const kecamatan = kecamatanData.find(row => row.nama === value)
+                      const kecamatan = kecamatanData.find(row => row.pid == value)
                       if (kecamatan) {
-                        setSelectedKecamatan(kecamatan.pid)
+                        setSelectedKecamatan(kecamatan.nama)
+                        setSelectedKecamatanPid(kecamatan.pid)
                         form.setFieldValue('kelurahan', null)
                       }
                     }}
                   >
                     {kecamatanData
-                      .filter(item => item.kab_id === selectedKabupaten)
+                      .filter(item => item.kab_id === selectedKabupatenPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
@@ -419,51 +412,44 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 </Form.Item>
               </Col>
               <Col span={12}>
-                <Form.Item
-                  name='kotakab'
-                  label='Kota/Kabupaten'
-                  rules={[
-                    {
-                      required: true
-                    }
-                  ]}
-                >
+                <Form.Item name='kotakab' label='Kota/Kabupaten' rules={[{}]}>
                   <Select
                     placeholder='Pilih Kota/Kabupaten'
                     allowClear
                     onChange={value => {
-                      const kabupaten = kabupatenData.find(row => row.nama === value)
+                      const kabupaten = kabupatenData.find(row => row.pid == value)
                       if (kabupaten) {
-                        setSelectedKabupaten(kabupaten.pid)
-                        form.setFieldValue('kecamatan', null)
+                        setSelectedKabupaten(kabupaten.nama)
+                        setSelectedKabupatenPid(kabupaten.pid)
                         form.setFieldValue('kelurahan', null)
                       }
                     }}
                   >
                     {kabupatenData
-                      .filter(item => item.prov_id === selectedProvinsi)
+                      .filter(item => item.prov_id === selectedProvinsiPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
                   </Select>
                 </Form.Item>
 
-                <Form.Item
-                  name='kelurahan'
-                  label='Kelurahan'
-                  rules={[
-                    {
-                      required: true
-                    }
-                  ]}
-                >
-                  <Select placeholder='Pilih Kelurahan' allowClear>
+                <Form.Item name='kelurahan' label='Kelurahan' rules={[{}]}>
+                  <Select
+                    placeholder='Pilih Kelurahan'
+                    allowClear
+                    onChange={value => {
+                      const kelurahan = kelurahanData.find(row => row.pid == value)
+                      if (kelurahan) {
+                        setSelectedKelurahan(kelurahan.nama)
+                      }
+                    }}
+                  >
                     {kelurahanData
-                      .filter(item => item.kec_id === selectedKecamatan)
+                      .filter(item => item.kec_id === selectedKecamatanPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
@@ -621,6 +607,10 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
   const [selectedProvinsi, setSelectedProvinsi] = useState(null)
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
   const [selectedKecamatan, setSelectedKecamatan] = useState(null)
+  const [selectedKelurahan, setSelectedKelurahan] = useState(null)
+  const [selectedProvinsiPid, setSelectedProvinsiPid] = useState(null)
+  const [selectedKabupatenPid, setSelectedKabupatenPid] = useState(null)
+  const [selectedKecamatanPid, setSelectedKecamatanPid] = useState(null)
 
   return (
     <div>
@@ -647,7 +637,14 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
             form={form}
             name='control-ref'
             onFinish={value => {
-              onFinish({ ...value, date: dates })
+              onFinish({
+                ...value,
+                date: dates,
+                provinsi: selectedProvinsi,
+                kotakab: selectedKabupaten,
+                kecamatan: selectedKecamatan,
+                kelurahan: selectedKelurahan
+              })
               setIsModalOpen(!isModalOpen)
             }}
             layout={'vertical'}
@@ -692,9 +689,11 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
                     placeholder='Pilih Provinsi'
                     allowClear
                     onChange={value => {
-                      const provinsi = provinsiData.find(row => row.nama === value)
+                      console.log(value, 'value')
+                      const provinsi = provinsiData.find(row => row.pid == value)
                       if (provinsi) {
-                        setSelectedProvinsi(provinsi.pid)
+                        setSelectedProvinsi(provinsi.nama)
+                        setSelectedProvinsiPid(provinsi.pid)
                         form.setFieldValue('kabupaten', null)
                         form.setFieldValue('kecamatan', null)
                         form.setFieldValue('kelurahan', null)
@@ -702,7 +701,7 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
                     }}
                   >
                     {provinsiData.map(item => (
-                      <Select.Option key={item.id} value={item.nama}>
+                      <Select.Option key={item.id} value={`${item.pid}`}>
                         {item.nama}
                       </Select.Option>
                     ))}
@@ -713,17 +712,18 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
                     placeholder='Pilih Kecamatan'
                     allowClear
                     onChange={value => {
-                      const kecamatan = kecamatanData.find(row => row.nama === value)
+                      const kecamatan = kecamatanData.find(row => row.pid == value)
                       if (kecamatan) {
-                        setSelectedKecamatan(kecamatan.pid)
+                        setSelectedKecamatan(kecamatan.nama)
+                        setSelectedKecamatanPid(kecamatan.pid)
                         form.setFieldValue('kelurahan', null)
                       }
                     }}
                   >
                     {kecamatanData
-                      .filter(item => item.kab_id === selectedKabupaten)
+                      .filter(item => item.kab_id === selectedKabupatenPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
@@ -736,18 +736,19 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
                     placeholder='Pilih Kota/Kabupaten'
                     allowClear
                     onChange={value => {
-                      const kabupaten = kabupatenData.find(row => row.nama === value)
+                      const kabupaten = kabupatenData.find(row => row.pid == value)
                       if (kabupaten) {
-                        setSelectedKabupaten(kabupaten.pid)
+                        setSelectedKabupaten(kabupaten.nama)
+                        setSelectedKabupatenPid(kabupaten.pid)
                         form.setFieldValue('kecamatan', null)
                         form.setFieldValue('kelurahan', null)
                       }
                     }}
                   >
                     {kabupatenData
-                      .filter(item => item.prov_id === selectedProvinsi)
+                      .filter(item => item.prov_id === selectedProvinsiPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
@@ -755,11 +756,20 @@ const ModalFormFilter = ({ update = false, initialValue = {}, onFinish, isFilter
                 </Form.Item>
 
                 <Form.Item name='kelurahan' label='Kelurahan' rules={[{}]}>
-                  <Select placeholder='Pilih Kelurahan' allowClear>
+                  <Select
+                    placeholder='Pilih Kelurahan'
+                    allowClear
+                    onChange={value => {
+                      const kelurahan = kelurahanData.find(row => row.pid == value)
+                      if (kelurahan) {
+                        setSelectedKelurahan(kelurahan.nama)
+                      }
+                    }}
+                  >
                     {kelurahanData
-                      .filter(item => item.kec_id === selectedKecamatan)
+                      .filter(item => item.kec_id === selectedKecamatanPid)
                       .map(item => (
-                        <Select.Option key={item.id} value={item.nama}>
+                        <Select.Option key={item.id} value={`${item.pid}`}>
                           {item.nama}
                         </Select.Option>
                       ))}
