@@ -10,12 +10,12 @@ const FooterContent = () => {
 
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
-      <Typography sx={{ mr: 2 }}>
-        {`© ${new Date().getFullYear()}, Develop `}
-        {` by `}
-        <Link target='_blank' href='#'>
-          Markdata
-        </Link>
+      <Typography sx={{ mr: 2, display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
+        <span>
+          {`© ${new Date().getFullYear()}, Develop `}
+          {` by `}
+        </span>
+        <img src={'https://i.ibb.co/F3cQQfH/markdata.jpg'} style={{ height: 30, marginLeft: 10 }} />
       </Typography>
       {/* {hidden ? null : (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', '& :not(:last-child)': { mr: 4 } }}>

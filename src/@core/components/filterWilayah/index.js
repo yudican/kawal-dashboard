@@ -42,13 +42,20 @@ const ModalFormFilterWilayah = ({ onFinish, isFilter = false }) => {
             form={form}
             name='control-ref'
             onFinish={value => {
-              onFinish({
-                ...value,
-                provinsi: selectedProvinsi,
-                kotakab: selectedKabupaten,
-                kecamatan: selectedKecamatan,
-                kelurahan: selectedKelurahan
-              })
+              const body = {}
+              if (selectedProvinsi) {
+                body.provinsi = selectedProvinsi
+              }
+              if (selectedKabupaten) {
+                body.kotakab = selectedKabupaten
+              }
+              if (selectedKecamatan) {
+                body.kecamatan = selectedKecamatan
+              }
+              if (selectedKelurahan) {
+                body.kelurahan = selectedKelurahan
+              }
+              onFinish(body)
               setIsModalOpen(!isModalOpen)
             }}
             layout={'vertical'}

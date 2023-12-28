@@ -65,7 +65,7 @@ const StatisticsCard = ({ visit, target = 0 }) => {
   return (
     <Card>
       <CardHeader
-        title='Statistics Card'
+        title='Perolehan Statistik DDC'
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
             <DotsVertical />
@@ -74,7 +74,7 @@ const StatisticsCard = ({ visit, target = 0 }) => {
         subheader={
           <Typography variant='body2'>
             <Box component='span' sx={{ fontWeight: 600, color: 'text.primary' }}>
-              Total {calculatePercentage(visit?.total, target).toFixed(3)}% realisasi
+              Total {calculatePercentage(visit?.total, target).toFixed(2)}% realisasi
             </Box>{' '}
           </Typography>
         }
