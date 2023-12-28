@@ -15,7 +15,7 @@ const FooterContent = () => {
           {`© ${new Date().getFullYear()}, Develop `}
           {` by `}
         </span>
-        <img src={'https://i.ibb.co/F3cQQfH/markdata.jpg'} style={{ height: 30, marginLeft: 10 }} />
+        <img src={'https://i.ibb.co/vZTLtbp/loog-markdata.png'} style={{ height: 30, marginLeft: 10 }} />
       </Typography>
       {/* {hidden ? null : (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', '& :not(:last-child)': { mr: 4 } }}>

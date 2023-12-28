@@ -32,7 +32,14 @@ const MapPoligon = ({ cities = [] }) => {
   const kabupaten = kabupatens.filter(item => item.nama == modalList[modalOpenKey])
 
   useEffect(() => {
-    getRealisasi({ kecamatan: '$kecamatan' })
+    if (kabupaten && kabupaten.length > 0) {
+      getRealisasi({
+        filter: { kecamatan: '$kecamatan' },
+        provinsi: dataTarget[0]['nama'],
+        kotakab: kabupaten[0]['nama']
+      })
+    }
+
     const map = new mapboxgl.Map({
       container: 'map', // container ID
       // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -4638,6 +4645,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('berau')
         setJumlahData(getTotal(cities, 'Kabupaten Berau'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Berau'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4652,6 +4664,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('kutai-barat')
         setJumlahData(getTotal(cities, 'Kabupaten Kutai Barat'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Kutai Barat'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4666,6 +4683,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('kutai-kartanegara')
         setJumlahData(getTotal(cities, 'Kabupaten Kutai Kartanegara'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Kutai Kartanegara'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4680,6 +4702,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('kutai-timur')
         setJumlahData(getTotal(cities, 'Kabupaten Kutai Timur'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Kutai Timur'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4694,6 +4721,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('balikpapan')
         setJumlahData(getTotal(cities, 'Kota Balikpapan'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kota Balikpapan'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4708,6 +4740,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('bontang')
         setJumlahData(getTotal(cities, 'Kota Bontang'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kota Bontang'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4722,7 +4759,12 @@ const MapPoligon = ({ cities = [] }) => {
       map.on('click', 'pasir', e => {
         setModalOpen(true)
         setModalOpenKey('pasir')
-        setJumlahData(getTotal(cities, 'Kota Paser'))
+        setJumlahData(getTotal(cities, 'Kabupaten Paser'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Paser'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4737,6 +4779,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('penajam-paser-utara')
         setJumlahData(getTotal(cities, 'Kabupaten Penajam Paser Utara'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kabupaten Penajam Paser Utara'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4751,6 +4798,11 @@ const MapPoligon = ({ cities = [] }) => {
         setModalOpen(true)
         setModalOpenKey('samarinda')
         setJumlahData(getTotal(cities, 'Kota Samarinda'))
+        getRealisasi({
+          filter: { kecamatan: '$kecamatan' },
+          provinsi: dataTarget[0]['nama'],
+          kotakab: 'Kota Samarinda'
+        })
         // new mapboxgl.Popup()
         //   .setLngLat(e.lngLat)
         //   .setHTML(
@@ -4776,6 +4828,7 @@ const MapPoligon = ({ cities = [] }) => {
         <div style={{ marginTop: 20 }}>
           <Table
             dataSource={(kabupaten && kabupaten.length > 0 && kabupaten[0]['kecamatan']) || []}
+            loading={realisasiLoading}
             columns={[
               {
                 title: 'Nama Kecamatan',

@@ -47,7 +47,7 @@ const VerticalNavHeader = props => {
       ) : (
         <Link href='/' passHref>
           <StyledLink>
-            <img src={'https://i.ibb.co/F3cQQfH/markdata.jpg'} style={{ height: 40, marginLeft: 10 }} />
+            <img src={'https://i.ibb.co/bsVRb6b/ir1.png'} style={{ height: 40, marginLeft: 10 }} />
           </StyledLink>
         </Link>
       )}

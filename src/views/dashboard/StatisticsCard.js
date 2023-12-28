@@ -24,13 +24,13 @@ const RenderStats = ({ visit, target }) => {
       icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
     },
     {
-      stats: visit?.total || 0,
+      stats: formatNumber(visit?.total) || 0,
       title: 'Rumah Warga Yang Dikunjungi',
       color: 'primary',
       icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
     },
     {
-      stats: calculatePercentage(visit?.total, target).toFixed(3) + '%',
+      stats: calculatePercentage(visit?.total, target).toFixed(2) + '%',
       color: 'warning',
       title: 'Realisasi',
       icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
@@ -86,7 +86,7 @@ const StatisticsCard = ({ visit, target = 0 }) => {
           }
         }}
       />
-      <CardContent sx={{ pt: theme => `${theme.spacing(3)} !important` }}>
+      <CardContent sx={{ pt: theme => `${theme.spacing(2)} !important` }}>
         <Grid container spacing={[5, 0]}>
           <RenderStats visit={visit} target={target} />
         </Grid>
