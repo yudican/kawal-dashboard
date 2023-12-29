@@ -402,6 +402,7 @@ const Dashboard = () => {
                       key: 'realisasi',
                       align: 'center',
                       render: (value, record) => {
+                        console.log(record, realisasiData, 'keluraahn')
                         const realisasi = realisasiData?.find(item => item._id.kelurahan === record.nama)
                         if (realisasi) {
                           return realisasi.count
