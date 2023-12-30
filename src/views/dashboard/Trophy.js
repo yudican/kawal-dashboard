@@ -45,7 +45,7 @@ const Trophy = ({ data }) => {
           Lihat Rumah Yang Dikunjungi
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
-        <TrophyImg alt='trophy' src='https://i.ibb.co/bsVRb6b/ir1.png' style={{ height: 70 }} />
+        <TrophyImg alt='trophy' src='https://i.ibb.co/bsVRb6b/ir1.png' style={{ height: 70, marginBottom: 50 }} />
       </CardContent>
     </Card>
   )
