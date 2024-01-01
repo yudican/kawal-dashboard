@@ -9,10 +9,11 @@ import Grid from '@mui/material/Grid'
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
-import { Card, Progress, Table } from 'antd'
-import { useEffect, useState } from 'react'
+import { Button, Card, Progress, Table } from 'antd'
+import { useCallback, useEffect, useState } from 'react'
 import {
   useGetFilterCoordinatesMutation,
+  useGetRealisasiExportMutation,
   useGetRealisasiMutation,
   useGetVisitMutation,
   useGetVisitReportCityQuery,
@@ -29,7 +30,7 @@ import { ProtectedRouter } from './_app'
 
 import { ArrowLeftBoldOutline } from 'mdi-material-ui'
 import ModalFormFilterWilayah from 'src/@core/components/filterWilayah'
-import { calculatePercentage, createSlug, formatNumber, getColor } from 'src/utils/helpers'
+import { calculatePercentage, createSlug, formatNumber, getColor, round } from 'src/utils/helpers'
 import dataTarget from './relawan/Wilayah/data_target.json'
 
 // provinsi
@@ -43,12 +44,35 @@ const columns = [
   }
 ]
 
+const questions = [
+  {
+    label:
+      'Apa pendapat Anda tentang kinerja Dr. H. Irwan, S.IP., MP. (Irwan Fecho) sebagai Caleg DPR RI selama periode sebelumnya?',
+    value: 'pertanyaan1Result'
+  },
+  {
+    label: 'Apa isu utama yang menurut Anda paling perlu diperhatikan di wilayah ini?',
+    value: 'pertanyaan2Result'
+  },
+  {
+    label: 'Bagaimana Anda menilai visi dan misi Dr. H. Irwan, S.IP., MP. (Irwan Fecho) untuk periode kedua?',
+    value: 'pertanyaan3Result'
+  },
+  {
+    label:
+      'Apakah Anda merasakan dampak positif dari program atau inisiatif yang telah dilakukan oleh Dr. H. Irwan, S.IP., MP. (Irwan Fecho) sebagai Caleg?',
+    value: 'pertanyaan4Result'
+  },
+  {
+    label: 'Bagaimana Anda melihat partisipasi masyarakat dalam proses politik di daerah ini?',
+    value: 'pertanyaan5Result'
+  }
+]
 // const getTarget = (kelurahan_nama, target = 0) => {
 //   const kel_target = targetkelurahan.find(item => createSlug(item.nama_kelurahan) === kelurahan_nama)
 //   if (kel_target) {
 //     return kel_target.target_kelurahan
 //   }
-//   console.log(kelurahan_nama, 'kelurahan_nama')
 //   return target
 // }
 
@@ -57,79 +81,23 @@ const columns = [
 //   if (kel_target) {
 //     return kel_target.target_kecamatan
 //   }
-//   console.log(kecamatan_nama, 'kecamatan_nama')
 //   return target
 // }
 
 const Dashboard = () => {
-  // // console.log('targetkelurahan', targetkelurahan)
-  // const [getRealisasiKabupaten, { data: realisasiKabupaten }] = useGetRealisasiMutation()
-  // const [getRealisasiKecamatan, { data: realisasiKecamatan }] = useGetRealisasiMutation()
-  // const [getRealisasiKelurahan, { data: realisasiKelurahan }] = useGetRealisasiMutation()
+  const [
+    getRealisasiKabupaten,
+    { data: realisasiKabupaten, isSuccess: realisasiKabupatenSuccess, isLoading: realisasiKabupatenLoading }
+  ] = useGetRealisasiMutation()
+  const [
+    getRealisasiKecamatan,
+    { data: realisasiKecamatan, isSuccess: realisasiKecamatanSuccess, isLoading: realisasiKecamatanLoading }
+  ] = useGetRealisasiMutation()
+  const [
+    getRealisasiKelurahan,
+    { data: realisasiKelurahan, isSuccess: realisasiKelurahanSuccess, isLoading: realisasiKelurahanLoading }
+  ] = useGetRealisasiMutation()
 
-  // useEffect(() => {
-  //   getRealisasiKabupaten({ kotakab: '$kotakab' })
-  //   getRealisasiKecamatan({ kecamatan: '$kecamatan' })
-  //   getRealisasiKelurahan({ kelurahan: '$kelurahan' })
-  // }, [])
-
-  // const targetBaru = dataTargetBaru[0].kabupaten
-  // const newData = dataTarget[0].kabupaten.map(item => {
-  //   const kabupaten = targetBaru.find(row1 => row1.id === item.id)
-  //   const realisasiKab = realisasiKabupaten?.find(itemRe1 => itemRe1._id.kotakab === kabupaten.nama)
-
-  //   return {
-  //     ...item,
-  //     realisasi: realisasiKab ? realisasiKab.count : 0,
-  //     kecamatan: kabupaten.kecamatan.map(itemKec => {
-  //       const realisasiKec = realisasiKecamatan?.find(itemRe2 => itemRe2._id.kecamatan === itemKec.nama)
-  //       return {
-  //         ...itemKec,
-  //         realisasi: realisasiKec ? realisasiKec.count : 0,
-  //         target: round(getTargetKecamatan(createSlug(itemKec.slug, itemKec.target))),
-  //         kelurahan: itemKec.kelurahan?.map(itemKel => {
-  //           const realisasiKel = realisasiKelurahan?.find(itemRe3 => itemRe3._id.kelurahan === itemKel.nama)
-  //           return {
-  //             ...itemKel,
-  //             target: round(getTarget(createSlug(itemKel.slug, itemKel.target))),
-  //             realisasi: realisasiKel ? realisasiKel.count : 0
-  //           }
-  //         })
-  //       }
-  //     })
-  //   }
-  // })
-
-  // console.log(JSON.stringify(newData))
-  // return null
-  // const finalData = newData
-  //   .sort((a, b) => b.target - a.target)
-  //   .map((item, index) => {
-  //     return item.kecamatan
-  //       .sort((a, b) => b.target - a.target)
-  //       .map(itemKec => {
-  //         return itemKec.kelurahan
-  //           .sort((a, b) => b.target - a.target)
-  //           .map(itemKel => {
-  //             return {
-  //               no: index + 1,
-  //               nama_provinsi: 'Kalimantan Timur',
-  //               nama_kabupaten: item.nama,
-  //               target_kabupatem: item.target,
-  //               realisasi_kabupatem: item.realisasi,
-  //               nama_kecamatan: itemKec.nama,
-  //               target_kecamatan: itemKec.target,
-  //               realisasi_kecamatan: itemKec.realisasi,
-  //               nama_kelurahan: itemKel.nama,
-  //               target_kelurahan: itemKel.target,
-  //               realisasi_kelurahan: itemKel.realisasi
-  //             }
-  //           })
-  //       })
-  //   })
-
-  // console.log(JSON.stringify(finalData), 'newData')
-  // return null
   const [getVisit, { data, isLoading }] = useGetVisitMutation()
   useEffect(() => {
     getVisit({ body: { limit: 1000 }, params: '' })
@@ -141,6 +109,7 @@ const Dashboard = () => {
   // const { data: cordinatesData, isLoading: coordinatesLoading } = useGetCoordinatesQuery()
   const [getFilterCoordinates, { data: resultCoordinates, loading: resultCoordinateLoading }] =
     useGetFilterCoordinatesMutation()
+  const [exportRealisasiReport, { loading: loadingExport }] = useGetRealisasiExportMutation()
 
   const [stage, setStage] = useState('selectedProvinsi')
   const [selectedKabupaten, setSelectedKabupaten] = useState(null)
@@ -169,30 +138,99 @@ const Dashboard = () => {
     })
   }, [])
 
-  const questions = [
-    {
-      label:
-        'Apa pendapat Anda tentang kinerja Dr. H. Irwan, S.IP., MP. (Irwan Fecho) sebagai Caleg DPR RI selama periode sebelumnya?',
-      value: 'pertanyaan1Result'
-    },
-    {
-      label: 'Apa isu utama yang menurut Anda paling perlu diperhatikan di wilayah ini?',
-      value: 'pertanyaan2Result'
-    },
-    {
-      label: 'Bagaimana Anda menilai visi dan misi Dr. H. Irwan, S.IP., MP. (Irwan Fecho) untuk periode kedua?',
-      value: 'pertanyaan3Result'
-    },
-    {
-      label:
-        'Apakah Anda merasakan dampak positif dari program atau inisiatif yang telah dilakukan oleh Dr. H. Irwan, S.IP., MP. (Irwan Fecho) sebagai Caleg?',
-      value: 'pertanyaan4Result'
-    },
-    {
-      label: 'Bagaimana Anda melihat partisipasi masyarakat dalam proses politik di daerah ini?',
-      value: 'pertanyaan5Result'
+  const getRealisasiData = (type = 'provinsi') => {
+    console.log(type)
+    if (type === 'provinsi') {
+      getRealisasiKabupaten({ filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab' } })
+      getRealisasiKecamatan({ filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab', kecamatan: '$kecamatan' } })
+      getRealisasiKelurahan({
+        filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab', kecamatan: '$kecamatan', kelurahan: '$kelurahan' }
+      })
+    } else if (type === 'kotakab') {
+      getRealisasiKecamatan({ filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab', kecamatan: '$kecamatan' } })
+      getRealisasiKelurahan({
+        filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab', kecamatan: '$kecamatan', kelurahan: '$kelurahan' }
+      })
+    } else if (type === 'kecamatan') {
+      getRealisasiKelurahan({
+        filter: { provinsi: 'Kalimantan Timur', kotakab: '$kotakab', kecamatan: '$kecamatan', kelurahan: '$kelurahan' }
+      })
     }
-  ]
+  }
+
+  const exportRealisasi = useCallback(
+    type => {
+      console.log(type, 'type')
+      if (type === 'provinsi') {
+        const targetBaru = dataTarget[0].kabupaten
+        const newData = targetBaru.map(item => {
+          const kabupaten = item
+          const realisasiKab = realisasiKabupaten?.find(itemRe1 => itemRe1._id.kotakab === kabupaten.nama)
+
+          return {
+            ...item,
+            realisasi: realisasiKab ? realisasiKab.count : 0,
+            kecamatan: kabupaten.kecamatan.map(itemKec => {
+              const realisasiKec = realisasiKecamatan?.find(itemRe2 => itemRe2._id.kecamatan === itemKec.nama)
+              return {
+                ...itemKec,
+                realisasi: realisasiKec ? realisasiKec.count : 0,
+                target: itemKec.target,
+                kelurahan: itemKec.kelurahan?.map(itemKel => {
+                  const realisasiKel = realisasiKelurahan?.find(itemRe3 => itemRe3._id.kelurahan === itemKel.nama)
+                  return {
+                    ...itemKel,
+                    target: itemKel.target,
+                    realisasi: realisasiKel ? realisasiKel.count : 0
+                  }
+                })
+              }
+            })
+          }
+        })
+
+        const finalData = newData
+          .sort((a, b) => b.target - a.target)
+          .map((item, index) => {
+            return item.kecamatan
+              .sort((a, b) => b.target - a.target)
+              .map(itemKec => {
+                return itemKec.kelurahan
+                  .sort((a, b) => b.target - a.target)
+                  .map(itemKel => {
+                    return {
+                      no: index + 1,
+                      nama_provinsi: 'Kalimantan Timur',
+                      nama_kabupaten: item.nama,
+                      target_kabupatem: item.target,
+                      realisasi_kabupatem: item.realisasi,
+                      nama_kecamatan: itemKec.nama,
+                      target_kecamatan: itemKec.target,
+                      realisasi_kecamatan: itemKec.realisasi,
+                      nama_kelurahan: itemKel.nama,
+                      target_kelurahan: itemKel.target,
+                      realisasi_kelurahan: itemKel.realisasi
+                    }
+                  })
+              })
+          })
+        // console.log(finalData.flat(2), 'finalData')
+        exportRealisasiReport({ exportData: JSON.stringify(finalData.flat(2)) }).then(({ data }) => {
+          if (data) {
+            window.open(data.url)
+          }
+        })
+      }
+    },
+    [realisasiKabupaten, realisasiKecamatan, realisasiKelurahan]
+  )
+
+  useEffect(() => {
+    console.log(realisasiKabupatenSuccess, realisasiKecamatanSuccess, realisasiKelurahanSuccess)
+    if (realisasiKabupatenSuccess && realisasiKecamatanSuccess && realisasiKelurahanSuccess) {
+      exportRealisasi('provinsi')
+    }
+  }, [realisasiKabupatenSuccess, realisasiKecamatanSuccess, realisasiKelurahanSuccess])
 
   const sumOfTargets = dataTarget?.reduce((sum, student) => sum + student.target, 0) || 0
   return (
@@ -208,7 +246,22 @@ const Dashboard = () => {
 
           <Grid item xs={12} md={12}>
             {stage === 'selectedProvinsi' && (
-              <Card title={`Laporan Wilayah ${dataTarget[0]['nama']}`}>
+              <Card
+                title={`Laporan Wilayah ${dataTarget[0]['nama']}`}
+                extra={
+                  <Button
+                    onClick={() => getRealisasiData()}
+                    loading={
+                      realisasiKabupatenLoading ||
+                      realisasiKecamatanLoading ||
+                      realisasiKelurahanLoading ||
+                      loadingExport
+                    }
+                  >
+                    Export
+                  </Button>
+                }
+              >
                 <Table
                   dataSource={dataTarget[0]['kabupaten'].sort((a, b) => b.target - a.target)}
                   columns={[

@@ -71,6 +71,13 @@ export const visitService = createApi({
         body
       })
     }),
+    getRealisasiExport: builder.mutation({
+      query: body => ({
+        url: '/visits/report/export/realisasi',
+        method: 'POST',
+        body
+      })
+    }),
     getCoordinates: builder.query({
       query: params => `/visits/report/coordinates`
     }),
@@ -95,6 +102,7 @@ export const {
   useGetVisitReportCityQuery,
   useShareVisitMutation,
   useGetRealisasiMutation,
+  useGetRealisasiExportMutation,
   useGetCoordinatesQuery,
   useGetFilterCoordinatesMutation
 } = visitService
