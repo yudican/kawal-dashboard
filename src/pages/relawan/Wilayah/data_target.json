@@ -7610,17 +7610,6 @@
                                 "realisasi": 180
                             },
                             {
-                                "id": 0,
-                                "nama": "Batu Timbau Ulu",
-                                "slug": "batu-timbau-ulu",
-                                "pid": "0",
-                                "prov_id": 23,
-                                "kab_id": 359,
-                                "kec_id": 5356,
-                                "target": 100,
-                                "realisasi": 0
-                            },
-                            {
                                 "id": 60642,
                                 "nama": "Beno Harapan",
                                 "slug": "beno-harapan",
@@ -8643,8 +8632,8 @@
                             },
                             {
                                 "id": 0,
-                                "nama": "Wanasari",
-                                "slug": "wanasari",
+                                "nama": "Wana sari",
+                                "slug": "wana-sari",
                                 "pid": "0",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -12208,9 +12197,9 @@
                             },
                             {
                                 "id": 0,
-                                "nama": "Loa Bahu",
-                                "slug": "loa-bahu",
-                                "pid": "0",
+                                "nama": "Lok Bahu",
+                                "slug": "lok-bahu",
+                                "pid": "6472040005",
                                 "prov_id": 23,
                                 "kab_id": 364,
                                 "kec_id": 5243,
