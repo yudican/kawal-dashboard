@@ -1818,8 +1818,8 @@
                         "kelurahan": [
                             {
                                 "id": 59975,
-                                "nama": "Jengang Danum",
-                                "slug": "jengang-danum",
+                                "nama": "Jengan Danum",
+                                "slug": "jengan-danum",
                                 "pid": "6402060011",
                                 "prov_id": 23,
                                 "kab_id": 357,
@@ -5139,8 +5139,8 @@
                             },
                             {
                                 "id": 60306,
-                                "nama": "Gas Alam Badak I",
-                                "slug": "gas-alam-badak-i",
+                                "nama": "Gas Alam Badak Satu",
+                                "slug": "gas-alam-badak-satu",
                                 "pid": "6403130009",
                                 "prov_id": 23,
                                 "kab_id": 358,
@@ -6952,7 +6952,7 @@
                         "pid": 6404012,
                         "prov_id": 23,
                         "kab_id": 359,
-                        "target": 750,
+                        "target": 800,
                         "kelurahan": [
                             {
                                 "id": 60174,
@@ -7024,6 +7024,17 @@
                                 "id": 60974,
                                 "nama": "Sumber Sari",
                                 "slug": "sumber-sari",
+                                "pid": "6404012002",
+                                "prov_id": 23,
+                                "kab_id": 359,
+                                "kec_id": 5114,
+                                "target": 50,
+                                "realisasi": 24
+                            },
+                            {
+                                "id": 60975,
+                                "nama": "Makmur Jaya",
+                                "slug": "makmur-jaya",
                                 "pid": "6404012002",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -7256,8 +7267,8 @@
                             },
                             {
                                 "id": 60944,
-                                "nama": "Marga Mulya",
-                                "slug": "marga-mulya",
+                                "nama": "Marga Mulia",
+                                "slug": "marga-mulia",
                                 "pid": "6404022005",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -7300,8 +7311,8 @@
                             },
                             {
                                 "id": 60659,
-                                "nama": "Sukamaju",
-                                "slug": "sukamaju",
+                                "nama": "Suka maju",
+                                "slug": "suka-maju",
                                 "pid": "6403110016",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -7778,8 +7789,8 @@
                             },
                             {
                                 "id": 60955,
-                                "nama": "Juk Ayaq",
-                                "slug": "juk-ayaq",
+                                "nama": "Juk Ayak",
+                                "slug": "juk-ayak",
                                 "pid": "6404021003",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -8577,8 +8588,8 @@
                             },
                             {
                                 "id": 60097,
-                                "nama": "Karya Bhakti",
-                                "slug": "karya-bhakti",
+                                "nama": "Karya Bakti",
+                                "slug": "karya-bakti",
                                 "pid": "6404020007",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -8610,8 +8621,8 @@
                             },
                             {
                                 "id": 60388,
-                                "nama": "Nehes liah Bing",
-                                "slug": "nehes-liah-bing",
+                                "nama": "Nehesliah Bing",
+                                "slug": "nehesliah-bing",
                                 "pid": "6404020006",
                                 "prov_id": 23,
                                 "kab_id": 359,
@@ -11040,8 +11051,8 @@
                             },
                             {
                                 "id": 60246,
-                                "nama": "Long Pahangai I",
-                                "slug": "long-pahangai-i",
+                                "nama": "Long Pahangai Satu",
+                                "slug": "long-pahangai-satu",
                                 "pid": "6411040008",
                                 "prov_id": 23,
                                 "kab_id": 362,
@@ -11073,8 +11084,8 @@
                             },
                             {
                                 "id": 60607,
-                                "nama": "Long Pahangai II",
-                                "slug": "long-pahangai-ii",
+                                "nama": "Long Pahangai Dua",
+                                "slug": "long-pahangai-dua",
                                 "pid": "6411040005",
                                 "prov_id": 23,
                                 "kab_id": 362,
@@ -11169,7 +11180,7 @@
                         "pid": 6411010,
                         "prov_id": 23,
                         "kab_id": 362,
-                        "target": 70,
+                        "target": 80,
                         "kelurahan": [
                             {
                                 "id": 60636,
@@ -11184,13 +11195,13 @@
                             },
                             {
                                 "id": 60733,
-                                "nama": "Danum Paroy",
-                                "slug": "danum-paroy",
+                                "nama": "Danum Paroi",
+                                "slug": "danum-paroi",
                                 "pid": "6411010003",
                                 "prov_id": 23,
                                 "kab_id": 362,
                                 "kec_id": 5754,
-                                "target": 0,
+                                "target": 10,
                                 "realisasi": 0
                             },
                             {
@@ -11201,7 +11212,7 @@
                                 "prov_id": 23,
                                 "kab_id": 362,
                                 "kec_id": 5754,
-                                "target": 0,
+                                "target": 10,
                                 "realisasi": 3
                             },
                             {
@@ -11484,8 +11495,8 @@
                             },
                             {
                                 "id": 60934,
-                                "nama": "Margasari",
-                                "slug": "margasari",
+                                "nama": "Marga sari",
+                                "slug": "marga-sari",
                                 "pid": "6471050002",
                                 "prov_id": 23,
                                 "kab_id": 363,
@@ -11585,8 +11596,8 @@
                             },
                             {
                                 "id": 60581,
-                                "nama": "Gunug Sari Ulu",
-                                "slug": "gunug-sari-ulu",
+                                "nama": "Gunung Sari Ulu",
+                                "slug": "gunung-sari-ulu",
                                 "pid": "6471040002",
                                 "prov_id": 23,
                                 "kab_id": 363,
@@ -12654,8 +12665,8 @@
                             },
                             {
                                 "id": 0,
-                                "nama": "Gunung Elai",
-                                "slug": "gunung-elai",
+                                "nama": "Gunung lai",
+                                "slug": "gunung-lai",
                                 "pid": "0",
                                 "prov_id": 23,
                                 "kab_id": 365,
@@ -12733,8 +12744,8 @@
                         "kelurahan": [
                             {
                                 "id": 60279,
-                                "nama": "Berbas Pantai",
-                                "slug": "Berbas-pantai",
+                                "nama": "Berebas Pantai",
+                                "slug": "Berebas-pantai",
                                 "pid": "6474010003",
                                 "prov_id": 23,
                                 "kab_id": 365,
@@ -12744,8 +12755,8 @@
                             },
                             {
                                 "id": 60572,
-                                "nama": "Berbas Tengah",
-                                "slug": "Berbas-tengah",
+                                "nama": "Berebas Tengah",
+                                "slug": "Berebas-tengah",
                                 "pid": "6474010004",
                                 "prov_id": 23,
                                 "kab_id": 365,
