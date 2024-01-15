@@ -644,8 +644,8 @@
                             },
                             {
                                 "id": 59999,
-                                "nama": "Sebakung Makmur",
-                                "slug": "sebakung-makmur",
+                                "nama": "Sebakung",
+                                "slug": "sebakung",
                                 "pid": "6401080004",
                                 "prov_id": 23,
                                 "kab_id": 356,
@@ -8473,7 +8473,7 @@
                         "pid": 6404040,
                         "prov_id": 23,
                         "kab_id": 359,
-                        "target": 30240,
+                        "target": 25000,
                         "kelurahan": [
                             {
                                 "id": 60436,
