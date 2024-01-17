@@ -241,6 +241,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
           handleGetLocation()
           setIsModalOpen(!isModalOpen)
         }}
+        style={{ marginRight: 5 }}
       >
         {update ? 'Edit' : 'Tambah Data Rumah Dikunjungi'}
       </Button>
@@ -364,6 +365,28 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 >
                   <Input placeholder='Input Lokasi' value={coordinates && coordinates.join(',')} disabled />
                 </Form.Item>
+                <Form.Item name='kotakab' label='Kota/Kabupaten' rules={[{}]}>
+                  <Select
+                    placeholder='Pilih Kota/Kabupaten'
+                    allowClear
+                    onChange={value => {
+                      const kabupaten = kabupatenData.find(row => row.pid == value)
+                      if (kabupaten) {
+                        setSelectedKabupaten(kabupaten.nama)
+                        setSelectedKabupatenPid(kabupaten.pid)
+                        form.setFieldValue('kelurahan', null)
+                      }
+                    }}
+                  >
+                    {kabupatenData
+                      .filter(item => item.prov_id === selectedProvinsiPid)
+                      .map(item => (
+                        <Select.Option key={item.id} value={`${item.pid}`}>
+                          {item.nama}
+                        </Select.Option>
+                      ))}
+                  </Select>
+                </Form.Item>
               </Col>
               <Col span={12}>
                 <Form.Item name='provinsi' label='Provinsi' rules={[{}]}>
@@ -413,29 +436,6 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 </Form.Item>
               </Col>
               <Col span={12}>
-                <Form.Item name='kotakab' label='Kota/Kabupaten' rules={[{}]}>
-                  <Select
-                    placeholder='Pilih Kota/Kabupaten'
-                    allowClear
-                    onChange={value => {
-                      const kabupaten = kabupatenData.find(row => row.pid == value)
-                      if (kabupaten) {
-                        setSelectedKabupaten(kabupaten.nama)
-                        setSelectedKabupatenPid(kabupaten.pid)
-                        form.setFieldValue('kelurahan', null)
-                      }
-                    }}
-                  >
-                    {kabupatenData
-                      .filter(item => item.prov_id === selectedProvinsiPid)
-                      .map(item => (
-                        <Select.Option key={item.id} value={`${item.pid}`}>
-                          {item.nama}
-                        </Select.Option>
-                      ))}
-                  </Select>
-                </Form.Item>
-
                 <Form.Item name='kelurahan' label='Kelurahan' rules={[{}]}>
                   <Select
                     placeholder='Pilih Kelurahan'
