@@ -154,23 +154,23 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
 
   const handleCreateVisit = value => {
     const formData = new FormData()
-    formData.append('nama_relawan', value.nama_relawan)
-    formData.append('nama_lengkap', value.nama_lengkap)
-    formData.append('jenis_kelamin', value.jenis_kelamin)
-    formData.append('nomor_telepon', value.nomor_telepon)
-    formData.append('alamat', value.alamat)
-    formData.append('rt', value.rt)
-    formData.append('rw', value.rw)
+    formData.append('nama_relawan', value?.nama_relawan)
+    formData.append('nama_lengkap', value?.nama_lengkap)
+    formData.append('jenis_kelamin', value?.jenis_kelamin)
+    formData.append('nomor_telepon', value?.nomor_telepon)
+    formData.append('alamat', value?.alamat)
+    formData.append('rt', value?.rt || '-')
+    formData.append('rw', value?.rw || '-')
     formData.append('provinsi', selectedProvinsi)
     formData.append('kotakab', selectedKabupaten)
     formData.append('kecamatan', selectedKecamatan)
     formData.append('kelurahan', selectedKelurahan)
-    formData.append('pengikut', value.pengikut)
-    formData.append('preference_1', value.preference_1)
-    formData.append('preference_2', value.preference_2)
-    formData.append('preference_3', value.preference_3)
-    formData.append('preference_4', value.preference_4)
-    formData.append('preference_5', value.preference_5)
+    formData.append('pengikut', value?.pengikut || 0)
+    formData.append('preference_1', value?.preference_1 || '-')
+    formData.append('preference_2', value?.preference_2 || '-')
+    formData.append('preference_3', value?.preference_3 || '-')
+    formData.append('preference_4', value?.preference_4 || '-')
+    formData.append('preference_5', value?.preference_5 || '-')
     formData.append('image', fileList)
     formData.append('uuid', uuidv4())
     formData.append('user', user?.id)
@@ -327,7 +327,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 </Form.Item>
               </Col>
 
-              <Col span={6}>
+              {/* <Col span={6}>
                 <Form.Item
                   name='rt'
                   label='RT'
@@ -352,7 +352,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                 >
                   <Input placeholder='Input RW' />
                 </Form.Item>
-              </Col>
+              </Col> */}
               <Col span={12}>
                 <Form.Item
                   label='Lokasi'
@@ -459,7 +459,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
               </Col>
 
               <Col span={24}>
-                <Form.Item
+                {/* <Form.Item
                   name='pengikut'
                   label='Berapa Orang Teman/Rekan/Keluarga Yang Bisa Anda Ajak Untuk Mendukung Dr. H. Irwan, S.IP., MP. (Irwan Fecho)?'
                   rules={[
@@ -553,7 +553,7 @@ const ModalForm = ({ update = false, initialValue = {}, refetch }) => {
                     <Select.Option value='Kurang aktif'>Kurang aktif</Select.Option>
                     <Select.Option value='Tidak terlibat'>Tidak terlibat</Select.Option>
                   </Select>
-                </Form.Item>
+                </Form.Item> */}
 
                 <Form.Item
                   label='Image'
